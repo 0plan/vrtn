@@ -1,11 +1,11 @@
 import './App.css'
-import Header from "./components/Header.tsx";
-import Footer from "./components/Footer.tsx";
+import Header from "@components/Header.tsx";
+import Footer from "@components/Footer.tsx";
 
 function App() {
 
     return (
-        <div >
+        <div>
             <Header/>
             <main className="h-96 min-h-full md:min-h-full">
                 <div>
@@ -18,4 +18,4 @@ function App() {
     )
 }
 
-export default App
+export default App;
