@@ -1,15 +1,14 @@
-import path from 'path'
+import * as path from 'path'
 import {defineConfig} from 'vite'
 import react from '@vitejs/plugin-react'
-import pages from 'vite-plugin-react-pages'
+import tsconfigPaths from "vite-tsconfig-paths";
 
 // https://vitejs.dev/config/
 export default defineConfig({
     plugins: [
         react(),
-        pages({
-            pagesDir: path.join(__dirname, 'pages'),
-        }),],
+        tsconfigPaths(),
+    ],
     resolve: {
         alias: {
             '~/': `${path.resolve(__dirname, 'src')}/`,
