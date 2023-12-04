@@ -10,7 +10,10 @@ import i18n from "i18next";
 import {initReactI18next} from "react-i18next";
 import koKR from '~/lang/koKR'
 import enEN from '~/lang/enEN'
-
+import Examples from "~/pages/examples/Examples.tsx";
+import StoreExample from "~/pages/examples/Store.tsx";
+import RouterExample from "~/pages/examples/Router.tsx";
+import '~/utils/isDark.ts'
 const router = createBrowserRouter([
     {
         path: "/",
@@ -24,9 +27,17 @@ const router = createBrowserRouter([
             {
                 path: "about",
                 element: <About/>
+            },
+            {
+                path: "examples",
+                element: <Examples/>,
+                children: [
+                    {path: "store-example", element: <StoreExample/>},
+                    {path: "router-example", element: <RouterExample/>}
+                ]
             }
         ]
-    }
+    },
 ])
 
 i18n.use(initReactI18next)
