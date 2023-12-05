@@ -10,7 +10,7 @@ const Footer = () => {
 
     return (
         <footer className="bg-white shadow dark:bg-gray-800 dark:text-slate-200">
-            <nav className="text-lg flex flex-auto justify-center">
+            <nav className='flex flex-wrap justify-center gap-2 py-2.5 items-center mx-auto'>
                 <IsDarkMode />
                 <a>
                     <LanguageIcon/>
