@@ -1,38 +1,21 @@
-const toggleDark = () => {
-    // to something
-}
-const toggleLocales = () => {
-    // do something
-}
-const toGuide = () => {
-    // do something
-}
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LanguageIcon from '@mui/icons-material/Language';
+import IsDarkMode from "@components/IsDarkMode.tsx";
+
 const Footer = () => {
+
     return (
-        <footer className="bg-white shadow dark:bg-gray-900">
-            <nav className="text-xl mt-6">
-                <div className="i-carbon-campsite"/>
-                <a className="icon-btn mx-2 !outline-none" onClick={toggleDark()}>
-                    <div className="carbon-sun dark:carbon-moon"/>
-                    다크모드
+        <footer className="bg-white shadow dark:bg-gray-800 dark:text-slate-200">
+            <nav className='flex flex-wrap justify-center gap-2 py-2.5 items-center mx-auto'>
+                <IsDarkMode />
+                <a>
+                    <LanguageIcon/>
                 </a>
-
-                <a className="icon-btn mx-2" onClick={toggleLocales()}>
-                    <div i-carbon-language/>
-                    언어
-                </a>
-
-                <a className="icon-btn mx-2" onClick={toGuide()}>
-                    <div i-carbon-dicom-overlay/>
-                    가이드
-                </a>
-                <a className="icon-btn mx-2" rel="noreferrer" href="https://github.com/socketbear/vue-dev-guide"
-                   target="_blank" title="GitHub">
-                    <div i-carbon-logo-github/>
+                <a href="https://github.com/chlee125/vite-react-typescript-template" target='_blank'>
+                    <GitHubIcon/>
                 </a>
             </nav>
         </footer>
     )
 }
-
-export default Footer
+export default Footer;
