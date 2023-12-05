@@ -1,4 +1,4 @@
-import {useDarkMode} from "~/utils/isDark.ts";
+import {useDarkMode} from "~/utils/dark-mode.ts";
 import LightModeIcon from "@mui/icons-material/LightMode";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 

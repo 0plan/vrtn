@@ -1,5 +1,5 @@
 import Menu from "@components/Menu.tsx";
-import { Link } from "react-router-dom";
+import {Link} from "react-router-dom";
 import {t} from "i18next";
 
 const Header = () => {
@@ -7,13 +7,12 @@ const Header = () => {
         <header>
             <nav className="bg-white border-gray-200 px-6 py-2.5 dark:bg-gray-800">
                 <div className="flex flex-wrap justify-between items-center mx-auto">
-                    <Link to={'/'} className="flex items-center">
+                    <Link className="flex items-center" to={'/'}>
                         <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
                             {t('projectName')}
                         </span>
                     </Link>
-
-                    <Menu />
+                    <Menu/>
                 </div>
             </nav>
         </header>
@@ -21,3 +20,4 @@ const Header = () => {
 }
 
 export default Header
+
