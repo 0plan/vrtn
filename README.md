@@ -1,30 +1,47 @@
-# React + TypeScript + Vite
+# Vite React Typescript i18n
+VRTN is Vite React Typescript i18n template
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[Live Demo](https://vite-react-typescript-i18n-template.vercel.app/)
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [React 18](), [Vite](https://github.com/vitejs/vite), [pnpm](https://pnpm.io/), [Typescript]()
+- [Components](./src/components)
+- [Zustand](https://zustand-demo.pmnd.rs/)
+- [I18n ready](./src/locales)
+- [Use icons]()
+- [Deploy on Vercel](https://vercel.com)
 
-## Expanding the ESLint configuration
+## 🚧 TO-DO
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- [File based routing]()
+- [PWA]()
+- [Layout]()
+- [Markdown Support]()
+- Unit Testing with [Vitest](https://github.com/vitest-dev/vitest), E2E Testing with [Cypress](https://cypress.io/)
+  on [GitHub Actions](https://github.com/features/actions)
+- Docker
 
-- Configure the top-level `parserOptions` property like this:
+[//]: # (## Try it now!)
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+[//]: # ()
+[//]: # (### GitHub Template)
+
+[//]: # ()
+[//]: # ([Create a repo from this template on GitHub]&#40;https://github.com/chlee125/vrtn/generate&#41;.)
+
+## Usage
+
+### Development
+```bash
+pnpm dev
 ```
+Just run and visit http://localhost:5173
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+### Build
+
+To build the App, run
+
+```bash
+pnpm build
+```

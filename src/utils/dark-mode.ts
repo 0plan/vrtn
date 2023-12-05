@@ -5,8 +5,6 @@ const COLOR_SCHEME_QUERY = '(prefers-color-scheme: dark)'
 interface UseDarkModeOutput {
     isDarkMode: boolean
     toggle: () => void
-    enable: () => void
-    disable: () => void
 }
 
 export function useDarkMode(defaultValue?: boolean): UseDarkModeOutput {

@@ -8,13 +8,15 @@ import About from "./pages/About.tsx";
 import Home from './pages/Home.tsx';
 import i18n from "i18next";
 import {initReactI18next} from "react-i18next";
-import koKR from '~/lang/koKR'
-import enEN from '~/lang/enEN'
+import koKR from '~/locales/ko'
+import enEN from '~/locales/en'
 import Examples from "~/pages/examples/Examples.tsx";
 import StoreExample from "~/pages/examples/Store.tsx";
 import RouterExample from "~/pages/examples/Router.tsx";
-import '~/utils/isDark.ts'
+import '~/utils/dark-mode.ts'
 import Todo from "~/pages/Todo.tsx";
+
+
 const router = createBrowserRouter([
     {
         path: "/",
@@ -56,7 +58,7 @@ i18n.use(initReactI18next)
             }
         },
         lng: "ko",
-        fallbackLng: "ko",
+        fallbackLng: import.meta.env.VITE_FALLBACK_LANG,
 
         interpolation: {
             escapeValue: false
