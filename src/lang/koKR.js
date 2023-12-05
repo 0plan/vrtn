@@ -1,10 +1,5 @@
 export default {
-    translation: {
-        "projectName": 'vite-react-i18n-typescript-template',
-        "hello": "안녕하세요",
-        "Welcome to React": "React 와 react-i18next 를 이용하여 다국어를 지원합니다.",
-        button: {
-            guide: "가이드"
-        }
-    }
-}
+    "projectName": 'vite-react-i18n-typescript-template',
+    'examples': '예제',
+    'about': 'About',
+};

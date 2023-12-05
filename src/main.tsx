@@ -14,6 +14,7 @@ import Examples from "~/pages/examples/Examples.tsx";
 import StoreExample from "~/pages/examples/Store.tsx";
 import RouterExample from "~/pages/examples/Router.tsx";
 import '~/utils/isDark.ts'
+import Todo from "~/pages/Todo.tsx";
 const router = createBrowserRouter([
     {
         path: "/",
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
             {
                 path: "about",
                 element: <About/>
+            },
+            {
+                path: "todo",
+                element: <Todo/>
             },
             {
                 path: "examples",
@@ -43,8 +48,12 @@ const router = createBrowserRouter([
 i18n.use(initReactI18next)
     .init({
         resources: {
-            en: enEN,
-            ko: koKR
+            en: {
+                translation: enEN
+            },
+            ko: {
+                translation: koKR
+            }
         },
         lng: "ko",
         fallbackLng: "ko",

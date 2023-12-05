@@ -1,12 +1,8 @@
-import {useTranslation} from "react-i18next";
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LanguageIcon from '@mui/icons-material/Language';
-import LightModeIcon from '@mui/icons-material/LightMode';
-import DarkModeIcon from '@mui/icons-material/DarkMode';
 import IsDarkMode from "@components/IsDarkMode.tsx";
 
 const Footer = () => {
-    const {t} = useTranslation();
 
     return (
         <footer className="bg-white shadow dark:bg-gray-800 dark:text-slate-200">
@@ -15,7 +11,7 @@ const Footer = () => {
                 <a>
                     <LanguageIcon/>
                 </a>
-                <a href="https://github.com/chlee125/vite-react-typescript-template">
+                <a href="https://github.com/chlee125/vite-react-typescript-template" target='_blank'>
                     <GitHubIcon/>
                 </a>
             </nav>
