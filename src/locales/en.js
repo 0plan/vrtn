@@ -1,4 +1,4 @@
 export default {
-    examples: 'Examples',
-    about: 'About'
-};
+  examples: 'Home',
+  about: 'About'
+}

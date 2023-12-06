@@ -1,13 +1,23 @@
+import generated from '@tailwindcss/forms'
+import preline from 'preline/plugin'
+
 /** @type {import('tailwindcss').Config} */
 export default {
   darkMode: 'class',
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
+    'node_modules/preline/dist/*.js',
   ],
   theme: {
-    extend: {},
+    container: {
+      padding: {
+        DEFAULT: '2rem',
+      },
+    },
   },
-  plugins: [],
+  plugins: [
+    generated,
+    preline
+  ],
 }
-
