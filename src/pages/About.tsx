@@ -1,9 +1,10 @@
+import { Button } from '@components/ui/button.tsx'
+
 export default function About() {
 
   return (
     <main>
-      <p className={'text-3xl'}>About</p>
-
+      <Button variant='outline'>test</Button>
     </main>
   )
 }

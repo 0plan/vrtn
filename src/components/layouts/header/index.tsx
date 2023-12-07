@@ -1,6 +1,6 @@
 import { t } from 'i18next'
 import { Link } from 'react-router-dom'
-import Menu from '@components/header/menu.tsx'
+import Menu from '@components/layouts/header/menu.tsx'
 
 const Header = () => {
   return (
