@@ -1,6 +1,6 @@
-import Footer from '@components/Footer.tsx'
+import Footer from '@components/layouts/footer.tsx'
 import { Outlet } from 'react-router-dom'
-import Header from '@components/header/index.tsx'
+import Header from '@components/layouts/header/index.tsx'
 
 export default function App() {
   return (
