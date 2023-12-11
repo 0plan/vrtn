@@ -1,10 +1,15 @@
 import {
+  DropdownMenu,
+  DropdownMenuContent, DropdownMenuGroup, DropdownMenuItem,
+  DropdownMenuLabel, DropdownMenuPortal,
+  DropdownMenuSeparator, DropdownMenuShortcut, DropdownMenuSub, DropdownMenuSubContent, DropdownMenuSubTrigger,
+  DropdownMenuTrigger
+} from '@components/ui/dropdown-menu.tsx'
+import { Button } from '@components/ui/button.tsx'
+import {
   Cloud,
-  CreditCard,
-  Github,
-  Keyboard,
-  LifeBuoy,
-  LogOut,
+  CreditCard, Github,
+  Keyboard, LifeBuoy, LogOut,
   Mail,
   MessageSquare,
   Plus,
@@ -15,27 +20,23 @@ import {
   Users
 } from 'lucide-react'
 
-import { Button } from '@components/ui/button'
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuGroup,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuPortal,
-  DropdownMenuSeparator,
-  DropdownMenuShortcut,
-  DropdownMenuSub,
-  DropdownMenuSubContent,
-  DropdownMenuSubTrigger,
-  DropdownMenuTrigger
-} from '@components/ui/dropdown-menu'
-
-export function DropdownMenuDemo() {
+export default function MobileMenu() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant='outline'>Open</Button>
+        <button type='button'
+                className='p-2 inline-flex justify-center items-center gap-x-2 rounded-lg border shadow-sm disabled:opacity-50 disabled:pointer-events-none dark:bg-transparent'
+        >
+          <svg className='flex-shrink-0 w-4 h-4' xmlns='http://www.w3.org/2000/svg'
+               width='24'
+               height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' strokeWidth='2'
+               strokeLinecap='round' strokeLinejoin='round'
+          >
+            <line x1='3' x2='21' y1='6' y2='6' />
+            <line x1='3' x2='21' y1='12' y2='12' />
+            <line x1='3' x2='21' y1='18' y2='18' />
+          </svg>
+        </button>
       </DropdownMenuTrigger>
       <DropdownMenuContent className='w-56'>
         <DropdownMenuLabel>My Account</DropdownMenuLabel>
@@ -118,5 +119,6 @@ export function DropdownMenuDemo() {
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
+
   )
 }
