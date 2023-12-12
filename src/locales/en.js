@@ -1,4 +1,5 @@
 export default {
-  examples: 'Home',
+  projectName: 'TEST PROJECT',
+  examples: 'Examples',
   about: 'About'
 }

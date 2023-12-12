@@ -10,9 +10,9 @@ import Examples from '~/pages/examples/Home.tsx'
 import * as UIExamples from '~/pages/examples/index.tsx'
 import '~/lib/dark-mode.ts'
 import Todo from '~/pages/Todo.tsx'
-// main.ts
 import 'virtual:uno.css'
 import { HelmetProvider } from 'react-helmet-async'
+import '~/lib/locales.ts'
 
 const router = createBrowserRouter([
   {

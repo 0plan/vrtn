@@ -1,12 +1,17 @@
 import { t } from 'i18next'
+import { useEffect, useState } from 'react'
 
-export interface Item {
-  name: string
-  path: string
+const menuItems = () => {
+  const menus =
+  const [menu, setMenu] = useState(menus)
+
+  useEffect(() => {
+    setMenu(menus)
+  }, menu)
+  return menu
+
 }
 
-export const menuItems = [
-  { path: '/examples', name: t('examples') },
-  { path: '/todo', name: t('Todo') },
-  { path: '/about', name: t('about') }
-]
+export {
+  menuItems
+}
