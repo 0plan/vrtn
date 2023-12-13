@@ -1,6 +1,4 @@
-'use client'
-
-import { cn } from '~/utils/utils.ts'
+import { cn } from '~/lib/utils.ts'
 import { forwardRef, TextareaHTMLAttributes } from 'react'
 
 export interface TextareaProps
