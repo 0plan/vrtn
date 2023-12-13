@@ -1,11 +1,9 @@
 project:
   title: VRTN
-
 menu:
   example: Example
   about: About
   todo: To-Do
-
 home:
   title: Let's Start
   subtitle: Together

@@ -1,5 +1,3 @@
-'use client'
-
 import { Checkbox } from '@components/ui/checkbox'
 import { CheckboxDisabled } from '~/pages/examples/checkbox/disabled.tsx'
 import { CheckboxWithText } from '~/pages/examples/checkbox/with-text.tsx'

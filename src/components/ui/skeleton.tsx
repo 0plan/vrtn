@@ -1,5 +1,3 @@
-'use client'
-
 import { cn } from '~/lib/utils.ts'
 import { HTMLAttributes } from 'react'
 
