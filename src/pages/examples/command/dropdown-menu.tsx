@@ -20,54 +20,55 @@ import {
 } from '@components/ui/dropdown-menu'
 
 const labels = [
-  "feature",
-  "bug",
-  "enhancement",
-  "documentation",
-  "design",
-  "question",
-  "maintenance",
+  'feature',
+  'bug',
+  'enhancement',
+  'documentation',
+  'design',
+  'question',
+  'maintenance'
 ]
 
 export function CommandDropdownMenu() {
-  const [label, setLabel] = React.useState("feature")
+  const [label, setLabel] = React.useState('feature')
   const [open, setOpen] = React.useState(false)
 
   return (
-    <div className="flex w-full flex-col items-start justify-between rounded-md border px-4 py-3 sm:flex-row sm:items-center">
-      <p className="text-sm font-medium leading-none">
-        <span className="mr-2 rounded-lg bg-primary px-2 py-1 text-xs text-primary-foreground">
+    <div
+      className='flex w-full flex-col items-start justify-between rounded-md border px-4 py-3 sm:flex-row sm:items-center'>
+      <p className='text-sm font-medium leading-none'>
+        <span className='mr-2 rounded-lg bg-primary px-2 py-1 text-xs text-primary-foreground'>
           {label}
         </span>
-        <span className="text-muted-foreground">Create a new project</span>
+        <span className='text-muted-foreground'>Create a new project</span>
       </p>
       <DropdownMenu open={open} onOpenChange={setOpen}>
         <DropdownMenuTrigger asChild>
-          <Button variant="ghost" size="sm">
+          <Button variant='ghost' size='sm'>
             <MoreHorizontal />
           </Button>
         </DropdownMenuTrigger>
-        <DropdownMenuContent align="end" className="w-[200px]">
+        <DropdownMenuContent align='end' className='w-[200px]'>
           <DropdownMenuLabel>Actions</DropdownMenuLabel>
           <DropdownMenuGroup>
             <DropdownMenuItem>
-              <User className="mr-2 h-4 w-4" />
+              <User className='mr-2 h-4 w-4' />
               Assign to...
             </DropdownMenuItem>
             <DropdownMenuItem>
-              <Calendar className="mr-2 h-4 w-4" />
+              <Calendar className='mr-2 h-4 w-4' />
               Set due date...
             </DropdownMenuItem>
             <DropdownMenuSeparator />
             <DropdownMenuSub>
               <DropdownMenuSubTrigger>
-                <Tags className="mr-2 h-4 w-4" />
+                <Tags className='mr-2 h-4 w-4' />
                 Apply label
               </DropdownMenuSubTrigger>
-              <DropdownMenuSubContent className="p-0">
+              <DropdownMenuSubContent className='p-0'>
                 <Command>
                   <CommandInput
-                    placeholder="Filter label..."
+                    placeholder='Filter label...'
                     autoFocus={true}
                   />
                   <CommandList>
@@ -90,8 +91,8 @@ export function CommandDropdownMenu() {
               </DropdownMenuSubContent>
             </DropdownMenuSub>
             <DropdownMenuSeparator />
-            <DropdownMenuItem className="text-red-600">
-              <Trash className="mr-2 h-4 w-4" />
+            <DropdownMenuItem className='text-red-600'>
+              <Trash className='mr-2 h-4 w-4' />
               Delete
               <DropdownMenuShortcut>⌘⌫</DropdownMenuShortcut>
             </DropdownMenuItem>

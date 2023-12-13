@@ -8,9 +8,9 @@ export function TooltipDemo() {
     <TooltipProvider>
       <Tooltip>
         <TooltipTrigger asChild>
-          <Button variant="outline" className="w-10 rounded-full p-0">
-            <Plus className="h-4 w-4" />
-            <span className="sr-only">Add</span>
+          <Button variant='outline' className='w-10 rounded-full p-0'>
+            <Plus className='h-4 w-4' />
+            <span className='sr-only'>Add</span>
           </Button>
         </TooltipTrigger>
         <TooltipContent>
