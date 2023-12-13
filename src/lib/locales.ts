@@ -15,7 +15,7 @@ i18n
       escapeValue: false
     },
     backend: {
-      loadPath: '/src/locales/{{lng}}.yml',
+      loadPath: '/locales/{{lng}}.yml',
       parse: function(data) {
         return yaml.load(data)
       }
