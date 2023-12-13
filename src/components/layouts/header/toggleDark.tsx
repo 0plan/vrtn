@@ -1,6 +1,6 @@
-import { useDarkMode } from '~/utils/dark-mode.ts'
+import { useDarkMode } from '~/lib/dark-mode.ts'
 
-export default function IsDarkMode() {
+export default function ToggleDark() {
   const { isDarkMode, toggle } = useDarkMode()
   return (
     <>

@@ -2,7 +2,7 @@
 
 import * as ScrollAreaPrimitive from '@radix-ui/react-scroll-area'
 
-import { cn } from '~/utils/utils.ts'
+import { cn } from '~/lib/utils.ts'
 import { ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react'
 
 const ScrollArea = forwardRef<
@@ -31,7 +31,7 @@ const ScrollBar = forwardRef<
     ref={ref}
     orientation={orientation}
     className={cn(
-      'flex touch-none select-none transition-colors',
+      'flex touch-none select-none transition-colors ',
       orientation === 'vertical' &&
       'h-full w-2.5 border-l border-l-transparent p-[1px]',
       orientation === 'horizontal' &&

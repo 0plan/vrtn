@@ -8,10 +8,10 @@ export function ToastSimple() {
 
   return (
     <Button
-      variant="outline"
+      variant='outline'
       onClick={() => {
         toast({
-          description: "Your message has been sent.",
+          description: 'Your message has been sent.'
         })
       }}
     >
