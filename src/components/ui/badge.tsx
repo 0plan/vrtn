@@ -1,8 +1,8 @@
 'use client'
 
 import { cva, VariantProps } from 'class-variance-authority'
-import { cn } from '~/lib/utils.ts'
-import { HTMLAttributes } from 'react'
+
+import { cn } from '~/utils/utils.ts'
 
 const badgeVariants = cva(
   'inline-flex items-center border rounded-full px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2',

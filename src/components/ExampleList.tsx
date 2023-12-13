@@ -1,19 +1,36 @@
-import { Fragment, useState } from 'react'
+import { useState } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
-import { ScrollArea } from '@components/ui/scroll-area.tsx'
-import { Separator } from '@components/ui/separator.tsx'
 
 const itemList = [
+  { name: 'Store Example', path: '/examples/store-example' },
+  { name: 'Router Example', path: '/examples/router-example' },
   { name: 'accordion-demo', path: 'accordion-demo' },
   { name: 'alert-demo', path: 'alert-demo' },
   { name: 'alert-dialog-demo', path: 'alert-dialog-demo' },
+  { name: 'alert-destructive', path: 'alert-destructive' },
   { name: 'aspect-ratio-demo', path: 'aspect-ratio-demo' },
   { name: 'avatar-demo', path: 'avatar-demo' },
   { name: 'badge-demo', path: 'badge-demo' },
+  { name: 'badge-destructive', path: 'badge-destructive' },
+  { name: 'badge-outline', path: 'badge-outline' },
+  { name: 'badge-secondary', path: 'badge-secondary' },
   { name: 'button-demo', path: 'button-demo' },
+  { name: 'button-ghost', path: 'button-ghost' },
+  { name: 'button-destructive', path: 'button-destructive' },
+  { name: 'button-link', path: 'button-link' },
+  { name: 'button-loading', path: 'button-loading' },
+  { name: 'button-outline', path: 'button-outline' },
+  { name: 'button-secondary', path: 'button-secondary' },
+  { name: 'button-with-icon', path: 'button-with-icon' },
   { name: 'calendar-demo', path: 'calendar-demo' },
+  { name: 'calendar-date-picker', path: 'calendar-date-picker' },
+  { name: 'calendar-date-range-picker', path: 'calendar-date-range-picker' },
+  { name: 'calendar-date-picker-with-presets', path: 'calendar-date-picker-with-presets' },
   { name: 'card-demo', path: 'card-demo' },
+  { name: 'card-with-form', path: 'card-with-form' },
   { name: 'checkbox-demo', path: 'checkbox-demo' },
+  { name: 'checkbox-disabled', path: 'checkbox-disabled' },
+  { name: 'checkbox-with-text', path: 'checkbox-with-text' },
   { name: 'collapsible-demo', path: 'collapsible-demo' },
   { name: 'command-demo', path: 'command-demo' },
   { name: 'command-dialog-demo', path: 'command-dialog-demo' },
@@ -92,20 +109,18 @@ export default function ExampleList() {
   }
 
   return (
-    <ScrollArea className='h-96 w-52 rounded-md border'>
-      <div className='p-4'>
-        {itemList.map(item => (
-          <Fragment>
-            <div className='text-sm cursor-pointer'
-                 key={item.path}
-                 onClick={() => handleListItemClick(item)}
-            >
-              {item.name}
-            </div>
-            <Separator className='my-2' />
-          </Fragment>
-        ))}
-      </div>
-    </ScrollArea>
+    <div>
+      <ul className="my-6 ml-6 list-disc [&>li]:mt-2">
+        {itemList.map(item => {
+          return <li
+            key={item.path}
+            onClick={() => handleListItemClick(item)}
+          >
+            {item.name} | item.path
+          </li>
+        })
+        }
+      </ul>
+    </div>
   )
 }

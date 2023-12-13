@@ -6,9 +6,7 @@ export default function Home() {
   return (
     <main className={'flex'}>
       <ExampleList />
-      <div className='container'>
-        <Outlet />
-      </div>
+      <Outlet />
     </main>
   )
 }

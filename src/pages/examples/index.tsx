@@ -1,13 +1,30 @@
 import { AccordionDemo } from './accordion/demo'
 import { AlertDialogDemo } from './alert-dialog/demo'
 import { AlertDemo } from './alert/demo'
+import { AlertDestructive } from './alert/destructive'
 import { AspectRatioDemo } from './aspect-ratio/demo'
 import { AvatarDemo } from './avatar/demo'
 import { BadgeDemo } from './badge/demo'
+import { BadgeDestructive } from './badge/destructive'
+import { BadgeOutline } from './badge/outline'
+import { BadgeSecondary } from './badge/secondary'
 import { ButtonDemo } from './button/demo'
+import { ButtonDestructive } from './button/destructive'
+import { ButtonGhost } from './button/ghost'
+import { ButtonLink } from './button/link'
+import { ButtonLoading } from './button/loading'
+import { ButtonOutline } from './button/outline'
+import { ButtonSecondary } from './button/secondary'
+import { ButtonWithIcon } from './button/with-icon'
+import { CalendarDatePicker } from './calendar/date-picker'
+import { CalendarDateRangePicker } from './calendar/date-range-picker'
 import { CalendarDemo } from './calendar/demo'
+import { CalendarDatePickerWithPresets } from './calendar/with-presets'
 import { CardDemo } from './card/demo'
+import { CardWithForm } from './card/with-form'
 import { CheckboxDemo } from './checkbox/demo'
+import { CheckboxDisabled } from './checkbox/disabled'
+import { CheckboxWithText } from './checkbox/with-text'
 import { CollapsibleDemo } from './collapsible/demo'
 import { CommandCombobox } from './command/combobox'
 import { CommandDemo } from './command/demo'
@@ -61,6 +78,11 @@ import { ToggleWithText } from './toggle/with-text'
 import { TooltipDemo } from './tooltip/demo'
 import { TypographyBlockquote } from './typography/blockquote'
 import { TypographyDemo } from './typography/demo'
+import { TypographyH1 } from './typography/h1'
+import { TypographyH2 } from './typography/h2'
+import { TypographyH3 } from './typography/h3'
+import { TypographyH4 } from './typography/h4'
+import { TypographyInlineCode } from './typography/inline-code'
 import { TypographyLarge } from './typography/large'
 import { TypographyLead } from './typography/lead'
 import { TypographyList } from './typography/list'
@@ -73,13 +95,30 @@ export const examples = {
   AccordionDemo,
   AlertDemo,
   AlertDialogDemo,
+  AlertDestructive,
   AspectRatioDemo,
   AvatarDemo,
   BadgeDemo,
+  BadgeDestructive,
+  BadgeOutline,
+  BadgeSecondary,
   ButtonDemo,
+  ButtonGhost,
+  ButtonDestructive,
+  ButtonLink,
+  ButtonLoading,
+  ButtonOutline,
+  ButtonSecondary,
+  ButtonWithIcon,
   CalendarDemo,
+  CalendarDatePicker,
+  CalendarDateRangePicker,
+  CalendarDatePickerWithPresets,
   CardDemo,
+  CardWithForm,
   CheckboxDemo,
+  CheckboxDisabled,
+  CheckboxWithText,
   CollapsibleDemo,
   CommandDemo,
   CommandDialogDemo,
@@ -127,6 +166,11 @@ export const examples = {
   TooltipDemo,
   TypographyBlockquote,
   TypographyDemo,
+  TypographyH1,
+  TypographyH2,
+  TypographyH3,
+  TypographyH4,
+  TypographyInlineCode,
   TypographyLarge,
   TypographyLead,
   TypographyList,
@@ -139,5 +183,5 @@ export const examples = {
   ToggleLg,
   ToggleOutline,
   ToggleDisabled,
-  ToggleWithText
+  ToggleWithText,
 }
