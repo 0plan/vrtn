@@ -21,6 +21,7 @@ VRTN is Vite React Typescript i18n template
 - Unit Testing with [Vitest](https://github.com/vitest-dev/vitest), E2E Testing with [Cypress](https://cypress.io/)
   on [GitHub Actions](https://github.com/features/actions)
 - Docker
+- [Storybook](https://storybook.js.org/)
 
 [//]: # (## Try it now!)
 
