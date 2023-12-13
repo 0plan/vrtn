@@ -1,10 +1,11 @@
-import { Button } from '@components/ui/button.tsx'
+import { useTranslation } from 'react-i18next'
 
 export default function About() {
+  const { t } = useTranslation()
 
   return (
     <main>
-      <Button variant='outline'>test</Button>
+      <p className={'text-3xl'}>{t('menu.about')}</p>
     </main>
   )
 }

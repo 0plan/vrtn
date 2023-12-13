@@ -1,24 +1,25 @@
 import { Link } from 'react-router-dom'
 import Menu from '@components/layouts/header/menu.tsx'
-import ToggleDark from '@components/toggleDark.tsx'
-import ToggleLanguage from '@components/toggleLanguage.tsx'
 import MobileMenu from '@components/layouts/header/mobileMenu.tsx'
-import '~/lib/locales.ts'
-import { t } from 'i18next'
+import ToggleLanguage from '@components/layouts/header/toggleLanguage.tsx'
+import ToggleDark from '@components/layouts/header/toggleDark.tsx'
+import { useTranslation } from 'react-i18next'
 
 const Header = () => {
+  const { t } = useTranslation()
+
   const menuItems = [
-    { path: '/examples', name: t('examples') },
-    { path: '/todo', name: t('Todo') },
-    { path: '/about', name: t('about') }]
+    { path: '/examples', name: t('menu.example') },
+    { path: '/todo', name: t('menu.todo') },
+    { path: '/about', name: t('menu.about') }]
   return (
     <header
       className='flex flex-wrap justify-start z-50 w-full text-sm py-4 '>
       <nav className='flex items-center max-w-[85rem] w-full mx-auto px-4 justify-between' aria-label='Global'>
         <div className='sm:hidden'>
-          <MobileMenu menuItems={menuItems}/>
+          <MobileMenu menuItems={menuItems} />
         </div>
-        <Link to='/' className='text-xl font-semibold'>{t('projectName')}</Link>
+        <Link to='/' className='text-xl font-semibold'>{t('project.title')}</Link>
         <div className='hidden basis-full grow sm:block'>
           <Menu menuItems={menuItems} />
         </div>

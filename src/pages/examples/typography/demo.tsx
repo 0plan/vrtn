@@ -134,7 +134,7 @@ export function TypographyDemo() {
         <div className={'py-2'}><TypographyH4 /></div>
       </div>
       <div>
-      <p>Inline Code</p>
+        <p>Inline Code</p>
         <TypographyInlineCode />
       </div>
     </div>

@@ -7,7 +7,7 @@ export default function Home() {
     <main className={'flex'}>
       <ExampleList />
       <div className='container'>
-          <Outlet />
+        <Outlet />
       </div>
     </main>
   )

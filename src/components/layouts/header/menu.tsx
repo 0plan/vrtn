@@ -1,5 +1,4 @@
 import { Link, useLocation } from 'react-router-dom'
-import { t } from 'i18next'
 
 interface IProps {
   item: Item
@@ -35,7 +34,7 @@ const IsActiveLink = (props: IProps) => {
 }
 
 
-const Menu = ({menuItems}) => {
+const Menu = ({ menuItems }) => {
 
   return (
     <div className='flex flex-col gap-5 mt-5 sm:flex-row sm:items-center sm:justify-end sm:mt-0 sm:ps-5'>

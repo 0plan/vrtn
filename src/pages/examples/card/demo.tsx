@@ -27,7 +27,7 @@ export function CardDemo({ className, ...props }: CardProps) {
   return (
     <div className={'flex'}>
       <div className={'mx-3'}>
-      <p>Default Card</p>
+        <p>Default Card</p>
         <Card className={cn('w-[380px]', className)} {...props}>
           <CardHeader>
             <CardTitle>Notifications</CardTitle>

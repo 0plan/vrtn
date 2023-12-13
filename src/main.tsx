@@ -12,7 +12,7 @@ import '~/lib/dark-mode.ts'
 import Todo from '~/pages/Todo.tsx'
 import 'virtual:uno.css'
 import { HelmetProvider } from 'react-helmet-async'
-import '~/lib/locales.ts'
+import '~/lib/locales'
 
 const router = createBrowserRouter([
   {
