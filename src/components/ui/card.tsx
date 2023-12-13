@@ -1,6 +1,6 @@
 'use client'
 
-import { cn } from '~/lib/utils.ts'
+import { cn } from '~/utils/utils.ts'
 import { forwardRef } from 'react'
 
 const Card = forwardRef<
