@@ -3,7 +3,7 @@
 import * as React from 'react'
 import { ArrowUpCircle, CheckCircle2, Circle, HelpCircle, LucideIcon, XCircle } from 'lucide-react'
 
-import { cn } from '~/utils/utils.ts'
+import { cn } from '~/lib/utils.ts'
 import { Button } from '@components/ui/button'
 import { Command, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList } from '@components/ui/command'
 import { Popover, PopoverContent, PopoverTrigger } from '@components/ui/popover'
@@ -16,30 +16,30 @@ type Status = {
 
 const statuses: Status[] = [
   {
-    value: "backlog",
-    label: "Backlog",
-    icon: HelpCircle,
+    value: 'backlog',
+    label: 'Backlog',
+    icon: HelpCircle
   },
   {
-    value: "todo",
-    label: "Todo",
-    icon: Circle,
+    value: 'todo',
+    label: 'Todo',
+    icon: Circle
   },
   {
-    value: "in progress",
-    label: "In Progress",
-    icon: ArrowUpCircle,
+    value: 'in progress',
+    label: 'In Progress',
+    icon: ArrowUpCircle
   },
   {
-    value: "done",
-    label: "Done",
-    icon: CheckCircle2,
+    value: 'done',
+    label: 'Done',
+    icon: CheckCircle2
   },
   {
-    value: "canceled",
-    label: "Canceled",
-    icon: XCircle,
-  },
+    value: 'canceled',
+    label: 'Canceled',
+    icon: XCircle
+  }
 ]
 
 export function CommandPopover() {
@@ -49,18 +49,18 @@ export function CommandPopover() {
   )
 
   return (
-    <div className="flex items-center space-x-4">
-      <p className="text-sm text-muted-foreground">Status</p>
+    <div className='flex items-center space-x-4'>
+      <p className='text-sm text-muted-foreground'>Status</p>
       <Popover open={open} onOpenChange={setOpen}>
         <PopoverTrigger asChild>
           <Button
-            variant="outline"
-            size="sm"
-            className="w-[150px] justify-start"
+            variant='outline'
+            size='sm'
+            className='w-[150px] justify-start'
           >
             {selectedStatus ? (
               <>
-                <selectedStatus.icon className="mr-2 h-4 w-4 shrink-0" />
+                <selectedStatus.icon className='mr-2 h-4 w-4 shrink-0' />
                 {selectedStatus.label}
               </>
             ) : (
@@ -68,9 +68,9 @@ export function CommandPopover() {
             )}
           </Button>
         </PopoverTrigger>
-        <PopoverContent className="p-0" side="right" align="start">
+        <PopoverContent className='p-0' side='right' align='start'>
           <Command>
-            <CommandInput placeholder="Change status..." />
+            <CommandInput placeholder='Change status...' />
             <CommandList>
               <CommandEmpty>No results found.</CommandEmpty>
               <CommandGroup>
@@ -80,17 +80,17 @@ export function CommandPopover() {
                     onSelect={(value) => {
                       setSelectedStatus(
                         statuses.find((priority) => priority.value === value) ||
-                          null
+                        null
                       )
                       setOpen(false)
                     }}
                   >
                     <status.icon
                       className={cn(
-                        "mr-2 h-4 w-4",
+                        'mr-2 h-4 w-4',
                         status.value === selectedStatus?.value
-                          ? "opacity-100"
-                          : "opacity-40"
+                          ? 'opacity-100'
+                          : 'opacity-40'
                       )}
                     />
                     <span>{status.label}</span>
