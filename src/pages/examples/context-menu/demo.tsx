@@ -11,17 +11,16 @@ import {
   ContextMenuSub,
   ContextMenuSubContent,
   ContextMenuSubTrigger,
-  ContextMenuTrigger
+  ContextMenuTrigger,
 } from '@components/ui/context-menu'
 
 export function ContextMenuDemo() {
   return (
     <ContextMenu>
-      <ContextMenuTrigger
-        className='flex h-[150px] w-[300px] items-center justify-center rounded-md border border-dashed text-sm'>
+      <ContextMenuTrigger className="flex h-[150px] w-[300px] items-center justify-center rounded-md border border-dashed text-sm">
         Right click here
       </ContextMenuTrigger>
-      <ContextMenuContent className='w-64'>
+      <ContextMenuContent className="w-64">
         <ContextMenuItem inset>
           Back
           <ContextMenuShortcut>⌘[</ContextMenuShortcut>
@@ -36,7 +35,7 @@ export function ContextMenuDemo() {
         </ContextMenuItem>
         <ContextMenuSub>
           <ContextMenuSubTrigger inset>More Tools</ContextMenuSubTrigger>
-          <ContextMenuSubContent className='w-48'>
+          <ContextMenuSubContent className="w-48">
             <ContextMenuItem>
               Save Page As...
               <ContextMenuShortcut>⇧⌘S</ContextMenuShortcut>
@@ -54,13 +53,13 @@ export function ContextMenuDemo() {
         </ContextMenuCheckboxItem>
         <ContextMenuCheckboxItem>Show Full URLs</ContextMenuCheckboxItem>
         <ContextMenuSeparator />
-        <ContextMenuRadioGroup value='pedro'>
+        <ContextMenuRadioGroup value="pedro">
           <ContextMenuLabel inset>People</ContextMenuLabel>
           <ContextMenuSeparator />
-          <ContextMenuRadioItem value='pedro'>
+          <ContextMenuRadioItem value="pedro">
             Pedro Duarte
           </ContextMenuRadioItem>
-          <ContextMenuRadioItem value='colm'>Colm Tuite</ContextMenuRadioItem>
+          <ContextMenuRadioItem value="colm">Colm Tuite</ContextMenuRadioItem>
         </ContextMenuRadioGroup>
       </ContextMenuContent>
     </ContextMenu>

@@ -2,19 +2,24 @@ import * as AlertDialogPrimitive from '@radix-ui/react-alert-dialog'
 
 import { cn } from '~/lib/utils.ts'
 import { buttonVariants } from '@components/ui/button'
-import { ComponentPropsWithoutRef, ElementRef, forwardRef, HTMLAttributes } from 'react'
+import {
+  ComponentPropsWithoutRef,
+  ElementRef,
+  forwardRef,
+  HTMLAttributes,
+} from 'react'
 
 const AlertDialog = AlertDialogPrimitive.Root
 
 const AlertDialogTrigger = AlertDialogPrimitive.Trigger
 
 const AlertDialogPortal = ({
-                             className,
-                             children,
-                             ...props
-                           }: AlertDialogPrimitive.AlertDialogPortalProps) => (
+  className,
+  children,
+  ...props
+}: AlertDialogPrimitive.AlertDialogPortalProps) => (
   <AlertDialogPrimitive.Portal className={cn(className)} {...props}>
-    <div className='fixed inset-0 z-50 flex items-end justify-center sm:items-center'>
+    <div className="fixed inset-0 z-50 flex items-end justify-center sm:items-center">
       {children}
     </div>
   </AlertDialogPrimitive.Portal>
@@ -27,8 +32,8 @@ const AlertDialogOverlay = forwardRef<
 >(({ className, children, ...props }, ref) => (
   <AlertDialogPrimitive.Overlay
     className={cn(
-      'fixed inset-0 z-50 bg-background/80 backdrop-blur-sm transition-opacity animate-in fade-in',
-      className
+      'animate-in fade-in fixed inset-0 z-50 bg-background/80 backdrop-blur-sm transition-opacity',
+      className,
     )}
     {...props}
     ref={ref}
@@ -45,8 +50,8 @@ const AlertDialogContent = forwardRef<
     <AlertDialogPrimitive.Content
       ref={ref}
       className={cn(
-        'fixed z-50 grid w-full max-w-lg scale-100 gap-4 border bg-background p-6 opacity-100 shadow-lg animate-in fade-in-90 slide-in-from-bottom-10 sm:rounded-lg sm:zoom-in-90 sm:slide-in-from-bottom-0 md:w-full',
-        className
+        'animate-in fade-in-90 slide-in-from-bottom-10 sm:zoom-in-90 sm:slide-in-from-bottom-0 fixed z-50 grid w-full max-w-lg scale-100 gap-4 border bg-background p-6 opacity-100 shadow-lg sm:rounded-lg md:w-full',
+        className,
       )}
       {...props}
     />
@@ -55,13 +60,13 @@ const AlertDialogContent = forwardRef<
 AlertDialogContent.displayName = AlertDialogPrimitive.Content.displayName
 
 const AlertDialogHeader = ({
-                             className,
-                             ...props
-                           }: HTMLAttributes<HTMLDivElement>) => (
+  className,
+  ...props
+}: HTMLAttributes<HTMLDivElement>) => (
   <div
     className={cn(
       'flex flex-col space-y-2 text-center sm:text-left',
-      className
+      className,
     )}
     {...props}
   />
@@ -69,13 +74,13 @@ const AlertDialogHeader = ({
 AlertDialogHeader.displayName = 'AlertDialogHeader'
 
 const AlertDialogFooter = ({
-                             className,
-                             ...props
-                           }: HTMLAttributes<HTMLDivElement>) => (
+  className,
+  ...props
+}: HTMLAttributes<HTMLDivElement>) => (
   <div
     className={cn(
       'flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2',
-      className
+      className,
     )}
     {...props}
   />
@@ -128,7 +133,7 @@ const AlertDialogCancel = forwardRef<
     className={cn(
       buttonVariants({ variant: 'outline' }),
       'mt-2 sm:mt-0',
-      className
+      className,
     )}
     {...props}
   />
@@ -144,5 +149,5 @@ export {
   AlertDialogTitle,
   AlertDialogDescription,
   AlertDialogAction,
-  AlertDialogCancel
+  AlertDialogCancel,
 }

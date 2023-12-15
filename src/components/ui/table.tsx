@@ -1,18 +1,17 @@
 import { cn } from '~/lib/utils.ts'
 import { forwardRef, HTMLAttributes } from 'react'
 
-const Table = forwardRef<
-  HTMLTableElement,
-  HTMLAttributes<HTMLTableElement>
->(({ className, ...props }, ref) => (
-  <div className='w-full overflow-auto'>
-    <table
-      ref={ref}
-      className={cn('w-full caption-bottom text-sm', className)}
-      {...props}
-    />
-  </div>
-))
+const Table = forwardRef<HTMLTableElement, HTMLAttributes<HTMLTableElement>>(
+  ({ className, ...props }, ref) => (
+    <div className="w-full overflow-auto">
+      <table
+        ref={ref}
+        className={cn('w-full caption-bottom text-sm', className)}
+        {...props}
+      />
+    </div>
+  ),
+)
 Table.displayName = 'Table'
 
 const TableHeader = forwardRef<
@@ -55,7 +54,7 @@ const TableRow = forwardRef<
     ref={ref}
     className={cn(
       'border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted',
-      className
+      className,
     )}
     {...props}
   />
@@ -70,7 +69,7 @@ const TableHead = forwardRef<
     ref={ref}
     className={cn(
       'h-12 px-4 text-left align-middle font-medium text-muted-foreground [&:has([role=checkbox])]:pr-0',
-      className
+      className,
     )}
     {...props}
   />
@@ -109,5 +108,5 @@ export {
   TableHead,
   TableRow,
   TableCell,
-  TableCaption
+  TableCaption,
 }

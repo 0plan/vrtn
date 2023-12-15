@@ -7,13 +7,13 @@ export function ToastDestructive() {
 
   return (
     <Button
-      variant='outline'
+      variant="outline"
       onClick={() => {
         toast({
           variant: 'destructive',
           title: 'Uh oh! Something went wrong.',
           description: 'There was a problem with your request.',
-          action: <ToastAction altText='Try again'>Try again</ToastAction>
+          action: <ToastAction altText="Try again">Try again</ToastAction>,
         })
       }}
     >
