@@ -16,7 +16,7 @@ i18n
     },
     backend: {
       loadPath: '/locales/{{lng}}.yml',
-      parse: function (data) {
+      parse: function (data: string) {
         return yaml.load(data)
       },
     },
