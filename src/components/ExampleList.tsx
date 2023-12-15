@@ -24,7 +24,10 @@ const itemList = [
   { name: 'dialog-demo', path: 'dialog-demo' },
   { name: 'dropdown-menu-checkboxes', path: 'dropdown-menu-checkboxes' },
   { name: 'dropdown-menu-demo', path: 'dropdown-menu-demo' },
-  { name: 'dropdown-menu-radio-group-demo', path: 'dropdown-menu-radio-group-demo' },
+  {
+    name: 'dropdown-menu-radio-group-demo',
+    path: 'dropdown-menu-radio-group-demo',
+  },
   { name: 'hover-card-demo', path: 'hover-card-demo' },
   { name: 'input-demo', path: 'input-demo' },
   { name: 'input-disabled', path: 'input-disabled' },
@@ -78,31 +81,30 @@ const itemList = [
   { name: 'toggle-lg', path: 'toggle-lg' },
   { name: 'toggle-outline', path: 'toggle-outline' },
   { name: 'toggle-disabled', path: 'toggle-disabled' },
-  { name: 'toggle-with-text', path: 'toggle-with-text' }
+  { name: 'toggle-with-text', path: 'toggle-with-text' },
 ]
 export default function ExampleList() {
   const navigate = useNavigate()
   const location = useLocation()
   const [path, setPath] = useState(location.pathname)
-  const handleListItemClick = (
-    item: { name: string, path: string }
-  ) => {
+  const handleListItemClick = (item: { name: string; path: string }) => {
     navigate(item.path)
     setPath(item.path)
   }
 
   return (
-    <ScrollArea className='h-96 w-52 rounded-md border'>
-      <div className='p-4'>
-        {itemList.map(item => (
+    <ScrollArea className="h-96 w-52 rounded-md border">
+      <div className="p-4">
+        {itemList.map((item) => (
           <Fragment>
-            <div className='text-sm cursor-pointer'
-                 key={item.path}
-                 onClick={() => handleListItemClick(item)}
+            <div
+              className="cursor-pointer text-sm"
+              key={item.path}
+              onClick={() => handleListItemClick(item)}
             >
               {item.name}
             </div>
-            <Separator className='my-2' />
+            <Separator className="my-2" />
           </Fragment>
         ))}
       </div>

@@ -6,11 +6,11 @@ export function ToastWithTitle() {
 
   return (
     <Button
-      variant='outline'
+      variant="outline"
       onClick={() => {
         toast({
           title: 'Uh oh! Something went wrong.',
-          description: 'There was a problem with your request.'
+          description: 'There was a problem with your request.',
         })
       }}
     >

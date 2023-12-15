@@ -10,5 +10,5 @@ export function ProgressDemo() {
     return () => clearTimeout(timer)
   }, [])
 
-  return <Progress value={progress} className='w-[60%]' />
+  return <Progress value={progress} className="w-[60%]" />
 }

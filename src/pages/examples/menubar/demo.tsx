@@ -11,7 +11,7 @@ import {
   MenubarSub,
   MenubarSubContent,
   MenubarSubTrigger,
-  MenubarTrigger
+  MenubarTrigger,
 } from '@components/ui/menubar'
 
 export function MenubarDemo() {
@@ -91,10 +91,10 @@ export function MenubarDemo() {
       <MenubarMenu>
         <MenubarTrigger>Profiles</MenubarTrigger>
         <MenubarContent>
-          <MenubarRadioGroup value='benoit'>
-            <MenubarRadioItem value='andy'>Andy</MenubarRadioItem>
-            <MenubarRadioItem value='benoit'>Benoit</MenubarRadioItem>
-            <MenubarRadioItem value='Luis'>Luis</MenubarRadioItem>
+          <MenubarRadioGroup value="benoit">
+            <MenubarRadioItem value="andy">Andy</MenubarRadioItem>
+            <MenubarRadioItem value="benoit">Benoit</MenubarRadioItem>
+            <MenubarRadioItem value="Luis">Luis</MenubarRadioItem>
           </MenubarRadioGroup>
           <MenubarSeparator />
           <MenubarItem inset>Edit...</MenubarItem>

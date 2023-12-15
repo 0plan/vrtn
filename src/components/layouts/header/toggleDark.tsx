@@ -4,12 +4,11 @@ export default function ToggleDark() {
   const { isDarkMode, toggle } = useDarkMode()
   return (
     <>
-      {
-        isDarkMode ?
-          <button onClick={toggle} className='text-2xl i-carbon-sun' />
-          : <button onClick={toggle} className='text-2xl i-carbon-moon' />
-      }
+      {isDarkMode ? (
+        <button onClick={toggle} className="i-carbon-sun text-2xl" />
+      ) : (
+        <button onClick={toggle} className="i-carbon-moon text-2xl" />
+      )}
     </>
   )
 }
-
