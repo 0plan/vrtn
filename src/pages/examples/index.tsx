@@ -1,14 +1,3 @@
-import { AccordionDemo } from './accordion/demo'
-import { AlertDialogDemo } from './alert-dialog/demo'
-import { AlertDemo } from './alert/demo'
-import { AspectRatioDemo } from './aspect-ratio/demo'
-import { AvatarDemo } from './avatar/demo'
-import { BadgeDemo } from './badge/demo'
-import { ButtonDemo } from './button/demo'
-import { CalendarDemo } from './calendar/demo'
-import { CardDemo } from './card/demo'
-import { CheckboxDemo } from './checkbox/demo'
-import { CollapsibleDemo } from './collapsible/demo'
 import { CommandCombobox } from './command/combobox'
 import { CommandDemo } from './command/demo'
 import { CommandDialogDemo } from './command/dialog'
@@ -70,17 +59,6 @@ import { TypographySmall } from './typography/small'
 import { TypographyTable } from './typography/table'
 
 export const examples = {
-  AccordionDemo,
-  AlertDemo,
-  AlertDialogDemo,
-  AspectRatioDemo,
-  AvatarDemo,
-  BadgeDemo,
-  ButtonDemo,
-  CalendarDemo,
-  CardDemo,
-  CheckboxDemo,
-  CollapsibleDemo,
   CommandDemo,
   CommandDialogDemo,
   CommandCombobox,
