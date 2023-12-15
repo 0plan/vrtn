@@ -13,8 +13,9 @@
     "tsc": "tsc",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "storybook": "storybook dev -p 6006 -s public",
+    "build-storybook": "storybook build -s public",
+    "serve-storybook": "serve storybook-static"
   },
   "dependencies": {
     "@radix-ui/react-accessible-icon": "^1.0.3",
