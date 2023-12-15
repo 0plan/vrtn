@@ -1,15 +1,27 @@
-import * as React from 'react'
+import type { ComponentStory, Meta, StoryObj } from '@storybook/react'
 import { ChevronsUpDown } from 'lucide-react'
-
 import { Button } from '@components/ui/button'
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
 } from '@components/ui/collapsible'
+import { useState } from 'react'
 
-export function CollapsibleDemo() {
-  const [isOpen, setIsOpen] = React.useState(false)
+const meta = {
+  title: 'Examples/Collapsible',
+  component: Collapsible,
+  parameters: {
+    layout: 'centered',
+  },
+  tags: ['autodocs'],
+} satisfies Meta<typeof Collapsible>
+
+export default meta
+type Story = StoryObj<typeof meta>
+
+const CollapsibleTemplate: ComponentStory<typeof Collapsible> = (args) => {
+  const [isOpen, setIsOpen] = useState(false)
 
   return (
     <Collapsible
@@ -42,3 +54,5 @@ export function CollapsibleDemo() {
     </Collapsible>
   )
 }
+
+export const DefaultCollapsible = CollapsibleTemplate.bind({})
