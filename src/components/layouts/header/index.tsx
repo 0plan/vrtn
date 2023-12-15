@@ -11,25 +11,28 @@ const Header = () => {
   const menuItems = [
     { path: '/examples', name: t('menu.example') },
     { path: '/todo', name: t('menu.todo') },
-    { path: '/about', name: t('menu.about') }]
+    { path: '/about', name: t('menu.about') },
+  ]
   return (
-    <header
-      className='flex flex-wrap justify-start z-50 w-full text-sm py-4 '>
-      <nav className='flex items-center max-w-[85rem] w-full mx-auto px-4 justify-between' aria-label='Global'>
-        <div className='sm:hidden'>
+    <header className="z-50 flex w-full flex-wrap justify-start py-4 text-sm ">
+      <nav
+        className="mx-auto flex w-full max-w-[85rem] items-center justify-between px-4"
+        aria-label="Global"
+      >
+        <div className="sm:hidden">
           <MobileMenu menuItems={menuItems} />
         </div>
-        <Link to='/' className='text-xl font-semibold'>{t('project.title')}</Link>
-        <div className='hidden basis-full grow sm:block'>
+        <Link to="/" className="text-xl font-semibold">
+          {t('project.title')}
+        </Link>
+        <div className="hidden grow basis-full sm:block">
           <Menu menuItems={menuItems} />
         </div>
-        <div className='flex items-center justify-end sm:px-10'>
-          <div
-            className='inline-flex justify-center items-center w-10 h-10 text-center  rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 transition'>
+        <div className="flex items-center justify-end sm:px-10">
+          <div className="inline-flex h-10 w-10 items-center justify-center rounded-full  text-center transition focus:outline-none focus:ring-2 focus:ring-offset-2">
             <ToggleDark />
           </div>
-          <div
-            className='inline-flex justify-center items-center w-10 h-10 text-center rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 transition'>
+          <div className="inline-flex h-10 w-10 items-center justify-center rounded-full text-center transition focus:outline-none focus:ring-2 focus:ring-offset-2">
             <ToggleLanguage />
           </div>
         </div>
@@ -39,4 +42,3 @@ const Header = () => {
 }
 
 export default Header
-

@@ -12,14 +12,14 @@ i18n
     lng: navigator.language.substring(0, 2),
     fallbackLng: import.meta.env.VITE_FALLBACK_LANG,
     interpolation: {
-      escapeValue: false
+      escapeValue: false,
     },
     backend: {
       loadPath: '/locales/{{lng}}.yml',
-      parse: function(data) {
+      parse: function (data) {
         return yaml.load(data)
-      }
-    }
+      },
+    },
   })
 
 export default i18n

@@ -11,25 +11,25 @@ const toggleVariants = cva(
       variant: {
         default: 'bg-transparent',
         outline:
-          'bg-transparent border border-input hover:bg-accent hover:text-accent-foreground'
+          'bg-transparent border border-input hover:bg-accent hover:text-accent-foreground',
       },
       size: {
         default: 'h-10 px-3',
         sm: 'h-9 px-2.5',
-        lg: 'h-11 px-5'
-      }
+        lg: 'h-11 px-5',
+      },
     },
     defaultVariants: {
       variant: 'default',
-      size: 'default'
-    }
-  }
+      size: 'default',
+    },
+  },
 )
 
 const Toggle = forwardRef<
   ElementRef<typeof TogglePrimitive.Root>,
   ComponentPropsWithoutRef<typeof TogglePrimitive.Root> &
-  VariantProps<typeof toggleVariants>
+    VariantProps<typeof toggleVariants>
 >(({ className, variant, size, ...props }, ref) => (
   <TogglePrimitive.Root
     ref={ref}

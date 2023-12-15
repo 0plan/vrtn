@@ -11,18 +11,14 @@ export interface Item {
 
 const activeLink = (item: Item) => {
   return (
-    <Link
-      className={'font-medium text-blue-500'}
-      to={item.path}>
+    <Link className={'font-medium text-blue-500'} to={item.path}>
       {item.name}
     </Link>
   )
 }
 const deActiveLink = (item: Item) => {
   return (
-    <Link
-      className={'font-medium'}
-      to={item.path}>
+    <Link className={'font-medium'} to={item.path}>
       {item.name}
     </Link>
   )
@@ -30,18 +26,16 @@ const deActiveLink = (item: Item) => {
 
 const IsActiveLink = (props: IProps) => {
   const location = useLocation()
-  return location.pathname.includes(props.item.path) ? activeLink(props.item) : deActiveLink(props.item)
+  return location.pathname.includes(props.item.path)
+    ? activeLink(props.item)
+    : deActiveLink(props.item)
 }
 
-
 const Menu = ({ menuItems }) => {
-
   return (
-    <div className='flex flex-col gap-5 mt-5 sm:flex-row sm:items-center sm:justify-end sm:mt-0 sm:ps-5'>
+    <div className="mt-5 flex flex-col gap-5 sm:mt-0 sm:flex-row sm:items-center sm:justify-end sm:ps-5">
       {menuItems.map((item) => {
-        return (
-          <IsActiveLink key={item.path} item={item} />
-        )
+        return <IsActiveLink key={item.path} item={item} />
       })}
     </div>
   )

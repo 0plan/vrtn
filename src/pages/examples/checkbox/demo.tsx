@@ -7,20 +7,24 @@ export function CheckboxDemo() {
     <div>
       <p>Default Checkbox</p>
       <div className={'py-2'}>
-        <div className='flex items-center space-x-2'>
-          <Checkbox id='terms' />
+        <div className="flex items-center space-x-2">
+          <Checkbox id="terms" />
           <label
-            htmlFor='terms'
-            className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70'
+            htmlFor="terms"
+            className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
           >
             Accept terms and conditions
           </label>
         </div>
       </div>
       <p>Disabled Checkbox</p>
-      <div className={'py-2'}><CheckboxDisabled /></div>
+      <div className={'py-2'}>
+        <CheckboxDisabled />
+      </div>
       <p>Checkbox With Text</p>
-      <div className={'py-2'}><CheckboxWithText /></div>
+      <div className={'py-2'}>
+        <CheckboxWithText />
+      </div>
     </div>
   )
 }

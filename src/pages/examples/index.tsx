@@ -139,5 +139,5 @@ export const examples = {
   ToggleLg,
   ToggleOutline,
   ToggleDisabled,
-  ToggleWithText
+  ToggleWithText,
 }

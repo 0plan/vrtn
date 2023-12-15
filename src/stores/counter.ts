@@ -9,7 +9,7 @@ type Store = {
 const useCounter = create<Store>()((set) => ({
   count: 50,
   inc: () => set((state) => ({ count: state.count + 1 })),
-  dec: () => set((state) => ({ count: state.count - 1 }))
+  dec: () => set((state) => ({ count: state.count - 1 })),
 }))
 
 export default useCounter

@@ -13,10 +13,10 @@ export function CalendarDemo() {
       <p className={'py-3'}>Default Calendar</p>
       <div>
         <Calendar
-          mode='single'
+          mode="single"
           selected={date}
           onSelect={setDate}
-          className='rounded-md border'
+          className="rounded-md border"
         />
       </div>
       <p className={'py-3'}>Date Picker</p>

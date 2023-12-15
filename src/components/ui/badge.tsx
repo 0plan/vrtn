@@ -13,19 +13,18 @@ const badgeVariants = cva(
           'bg-secondary hover:bg-secondary/80 border-transparent text-secondary-foreground',
         destructive:
           'bg-destructive hover:bg-destructive/80 border-transparent text-destructive-foreground',
-        outline: 'text-foreground'
-      }
+        outline: 'text-foreground',
+      },
     },
     defaultVariants: {
-      variant: 'default'
-    }
-  }
+      variant: 'default',
+    },
+  },
 )
 
 export interface BadgeProps
   extends HTMLAttributes<HTMLDivElement>,
-    VariantProps<typeof badgeVariants> {
-}
+    VariantProps<typeof badgeVariants> {}
 
 function Badge({ className, variant, ...props }: BadgeProps) {
   return (

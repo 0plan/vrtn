@@ -11,9 +11,13 @@ export function useDarkMode(defaultValue?: boolean): UseDarkModeOutput {
   const isDarkOS = useMediaQuery(COLOR_SCHEME_QUERY)
   const [isDarkMode, setDarkMode] = useLocalStorage<boolean>(
     'usehooks-ts-dark-mode',
-    defaultValue ?? isDarkOS ?? false
+    defaultValue ?? isDarkOS ?? false,
   )
-  if (localStorage['usehooks-ts-dark-mode'] === 'true' || (!('usehooks-ts-dark-mode' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+  if (
+    localStorage['usehooks-ts-dark-mode'] === 'true' ||
+    (!('usehooks-ts-dark-mode' in localStorage) &&
+      window.matchMedia('(prefers-color-scheme: dark)').matches)
+  ) {
     document.documentElement.classList.add('dark')
   } else {
     document.documentElement.classList.remove('dark')
@@ -24,6 +28,6 @@ export function useDarkMode(defaultValue?: boolean): UseDarkModeOutput {
 
   return {
     isDarkMode,
-    toggle: () => setDarkMode(prev => !prev)
+    toggle: () => setDarkMode((prev) => !prev),
   }
 }
