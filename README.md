@@ -11,10 +11,10 @@ VRTN is Vite React Typescript i18n template
 - [I18n ready](./src/locales)
 - [Use icons]()
 - [Deploy on Vercel](https://vercel.com)
+- [File based routing](https://github.com/oedotme/generouted)
 
 ## 🚧 TO-DO
 
-- [File based routing]()
 - [PWA]()
 - [Layout]()
 - [Markdown Support]()

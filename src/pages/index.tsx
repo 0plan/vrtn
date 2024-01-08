@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next'
 
-export default function Home() {
+export default function Index() {
   const { t } = useTranslation()
   return (
     <div className="relative overflow-hidden before:absolute before:start-1/2 before:top-0">
