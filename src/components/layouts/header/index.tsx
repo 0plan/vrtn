@@ -1,24 +1,17 @@
-import { Link } from 'react-router-dom'
-import Menu from '@components/layouts/header/menu.tsx'
-import MobileMenu from '@components/layouts/header/mobileMenu.tsx'
-import ToggleLanguage from '@components/layouts/header/toggleLanguage.tsx'
-import ToggleDark from '@components/layouts/header/toggleDark.tsx'
-import { useTranslation } from 'react-i18next'
+import { Link } from 'react-router-dom';
+import Menu from '@components/layouts/header/menu.tsx';
+import MobileMenu from '@components/layouts/header/mobileMenu.tsx';
+import ToggleLanguage from '@components/layouts/header/toggleLanguage.tsx';
+import ToggleDark from '@components/layouts/header/toggleDark.tsx';
+import { useTranslation } from 'react-i18next';
 
-const Header = () => {
-  const { t } = useTranslation()
+function Header() {
+  const { t } = useTranslation();
 
-  const menuItems = [
-    { path: '/examples', name: t('menu.example') },
-    { path: '/todo', name: t('menu.todo') },
-    { path: '/about', name: t('menu.about') },
-  ]
+  const menuItems = [{ path: '/example', name: t('menu.example') }];
   return (
     <header className="z-50 flex w-full flex-wrap justify-start py-4 text-sm ">
-      <nav
-        className="mx-auto flex w-full max-w-[85rem] items-center justify-between px-4"
-        aria-label="Global"
-      >
+      <nav className="mx-auto flex w-full max-w-[85rem] items-center justify-between px-4">
         <div className="sm:hidden">
           <MobileMenu menuItems={menuItems} />
         </div>
@@ -29,7 +22,7 @@ const Header = () => {
           <Menu menuItems={menuItems} />
         </div>
         <div className="flex items-center justify-end sm:px-10">
-          <div className="inline-flex h-10 w-10 items-center justify-center rounded-full  text-center transition focus:outline-none focus:ring-2 focus:ring-offset-2">
+          <div className="inline-flex h-10 w-10 items-center justify-center rounded-full text-center transition focus:outline-none focus:ring-2 focus:ring-offset-2">
             <ToggleDark />
           </div>
           <div className="inline-flex h-10 w-10 items-center justify-center rounded-full text-center transition focus:outline-none focus:ring-2 focus:ring-offset-2">
@@ -38,7 +31,7 @@ const Header = () => {
         </div>
       </nav>
     </header>
-  )
+  );
 }
 
-export default Header
+export default Header;

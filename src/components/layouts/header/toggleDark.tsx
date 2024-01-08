@@ -1,14 +1,11 @@
-import { useDarkMode } from '~/lib/dark-mode.ts'
+import { useDarkMode } from '~/lib/dark-mode.ts';
 
 export default function ToggleDark() {
-  const { isDarkMode, toggle } = useDarkMode()
+  const { isDarkMode, toggle } = useDarkMode();
   return (
-    <>
-      {isDarkMode ? (
-        <button onClick={toggle} className="i-carbon-sun text-2xl" />
-      ) : (
-        <button onClick={toggle} className="i-carbon-moon text-2xl" />
-      )}
-    </>
-  )
+    <button
+      onClick={toggle}
+      className={`text-2xl ${isDarkMode ? 'i-carbon-sun' : 'i-carbon-moon'}`}
+    />
+  );
 }

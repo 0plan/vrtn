@@ -1,5 +1,5 @@
-import type { Meta, StoryObj } from '@storybook/react'
-import { Avatar, AvatarFallback, AvatarImage } from '@components/ui/avatar.tsx'
+import type { Meta, StoryObj } from '@storybook/react';
+import { Avatar, AvatarFallback, AvatarImage } from '@components/ui/avatar.tsx';
 
 const meta = {
   title: 'Examples/Avatar',
@@ -8,22 +8,20 @@ const meta = {
     layout: 'centered',
   },
   tags: ['autodocs'],
-} satisfies Meta<typeof Avatar>
+} satisfies Meta<typeof Avatar>;
 
-export default meta
+export default meta;
 type Story = StoryObj<typeof meta>
 
 const AvatarTemplate: Story = {
-  render: ({ ...args }) => {
-    return (
-      <Avatar>
-        <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
-        <AvatarFallback>CN</AvatarFallback>
-      </Avatar>
-    )
-  },
-}
+  render: ({ ...args }) => (
+    <Avatar>
+      <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+      <AvatarFallback>CN</AvatarFallback>
+    </Avatar>
+  ),
+};
 export const Default: Story = {
   ...AvatarTemplate,
   args: {},
-}
+};

@@ -1,7 +1,7 @@
-import * as SwitchPrimitives from '@radix-ui/react-switch'
+import * as SwitchPrimitives from '@radix-ui/react-switch';
 
-import { cn } from '~/lib/utils.ts'
-import { ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react'
+import { ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react';
+import { cn } from '~/lib/utils.ts';
 
 const Switch = forwardRef<
   ElementRef<typeof SwitchPrimitives.Root>,
@@ -21,7 +21,7 @@ const Switch = forwardRef<
       )}
     />
   </SwitchPrimitives.Root>
-))
-Switch.displayName = SwitchPrimitives.Root.displayName
+));
+Switch.displayName = SwitchPrimitives.Root.displayName;
 
-export { Switch }
+export { Switch };

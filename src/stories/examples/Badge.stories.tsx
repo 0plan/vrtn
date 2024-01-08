@@ -1,5 +1,5 @@
-import type { Meta, StoryObj } from '@storybook/react'
-import { Badge } from '@components/ui/badge.tsx'
+import type { Meta, StoryObj } from '@storybook/react';
+import { Badge } from '@components/ui/badge.tsx';
 
 const meta = {
   title: 'Examples/Badge',
@@ -8,17 +8,15 @@ const meta = {
     layout: 'centered',
   },
   tags: ['autodocs'],
-} satisfies Meta<typeof Badge>
+} satisfies Meta<typeof Badge>;
 
-export default meta
+export default meta;
 type Story = StoryObj<typeof meta>
 
 const BadgeTemplate: Story = {
-  render: ({ ...args }) => {
-    return <Badge {...args}>Badge</Badge>
-  },
-}
+  render: ({ ...args }) => <Badge {...args}>Badge</Badge>,
+};
 export const Default: Story = {
   ...BadgeTemplate,
   args: {},
-}
+};

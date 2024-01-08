@@ -1,24 +1,24 @@
-import type { ComponentStory, Meta, StoryObj } from '@storybook/react'
-import { Calendar } from '@components/ui/calendar.tsx'
-import * as React from 'react'
-import { useState } from 'react'
+import type { ComponentStory, Meta, StoryObj } from '@storybook/react';
+import { Calendar } from '@components/ui/calendar.tsx';
+import * as React from 'react';
+import { useState } from 'react';
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from '@components/ui/popover.tsx'
-import { Button } from '@components/ui/button.tsx'
-import { cn } from '~/lib/utils.ts'
-import { Calendar as CalendarIcon } from 'lucide-react'
-import { addDays, format } from 'date-fns'
-import { DateRange } from 'react-day-picker'
+} from '@components/ui/popover.tsx';
+import { Button } from '@components/ui/button.tsx';
+import { Calendar as CalendarIcon } from 'lucide-react';
+import { addDays, format } from 'date-fns';
+import { DateRange } from 'react-day-picker';
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from '@components/ui/select.tsx'
+} from '@components/ui/select.tsx';
+import { cn } from '~/lib/utils.ts';
 
 const meta = {
   title: 'Examples/Calendar',
@@ -27,13 +27,13 @@ const meta = {
     layout: 'centered',
   },
   tags: ['autodocs'],
-} satisfies Meta<typeof Calendar>
+} satisfies Meta<typeof Calendar>;
 
-export default meta
+export default meta;
 type Story = StoryObj<typeof meta>
 
 const CalendarTemplate: ComponentStory<typeof Calendar> = (args) => {
-  const [date, setDate] = useState<Date | undefined>(new Date())
+  const [date, setDate] = useState<Date | undefined>(new Date());
   return (
     <Calendar
       {...args}
@@ -42,15 +42,15 @@ const CalendarTemplate: ComponentStory<typeof Calendar> = (args) => {
       selected={date}
       onSelect={setDate}
     />
-  )
-}
-const CalendarDatePickerTemplate = (args) => {
-  const [date, setDate] = useState<Date | undefined>(new Date())
+  );
+};
+function CalendarDatePickerTemplate(args) {
+  const [date, setDate] = useState<Date | undefined>(new Date());
   return (
     <Popover>
       <PopoverTrigger asChild>
         <Button
-          variant={'outline'}
+          variant="outline"
           className={cn(
             'w-[280px] justify-start text-left font-normal',
             !date && 'text-muted-foreground',
@@ -69,20 +69,20 @@ const CalendarDatePickerTemplate = (args) => {
         />
       </PopoverContent>
     </Popover>
-  )
+  );
 }
-const CalendarDateRangePickerTemplate = (args) => {
+function CalendarDateRangePickerTemplate(args) {
   const [date, setDate] = React.useState<DateRange | undefined>({
     from: new Date(2022, 0, 20),
     to: addDays(new Date(2022, 0, 20), 20),
-  })
+  });
 
   return (
     <Popover>
       <PopoverTrigger asChild>
         <Button
           id="date"
-          variant={'outline'}
+          variant="outline"
           className={cn(
             'w-[300px] justify-start text-left font-normal',
             !date && 'text-muted-foreground',
@@ -114,17 +114,17 @@ const CalendarDateRangePickerTemplate = (args) => {
         />
       </PopoverContent>
     </Popover>
-  )
+  );
 }
 
-const CalendarDatePickerWithPresetsTemplate = (args) => {
-  const [date, setDate] = React.useState<Date>()
+function CalendarDatePickerWithPresetsTemplate(args) {
+  const [date, setDate] = React.useState<Date>();
 
   return (
     <Popover>
       <PopoverTrigger asChild>
         <Button
-          variant={'outline'}
+          variant="outline"
           className={cn(
             'w-[280px] justify-start text-left font-normal',
             !date && 'text-muted-foreground',
@@ -136,9 +136,7 @@ const CalendarDatePickerWithPresetsTemplate = (args) => {
       </PopoverTrigger>
       <PopoverContent className="flex w-auto flex-col space-y-2 p-2">
         <Select
-          onValueChange={(value) =>
-            setDate(addDays(new Date(), parseInt(value)))
-          }
+          onValueChange={(value) => setDate(addDays(new Date(), parseInt(value)))}
         >
           <SelectTrigger>
             <SelectValue placeholder="Select" />
@@ -155,11 +153,10 @@ const CalendarDatePickerWithPresetsTemplate = (args) => {
         </div>
       </PopoverContent>
     </Popover>
-  )
+  );
 }
 
-export const DefaultCalendar = CalendarTemplate.bind({})
-export const CalendarDatePicker = CalendarDatePickerTemplate.bind({})
-export const CalendarDateRangePicker = CalendarDateRangePickerTemplate.bind({})
-export const CalendarDatePickerWithPresets =
-  CalendarDatePickerWithPresetsTemplate.bind({})
+export const DefaultCalendar = CalendarTemplate.bind({});
+export const CalendarDatePicker = CalendarDatePickerTemplate.bind({});
+export const CalendarDateRangePicker = CalendarDateRangePickerTemplate.bind({});
+export const CalendarDatePickerWithPresets = CalendarDatePickerWithPresetsTemplate.bind({});

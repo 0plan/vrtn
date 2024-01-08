@@ -1,7 +1,7 @@
-import { useTranslation } from 'react-i18next'
+import { useTranslation } from 'react-i18next';
 
 export default function Index() {
-  const { t } = useTranslation()
+  const { t } = useTranslation();
   return (
     <div className="relative overflow-hidden before:absolute before:start-1/2 before:top-0">
       <div className="mx-auto max-w-[85rem] px-4 pb-10 pt-24 sm:px-6 lg:px-8">
@@ -21,5 +21,5 @@ export default function Index() {
         </div>
       </div>
     </div>
-  )
+  );
 }

@@ -1,10 +1,10 @@
-import { DialogProps } from '@radix-ui/react-dialog'
-import { Command as CommandPrimitive } from 'cmdk'
-import { Search } from 'lucide-react'
+import { DialogProps } from '@radix-ui/react-dialog';
+import { Command as CommandPrimitive } from 'cmdk';
+import { Search } from 'lucide-react';
 
-import { cn } from '~/lib/utils.ts'
-import { Dialog, DialogContent } from '@components/ui/dialog'
-import { ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react'
+import { Dialog, DialogContent } from '@components/ui/dialog';
+import { ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react';
+import { cn } from '~/lib/utils.ts';
 
 const Command = forwardRef<
   ElementRef<typeof CommandPrimitive>,
@@ -18,12 +18,12 @@ const Command = forwardRef<
     )}
     {...props}
   />
-))
-Command.displayName = CommandPrimitive.displayName
+));
+Command.displayName = CommandPrimitive.displayName;
 
 interface CommandDialogProps extends DialogProps {}
 
-const CommandDialog = ({ children, ...props }: CommandDialogProps) => {
+function CommandDialog({ children, ...props }: CommandDialogProps) {
   return (
     <Dialog {...props}>
       <DialogContent className="overflow-hidden p-0 shadow-2xl">
@@ -32,7 +32,7 @@ const CommandDialog = ({ children, ...props }: CommandDialogProps) => {
         </Command>
       </DialogContent>
     </Dialog>
-  )
+  );
 }
 
 const CommandInput = forwardRef<
@@ -50,9 +50,9 @@ const CommandInput = forwardRef<
       {...props}
     />
   </div>
-))
+));
 
-CommandInput.displayName = CommandPrimitive.Input.displayName
+CommandInput.displayName = CommandPrimitive.Input.displayName;
 
 const CommandList = forwardRef<
   ElementRef<typeof CommandPrimitive.List>,
@@ -63,9 +63,9 @@ const CommandList = forwardRef<
     className={cn('max-h-[300px] overflow-y-auto overflow-x-hidden', className)}
     {...props}
   />
-))
+));
 
-CommandList.displayName = CommandPrimitive.List.displayName
+CommandList.displayName = CommandPrimitive.List.displayName;
 
 const CommandEmpty = forwardRef<
   ElementRef<typeof CommandPrimitive.Empty>,
@@ -76,9 +76,9 @@ const CommandEmpty = forwardRef<
     className="py-6 text-center text-sm"
     {...props}
   />
-))
+));
 
-CommandEmpty.displayName = CommandPrimitive.Empty.displayName
+CommandEmpty.displayName = CommandPrimitive.Empty.displayName;
 
 const CommandGroup = forwardRef<
   ElementRef<typeof CommandPrimitive.Group>,
@@ -92,9 +92,9 @@ const CommandGroup = forwardRef<
     )}
     {...props}
   />
-))
+));
 
-CommandGroup.displayName = CommandPrimitive.Group.displayName
+CommandGroup.displayName = CommandPrimitive.Group.displayName;
 
 const CommandSeparator = forwardRef<
   ElementRef<typeof CommandPrimitive.Separator>,
@@ -105,8 +105,8 @@ const CommandSeparator = forwardRef<
     className={cn('-mx-1 h-px bg-border', className)}
     {...props}
   />
-))
-CommandSeparator.displayName = CommandPrimitive.Separator.displayName
+));
+CommandSeparator.displayName = CommandPrimitive.Separator.displayName;
 
 const CommandItem = forwardRef<
   ElementRef<typeof CommandPrimitive.Item>,
@@ -120,14 +120,14 @@ const CommandItem = forwardRef<
     )}
     {...props}
   />
-))
+));
 
-CommandItem.displayName = CommandPrimitive.Item.displayName
+CommandItem.displayName = CommandPrimitive.Item.displayName;
 
-const CommandShortcut = ({
+function CommandShortcut({
   className,
   ...props
-}: HTMLAttributes<HTMLSpanElement>) => {
+}: HTMLAttributes<HTMLSpanElement>) {
   return (
     <span
       className={cn(
@@ -136,9 +136,9 @@ const CommandShortcut = ({
       )}
       {...props}
     />
-  )
+  );
 }
-CommandShortcut.displayName = 'CommandShortcut'
+CommandShortcut.displayName = 'CommandShortcut';
 
 export {
   Command,
@@ -150,4 +150,4 @@ export {
   CommandItem,
   CommandShortcut,
   CommandSeparator,
-}
+};

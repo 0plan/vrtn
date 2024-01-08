@@ -1,48 +1,33 @@
-import { Link, useLocation } from 'react-router-dom'
+import { Link, useLocation } from "react-router-dom";
 
 interface IProps {
-  item: Item
+  menuItems: IMenu[];
 }
 
-export interface Item {
-  name: string
-  path: string
+export interface IMenu {
+  name: string;
+  path: string;
 }
 
-const activeLink = (item: Item) => {
-  return (
-    <Link className={'font-medium text-blue-500'} to={item.path}>
-      {item.name}
-    </Link>
-  )
-}
-const deActiveLink = (item: Item) => {
-  return (
-    <Link className={'font-medium'} to={item.path}>
-      {item.name}
-    </Link>
-  )
-}
+const isActive = (path: string) => {
+  const location = useLocation();
+  return location.pathname.includes(path);
+};
 
-const IsActiveLink = (props: IProps) => {
-  const location = useLocation()
-  return location.pathname.includes(props.item.path)
-    ? activeLink(props.item)
-    : deActiveLink(props.item)
-}
-
-const Menu = ({ menuItems }) => {
+function Menu({ menuItems }: IProps) {
   return (
     <div className="mt-5 flex flex-col gap-5 sm:mt-0 sm:flex-row sm:items-center sm:justify-end sm:ps-5">
-      <a href="/storybook" target="_blank">
-        Storybook
-      </a>
-
-      {menuItems.map((item) => {
-        return <IsActiveLink key={item.path} item={item} />
-      })}
+      {menuItems.map((menu) => (
+        <Link
+          className={isActive(menu.path.toString()) ? "text-blue-500" : ""}
+          key={menu.path}
+          to={menu.path}
+        >
+          {menu.name}
+        </Link>
+      ))}
     </div>
-  )
+  );
 }
 
-export default Menu
+export default Menu;
