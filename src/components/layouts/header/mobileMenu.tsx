@@ -3,10 +3,17 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from '@components/ui/dropdown-menu.tsx'
-import { Link } from 'react-router-dom'
+} from '@components/ui/dropdown-menu.tsx';
+import { Link } from 'react-router-dom';
 
-export default function MobileMenu({ menuItems }) {
+interface IMenu {
+  path: string
+  name: string
+}
+interface IProps {
+  menuItems: IMenu[]
+}
+export default function MobileMenu({ menuItems }: IProps) {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
@@ -33,16 +40,14 @@ export default function MobileMenu({ menuItems }) {
         </button>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-56">
-        {menuItems.map((item) => {
-          return (
-            <Link to={item.path}>
-              <DropdownMenuItem>
-                <span>{item.name}</span>
-              </DropdownMenuItem>
-            </Link>
-          )
-        })}
+        {menuItems.map((menu) => (
+          <Link to={menu.path} key={menu.path}>
+            <DropdownMenuItem>
+              <span>{menu.name}</span>
+            </DropdownMenuItem>
+          </Link>
+        ))}
       </DropdownMenuContent>
     </DropdownMenu>
-  )
+  );
 }

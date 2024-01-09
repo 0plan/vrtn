@@ -1,12 +1,12 @@
-import type { ComponentStory, Meta, StoryObj } from '@storybook/react'
-import { ChevronsUpDown } from 'lucide-react'
-import { Button } from '@components/ui/button'
+import type { ComponentStory, Meta, StoryObj } from '@storybook/react';
+import { ChevronsUpDown } from 'lucide-react';
+import { Button } from '@components/ui/button';
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from '@components/ui/collapsible'
-import { useState } from 'react'
+} from '@components/ui/collapsible';
+import { useState } from 'react';
 
 const meta = {
   title: 'Examples/Collapsible',
@@ -15,13 +15,13 @@ const meta = {
     layout: 'centered',
   },
   tags: ['autodocs'],
-} satisfies Meta<typeof Collapsible>
+} satisfies Meta<typeof Collapsible>;
 
-export default meta
+export default meta;
 type Story = StoryObj<typeof meta>
 
 const CollapsibleTemplate: ComponentStory<typeof Collapsible> = (args) => {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <Collapsible
@@ -52,7 +52,7 @@ const CollapsibleTemplate: ComponentStory<typeof Collapsible> = (args) => {
         </div>
       </CollapsibleContent>
     </Collapsible>
-  )
-}
+  );
+};
 
-export const DefaultCollapsible = CollapsibleTemplate.bind({})
+export const DefaultCollapsible = CollapsibleTemplate.bind({});

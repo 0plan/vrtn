@@ -1,6 +1,6 @@
-import type { Meta, StoryObj } from '@storybook/react'
-import { Button } from '@components/ui/button.tsx'
-import { Loader2, Mail } from 'lucide-react'
+import type { Meta, StoryObj } from '@storybook/react';
+import { Button } from '@components/ui/button.tsx';
+import { Loader2, Mail } from 'lucide-react';
 
 const meta = {
   title: 'Examples/Button',
@@ -15,56 +15,54 @@ const meta = {
     },
   },
   tags: ['autodocs'],
-} satisfies Meta<typeof Button>
+} satisfies Meta<typeof Button>;
 
-export default meta
+export default meta;
 type Story = StoryObj<typeof meta>
 
 const ButtonTemplate: Story = {
-  render: ({ ...args }) => {
-    return <Button {...args}>Button</Button>
-  },
-}
+  render: ({ ...args }) => <Button {...args}>Button</Button>,
+};
 
 export const Primary: Story = {
   ...ButtonTemplate,
   args: {},
-}
+};
 
 export const Secondary: Story = {
   ...ButtonTemplate,
   args: {
     variant: 'secondary',
   },
-}
+};
 
 export const Destructive: Story = {
   ...ButtonTemplate,
   args: {
     variant: 'destructive',
   },
-}
+};
 
 export const Outline: Story = {
   ...ButtonTemplate,
   args: {
     variant: 'outline',
   },
-}
+};
 
 export const Link: Story = {
   ...ButtonTemplate,
   args: {
     variant: 'link',
   },
-}
+};
 
 export const Ghost: Story = {
   ...ButtonTemplate,
   args: {
     variant: 'ghost',
   },
-}
+};
 export const Loading: Story = {
   render: () => (
     <Button disabled>
@@ -72,7 +70,7 @@ export const Loading: Story = {
       Please wait
     </Button>
   ),
-}
+};
 
 export const IconButton: Story = {
   render: () => (
@@ -81,11 +79,11 @@ export const IconButton: Story = {
       Login with Email
     </Button>
   ),
-}
+};
 
 export const CustomClassName: Story = {
   ...ButtonTemplate,
   args: {
     className: 'bg-amber-300 text-black hover:bg-green-300',
   },
-}
+};

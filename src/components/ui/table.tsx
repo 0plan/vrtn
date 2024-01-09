@@ -1,5 +1,5 @@
-import { cn } from '~/lib/utils.ts'
-import { forwardRef, HTMLAttributes } from 'react'
+import { forwardRef, HTMLAttributes } from 'react';
+import { cn } from '~/lib/utils.ts';
 
 const Table = forwardRef<HTMLTableElement, HTMLAttributes<HTMLTableElement>>(
   ({ className, ...props }, ref) => (
@@ -11,16 +11,16 @@ const Table = forwardRef<HTMLTableElement, HTMLAttributes<HTMLTableElement>>(
       />
     </div>
   ),
-)
-Table.displayName = 'Table'
+);
+Table.displayName = 'Table';
 
 const TableHeader = forwardRef<
   HTMLTableSectionElement,
   HTMLAttributes<HTMLTableSectionElement>
 >(({ className, ...props }, ref) => (
   <thead ref={ref} className={cn('[&_tr]:border-b', className)} {...props} />
-))
-TableHeader.displayName = 'TableHeader'
+));
+TableHeader.displayName = 'TableHeader';
 
 const TableBody = forwardRef<
   HTMLTableSectionElement,
@@ -31,8 +31,8 @@ const TableBody = forwardRef<
     className={cn('[&_tr:last-child]:border-0', className)}
     {...props}
   />
-))
-TableBody.displayName = 'TableBody'
+));
+TableBody.displayName = 'TableBody';
 
 const TableFooter = forwardRef<
   HTMLTableSectionElement,
@@ -43,8 +43,8 @@ const TableFooter = forwardRef<
     className={cn('bg-primary font-medium text-primary-foreground', className)}
     {...props}
   />
-))
-TableFooter.displayName = 'TableFooter'
+));
+TableFooter.displayName = 'TableFooter';
 
 const TableRow = forwardRef<
   HTMLTableRowElement,
@@ -58,8 +58,8 @@ const TableRow = forwardRef<
     )}
     {...props}
   />
-))
-TableRow.displayName = 'TableRow'
+));
+TableRow.displayName = 'TableRow';
 
 const TableHead = forwardRef<
   HTMLTableCellElement,
@@ -73,8 +73,8 @@ const TableHead = forwardRef<
     )}
     {...props}
   />
-))
-TableHead.displayName = 'TableHead'
+));
+TableHead.displayName = 'TableHead';
 
 const TableCell = forwardRef<
   HTMLTableCellElement,
@@ -85,8 +85,8 @@ const TableCell = forwardRef<
     className={cn('p-4 align-middle [&:has([role=checkbox])]:pr-0', className)}
     {...props}
   />
-))
-TableCell.displayName = 'TableCell'
+));
+TableCell.displayName = 'TableCell';
 
 const TableCaption = forwardRef<
   HTMLTableCaptionElement,
@@ -97,8 +97,8 @@ const TableCaption = forwardRef<
     className={cn('mt-4 text-sm text-muted-foreground', className)}
     {...props}
   />
-))
-TableCaption.displayName = 'TableCaption'
+));
+TableCaption.displayName = 'TableCaption';
 
 export {
   Table,
@@ -109,4 +109,4 @@ export {
   TableRow,
   TableCell,
   TableCaption,
-}
+};

@@ -1,5 +1,5 @@
-import { cn } from '~/lib/utils.ts'
-import { HTMLAttributes } from 'react'
+import { HTMLAttributes } from 'react';
+import { cn } from '~/lib/utils.ts';
 
 function Skeleton({ className, ...props }: HTMLAttributes<HTMLDivElement>) {
   return (
@@ -7,7 +7,7 @@ function Skeleton({ className, ...props }: HTMLAttributes<HTMLDivElement>) {
       className={cn('animate-pulse rounded-md bg-muted', className)}
       {...props}
     />
-  )
+  );
 }
 
-export { Skeleton }
+export { Skeleton };

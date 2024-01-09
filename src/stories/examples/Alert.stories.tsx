@@ -1,6 +1,6 @@
-import type { Meta, StoryObj } from '@storybook/react'
-import { Alert, AlertDescription, AlertTitle } from '@components/ui/alert'
-import { Terminal } from 'lucide-react'
+import type { Meta, StoryObj } from '@storybook/react';
+import { Alert, AlertDescription, AlertTitle } from '@components/ui/alert';
+import { Terminal } from 'lucide-react';
 
 const meta = {
   title: 'Examples/Alert',
@@ -9,32 +9,30 @@ const meta = {
     layout: 'centered',
   },
   tags: ['autodocs'],
-} satisfies Meta<typeof Alert>
+} satisfies Meta<typeof Alert>;
 
-export default meta
+export default meta;
 type Story = StoryObj<typeof meta>
 
 const AlertTemplate: Story = {
-  render: ({ ...args }) => {
-    return (
-      <Alert {...args}>
-        <Terminal className="h-4 w-4" />
-        <AlertTitle>Heads up!</AlertTitle>
-        <AlertDescription>
-          You can add components to your app using the cli.
-        </AlertDescription>
-      </Alert>
-    )
-  },
-}
+  render: ({ ...args }) => (
+    <Alert {...args}>
+      <Terminal className="h-4 w-4" />
+      <AlertTitle>Heads up!</AlertTitle>
+      <AlertDescription>
+        You can add components to your app using the cli.
+      </AlertDescription>
+    </Alert>
+  ),
+};
 export const Default: Story = {
   ...AlertTemplate,
   args: {},
-}
+};
 
 export const Destructive: Story = {
   ...AlertTemplate,
   args: {
     variant: 'destructive',
   },
-}
+};
