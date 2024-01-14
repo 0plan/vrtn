@@ -59,7 +59,7 @@
     "i18next-http-backend": "^2.4.2",
     "js-yaml": "^4.1.0",
     "localforage": "^1.10.0",
-    "lucide-react": "^0.298.0",
+    "lucide-react": "^0.301.0",
     "match-sorter": "^6.3.1",
     "react": "^18.2.0",
     "react-day-picker": "^8.10.0",
