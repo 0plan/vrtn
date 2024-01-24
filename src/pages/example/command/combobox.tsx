@@ -1,13 +1,8 @@
 import * as React from 'react';
-import { Check, ChevronsUpDown } from 'lucide-react';
 
 import { Button } from '@components/ui/button';
 import {
-  Command,
-  CommandEmpty,
-  CommandGroup,
-  CommandInput,
-  CommandItem,
+  Command, CommandEmpty, CommandGroup, CommandInput, CommandItem,
 } from '@components/ui/command';
 import { Popover, PopoverContent, PopoverTrigger } from '@components/ui/popover';
 import { cn } from '~/lib/utils.ts';
@@ -51,7 +46,7 @@ export function CommandCombobox() {
           {value
             ? frameworks.find((framework) => framework.value === value)?.label
             : 'Select framework...'}
-          <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
+          <div className="i-lucide:chevrons-up-down ml-2 h-4 w-4 shrink-0 opacity-50" />
         </Button>
       </PopoverTrigger>
       <PopoverContent className="w-[200px] p-0">
@@ -67,9 +62,9 @@ export function CommandCombobox() {
                   setOpen(false);
                 }}
               >
-                <Check
+                <div
                   className={cn(
-                    'mr-2 h-4 w-4',
+                    'i-lucide:check mr-2 h-4 w-4',
                     value === framework.value ? 'opacity-100' : 'opacity-0',
                   )}
                 />

@@ -1,6 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { Alert, AlertDescription, AlertTitle } from '@components/ui/alert';
-import { Terminal } from 'lucide-react';
 
 const meta = {
   title: 'Examples/Alert',
@@ -17,7 +16,7 @@ type Story = StoryObj<typeof meta>
 const AlertTemplate: Story = {
   render: ({ ...args }) => (
     <Alert {...args}>
-      <Terminal className="h-4 w-4" />
+      <div className="i-lucide:terminal h-4 w-4" />
       <AlertTitle>Heads up!</AlertTitle>
       <AlertDescription>
         You can add components to your app using the cli.

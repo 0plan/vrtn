@@ -13,8 +13,8 @@ export type Path =
   | `/example/command/popover`
   | `/example/context-menu/demo`
   | `/example/dialog/demo`
+  | `/example/dropdown-menu`
   | `/example/dropdown-menu/checkboxes`
-  | `/example/dropdown-menu/demo`
   | `/example/dropdown-menu/radio-group`
   | `/example/hover-card/demo`
   | `/example/input/demo`

@@ -1,11 +1,6 @@
 import type { ComponentStory, Meta, StoryObj } from '@storybook/react';
-import { ChevronsUpDown } from 'lucide-react';
 import { Button } from '@components/ui/button';
-import {
-  Collapsible,
-  CollapsibleContent,
-  CollapsibleTrigger,
-} from '@components/ui/collapsible';
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@components/ui/collapsible';
 import { useState } from 'react';
 
 const meta = {
@@ -35,7 +30,7 @@ const CollapsibleTemplate: ComponentStory<typeof Collapsible> = (args) => {
         </h4>
         <CollapsibleTrigger asChild>
           <Button variant="ghost" size="sm" className="w-9 p-0">
-            <ChevronsUpDown className="h-4 w-4" />
+            <div className="i-lucide:chevrons-up-down h-4 w-4" />
             <span className="sr-only">Toggle</span>
           </Button>
         </CollapsibleTrigger>

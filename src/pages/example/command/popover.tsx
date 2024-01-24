@@ -1,21 +1,8 @@
 import * as React from 'react';
-import {
-  ArrowUpCircle,
-  CheckCircle2,
-  Circle,
-  HelpCircle,
-  LucideIcon,
-  XCircle,
-} from 'lucide-react';
 
 import { Button } from '@components/ui/button';
 import {
-  Command,
-  CommandEmpty,
-  CommandGroup,
-  CommandInput,
-  CommandItem,
-  CommandList,
+  Command, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList,
 } from '@components/ui/command';
 import { Popover, PopoverContent, PopoverTrigger } from '@components/ui/popover';
 import { cn } from '~/lib/utils.ts';
@@ -23,34 +10,34 @@ import { cn } from '~/lib/utils.ts';
 type Status = {
   value: string
   label: string
-  icon: LucideIcon
+  icon: string
 }
 
 const statuses: Status[] = [
   {
     value: 'backlog',
     label: 'Backlog',
-    icon: HelpCircle,
+    icon: 'i-lucide:help-circle',
   },
   {
     value: 'todo',
     label: 'Todo',
-    icon: Circle,
+    icon: 'i-lucide:circle',
   },
   {
     value: 'in progress',
     label: 'In Progress',
-    icon: ArrowUpCircle,
+    icon: 'i-lucide:arrow-up-circle',
   },
   {
     value: 'done',
     label: 'Done',
-    icon: CheckCircle2,
+    icon: 'i-lucide:check-circle-2',
   },
   {
     value: 'canceled',
     label: 'Canceled',
-    icon: XCircle,
+    icon: 'i-lucide:x-circle',
   },
 ];
 
@@ -72,7 +59,7 @@ export function CommandPopover() {
           >
             {selectedStatus ? (
               <>
-                <selectedStatus.icon className="mr-2 h-4 w-4 shrink-0" />
+                <div className={`${selectedStatus.icon} mr-2 h-4 w-4 shrink-0`} />
                 {selectedStatus.label}
               </>
             ) : (
@@ -97,13 +84,14 @@ export function CommandPopover() {
                       setOpen(false);
                     }}
                   >
-                    <status.icon
-                      className={cn(
+                    <div
+                      className={`${status.icon}
+                      ${cn(
                         'mr-2 h-4 w-4',
                         status.value === selectedStatus?.value
                           ? 'opacity-100'
                           : 'opacity-40',
-                      )}
+                      )}`}
                     />
                     <span>{status.label}</span>
                   </CommandItem>
