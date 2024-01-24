@@ -2,21 +2,12 @@ import type { ComponentStory, Meta, StoryObj } from '@storybook/react';
 import { Calendar } from '@components/ui/calendar.tsx';
 import * as React from 'react';
 import { useState } from 'react';
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from '@components/ui/popover.tsx';
+import { Popover, PopoverContent, PopoverTrigger } from '@components/ui/popover.tsx';
 import { Button } from '@components/ui/button.tsx';
-import { Calendar as CalendarIcon } from 'lucide-react';
 import { addDays, format } from 'date-fns';
 import { DateRange } from 'react-day-picker';
 import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
+  Select, SelectContent, SelectItem, SelectTrigger, SelectValue,
 } from '@components/ui/select.tsx';
 import { cn } from '~/lib/utils.ts';
 
@@ -56,7 +47,7 @@ function CalendarDatePickerTemplate(args) {
             !date && 'text-muted-foreground',
           )}
         >
-          <CalendarIcon className="mr-2 h-4 w-4" />
+          <div className="i-lucide:calendar mr-2 h-4 w-4" />
           {date ? format(date, 'PPP') : <span>Pick a date</span>}
         </Button>
       </PopoverTrigger>
@@ -88,7 +79,7 @@ function CalendarDateRangePickerTemplate(args) {
             !date && 'text-muted-foreground',
           )}
         >
-          <CalendarIcon className="mr-2 h-4 w-4" />
+          <div className="i-lucide:calendar mr-2 h-4 w-4" />
           {date?.from ? (
             date.to ? (
               <>
@@ -130,7 +121,7 @@ function CalendarDatePickerWithPresetsTemplate(args) {
             !date && 'text-muted-foreground',
           )}
         >
-          <CalendarIcon className="mr-2 h-4 w-4" />
+          <div className="i-lucide:calendar mr-2 h-4 w-4" />
           {date ? format(date, 'PPP') : <span>Pick a date</span>}
         </Button>
       </PopoverTrigger>

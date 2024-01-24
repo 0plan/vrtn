@@ -112,18 +112,18 @@ export default function Examples() {
   return (
     <ScrollArea className="h-96 w-80 rounded-md border">
       <div className="p-4">
-        {itemList.map((item, index) => (
-          <>
+        {itemList.map((item) => (
+          <div
+            key={`example-path-key-${item.path}}`}
+          >
             <div
               className="cursor-pointer text-sm"
-              key={`example-path-key-${item.path}-${index}`}
               onClick={() => handleListItemClick(item)}
             >
-              {item.path}-{index}
-              {/* {item.name} */}
+              {item.name}
             </div>
             <Separator className="my-2" />
-          </>
+          </div>
         ))}
       </div>
     </ScrollArea>
