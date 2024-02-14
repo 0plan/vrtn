@@ -98,6 +98,7 @@ const itemList = [
   { name: '/example/typography/p', path: '/example/typography/p' },
   { name: '/example/typography/small', path: '/example/typography/small' },
   { name: '/example/typography/table', path: '/example/typography/table' },
+  { name: '/example/markdown/editor', path: '/example/markdown/editor' },
 ];
 
 export default function Examples() {
