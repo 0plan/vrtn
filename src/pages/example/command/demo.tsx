@@ -9,7 +9,7 @@ import {
   CommandShortcut,
 } from '@components/ui/command';
 
-export function CommandDemo() {
+export default function CommandDemo() {
   return (
     <Command className="rounded-lg border shadow-md">
       <CommandInput placeholder="Type a command or search..." />

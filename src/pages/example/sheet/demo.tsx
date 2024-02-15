@@ -11,7 +11,7 @@ import {
   SheetTrigger,
 } from '@components/ui/sheet';
 
-export function SheetDemo() {
+export default function SheetDemo() {
   return (
     <Sheet>
       <SheetTrigger asChild>

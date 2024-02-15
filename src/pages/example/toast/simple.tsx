@@ -1,7 +1,7 @@
 import { Button } from '@components/ui/button';
 import { useToast } from '@components/ui/use-toast';
 
-export function ToastSimple() {
+export default function ToastSimple() {
   const { toast } = useToast();
 
   return (

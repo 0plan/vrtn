@@ -3,7 +3,7 @@ import { Input } from '@components/ui/input';
 import { Label } from '@components/ui/label';
 import { Popover, PopoverContent, PopoverTrigger } from '@components/ui/popover';
 
-export function PopoverDemo() {
+export default function PopoverDemo() {
   return (
     <Popover>
       <PopoverTrigger asChild>

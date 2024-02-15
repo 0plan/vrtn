@@ -10,7 +10,7 @@ import {
   SelectValue,
 } from '@components/ui/select';
 
-export function SelectDemo() {
+export default function SelectDemo() {
   return (
     <Select>
       <SelectTrigger className="w-[180px]">

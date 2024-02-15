@@ -1,7 +1,7 @@
 import { Button } from '@components/ui/button';
 import { useToast } from '@components/ui/use-toast';
 
-export function ToastWithTitle() {
+export default function ToastWithTitle() {
   const { toast } = useToast();
 
   return (

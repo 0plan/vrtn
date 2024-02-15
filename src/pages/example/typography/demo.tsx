@@ -1,10 +1,10 @@
-import { TypographyH1 } from '~/pages/example/typography/h1.tsx';
-import { TypographyH2 } from '~/pages/example/typography/h2.tsx';
-import { TypographyH3 } from '~/pages/example/typography/h3.tsx';
-import { TypographyH4 } from '~/pages/example/typography/h4.tsx';
-import { TypographyInlineCode } from '~/pages/example/typography/inline-code.tsx';
+import TypographyH1 from '~/pages/example/typography/h1.tsx';
+import TypographyH2 from '~/pages/example/typography/h2.tsx';
+import TypographyH3 from '~/pages/example/typography/h3.tsx';
+import TypographyH4 from '~/pages/example/typography/h4.tsx';
+import TypographyInlineCode from '~/pages/example/typography/inline-code.tsx';
 
-export function TypographyDemo() {
+export default function TypographyDemo() {
   return (
     <div>
       <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">

@@ -1,5 +1,5 @@
 import { Textarea } from '@components/ui/textarea';
 
-export function TextareaDemo() {
+export default function TextareaDemo() {
   return <Textarea placeholder="Type your message here." />;
 }

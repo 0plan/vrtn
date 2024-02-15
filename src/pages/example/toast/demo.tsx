@@ -2,7 +2,7 @@ import { Button } from '@components/ui/button';
 import { ToastAction } from '@components/ui/toast';
 import { useToast } from '@components/ui/use-toast';
 
-export function ToastDemo() {
+export default function ToastDemo() {
   const { toast } = useToast();
 
   return (

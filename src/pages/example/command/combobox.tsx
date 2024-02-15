@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useState } from 'react';
 
 import { Button } from '@components/ui/button';
 import {
@@ -30,9 +31,9 @@ const frameworks = [
   },
 ];
 
-export function CommandCombobox() {
-  const [open, setOpen] = React.useState(false);
-  const [value, setValue] = React.useState('');
+export default function CommandCombobox() {
+  const [open, setOpen] = useState(false);
+  const [value, setValue] = useState('');
 
   return (
     <Popover open={open} onOpenChange={setOpen}>

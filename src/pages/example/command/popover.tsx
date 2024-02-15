@@ -41,7 +41,7 @@ const statuses: Status[] = [
   },
 ];
 
-export function CommandPopover() {
+export default function CommandPopover() {
   const [open, setOpen] = React.useState(false);
   const [selectedStatus, setSelectedStatus] = React.useState<Status | null>(
     null,

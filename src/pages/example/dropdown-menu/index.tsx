@@ -14,7 +14,7 @@ import {
   DropdownMenuTrigger,
 } from '@components/ui/dropdown-menu';
 
-export function index() {
+export default function index() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>

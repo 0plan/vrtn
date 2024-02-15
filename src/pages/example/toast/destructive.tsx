@@ -2,7 +2,7 @@ import { Button } from '@components/ui/button';
 import { ToastAction } from '@components/ui/toast';
 import { useToast } from '@components/ui/use-toast';
 
-export function ToastDestructive() {
+export default function ToastDestructive() {
   const { toast } = useToast();
 
   return (

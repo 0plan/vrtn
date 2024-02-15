@@ -18,7 +18,7 @@ const SHEET_POSITIONS = ['top', 'right', 'bottom', 'left'] as const;
 
 type SheetPosition = (typeof SHEET_POSITIONS)[number]
 
-export function SheetPosition() {
+export default function SheetPosition() {
   const [position, setPosition] = useState<SheetPosition>('right');
   return (
     <div className="flex flex-col space-y-8">
