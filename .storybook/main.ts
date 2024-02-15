@@ -1,4 +1,5 @@
-import type { StorybookConfig } from '@storybook/react-vite';
+import type { StorybookConfig } from '@storybook/react-vite'
+import Unocss from 'unocss/vite'
 
 const config: StorybookConfig = {
   "stories": [
@@ -17,6 +18,12 @@ const config: StorybookConfig = {
   },
   "docs": {
     "autodocs": "tag"
+  },
+  viteFinal(config){
+    config.plugins?.push(Unocss())
+    // Add other configuration here depending on your use case
+    return config
   }
 };
+
 export default config;
