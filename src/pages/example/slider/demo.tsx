@@ -3,7 +3,7 @@ import { cn } from '~/lib/utils.ts';
 
 type SliderProps = React.ComponentProps<typeof Slider>
 
-export function SliderDemo({ className, ...props }: SliderProps) {
+export default function SliderDemo({ className, ...props }: SliderProps) {
   return (
     <Slider
       defaultValue={[50]}

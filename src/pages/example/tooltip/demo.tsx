@@ -3,7 +3,7 @@ import {
   Tooltip, TooltipContent, TooltipProvider, TooltipTrigger,
 } from '@components/ui/tooltip';
 
-export function TooltipDemo() {
+export default function TooltipDemo() {
   return (
     <TooltipProvider>
       <Tooltip>

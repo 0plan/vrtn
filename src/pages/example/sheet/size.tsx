@@ -18,7 +18,7 @@ const SHEET_SIZES = ['sm', 'default', 'lg', 'xl', 'full', 'content'] as const;
 
 type SheetSize = (typeof SHEET_SIZES)[number]
 
-export function SheetSize() {
+export default function SheetSize() {
   const [size, setSize] = useState<SheetSize>('default');
   return (
     <div className="flex flex-col space-y-8">

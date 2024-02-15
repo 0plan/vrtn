@@ -28,7 +28,7 @@ const labels = [
   'maintenance',
 ];
 
-export function CommandDropdownMenu() {
+export default function CommandDropdownMenu() {
   const [label, setLabel] = React.useState('feature');
   const [open, setOpen] = React.useState(false);
 

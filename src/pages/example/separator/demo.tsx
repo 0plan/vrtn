@@ -1,6 +1,6 @@
 import { Separator } from '@components/ui/separator';
 
-export function SeparatorDemo() {
+export default function SeparatorDemo() {
   return (
     <div>
       <div className="space-y-1">
