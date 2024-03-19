@@ -1,10 +1,10 @@
+import { Link } from 'react-router-dom';
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from '@components/ui/dropdown-menu.tsx';
-import { Link } from 'react-router-dom';
+} from '@/components/ui/dropdown-menu.tsx';
 
 interface IMenu {
   path: string

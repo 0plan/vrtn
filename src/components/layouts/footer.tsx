@@ -1,3 +1,5 @@
+import { Github } from 'lucide-react';
+
 function Footer() {
   return (
     <footer className="mx-auto w-full max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8">
@@ -9,9 +11,7 @@ function Footer() {
             target="_blank"
             rel="noreferrer"
           >
-            <div
-              className="i-mdi:github h-3.5 w-3.5 flex-shrink-0 text-2xl"
-            />
+            <Github />
           </a>
         </div>
       </div>

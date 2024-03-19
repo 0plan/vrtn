@@ -1,4 +1,4 @@
-import MarkdownEditor from '@components/ui/markdown-editor.tsx';
+import MarkdownEditor from '@/components/ui/markdown-editor.tsx';
 
 export default function Editor() {
   const mkdStr = `

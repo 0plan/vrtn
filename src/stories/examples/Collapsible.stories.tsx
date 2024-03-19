@@ -1,7 +1,7 @@
 import type { ComponentStory, Meta, StoryObj } from '@storybook/react';
-import { Button } from '@components/ui/button';
-import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@components/ui/collapsible';
 import { useState } from 'react';
+import { Button } from '@/components/ui/button';
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible';
 
 const meta = {
   title: 'Examples/Collapsible',

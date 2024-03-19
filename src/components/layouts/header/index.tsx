@@ -1,12 +1,16 @@
 import { Link } from 'react-router-dom';
-import Menu from '@components/layouts/header/menu.tsx';
-import MobileMenu from '@components/layouts/header/mobileMenu.tsx';
-import ToggleLanguage from '@components/layouts/header/toggleLanguage.tsx';
-import ToggleDark from '@components/layouts/header/toggleDark.tsx';
+import Menu from '@/components/layouts/header/menu.tsx';
+import MobileMenu from '@/components/layouts/header/mobileMenu.tsx';
 import { useTranslation } from 'react-i18next';
+import { Globe, Moon, Sun } from 'lucide-react';
+import { useDarkMode } from '@/lib/dark-mode.ts';
+import useLanguage from '@/stores/language.ts';
+import { Button } from '@/components/ui/button.tsx';
 
 function Header() {
   const { t } = useTranslation();
+  const { isDarkMode, toggle } = useDarkMode();
+  const { toggleLang } = useLanguage();
 
   const menuItems = [{ path: '/example', name: t('menu.example') }];
   return (
@@ -22,12 +26,18 @@ function Header() {
           <Menu menuItems={menuItems} />
         </div>
         <div className="flex items-center justify-end sm:px-10">
-          <div className="inline-flex h-10 w-10 items-center justify-center rounded-full text-center transition focus:outline-none focus:ring-2 focus:ring-offset-2">
-            <ToggleDark />
-          </div>
-          <div className="inline-flex h-10 w-10 items-center justify-center rounded-full text-center transition focus:outline-none focus:ring-2 focus:ring-offset-2">
-            <ToggleLanguage />
-          </div>
+          <Button
+            className="h-10 px-2 rounded-full"
+            size="sm"
+            variant="ghost"
+            onClick={toggle}
+          >
+            {isDarkMode
+              ? <Sun /> : <Moon />}
+          </Button>
+          <Button onClick={toggleLang} size="sm" variant="ghost" className="h-10 px-2 rounded-full">
+            <Globe />
+          </Button>
         </div>
       </nav>
     </header>

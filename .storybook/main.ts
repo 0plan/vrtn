@@ -1,5 +1,4 @@
 import type { StorybookConfig } from '@storybook/react-vite'
-import Unocss from 'unocss/vite'
 
 const config: StorybookConfig = {
   "stories": [

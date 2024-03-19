@@ -1,8 +1,7 @@
 import './index.css';
-import '~/lib/dark-mode.ts';
-import 'virtual:uno.css';
+import '@/lib/dark-mode.ts';
 import { HelmetProvider } from 'react-helmet-async';
-import '~/lib/locales';
+import '@/lib/locales';
 import { createRoot } from 'react-dom/client';
 import { Routes } from '@generouted/react-router';
 

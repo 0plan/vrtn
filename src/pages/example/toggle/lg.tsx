@@ -1,4 +1,4 @@
-import { Toggle } from '@components/ui/toggle';
+import { Toggle } from '@/components/ui/toggle';
 
 export default function ToggleLg() {
   return (

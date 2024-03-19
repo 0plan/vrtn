@@ -1,15 +1,15 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Button } from '@components/ui/button';
-import {
-  Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle,
-} from '@components/ui/card';
-import { Switch } from '@components/ui/switch.tsx';
-import { Label } from '@components/ui/label.tsx';
-import { Input } from '@components/ui/input.tsx';
+import { Switch } from '@/components/ui/switch.tsx';
+import { Label } from '@/components/ui/label.tsx';
+import { Input } from '@/components/ui/input.tsx';
 import {
   Select, SelectContent, SelectItem, SelectTrigger, SelectValue,
-} from '@components/ui/select.tsx';
-import { cn } from '~/lib/utils.ts';
+} from '@/components/ui/select.tsx';
+import { cn } from '@/lib/utils.ts';
+import {
+  Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle,
+} from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
 
 const meta = {
   title: 'Examples/Card',

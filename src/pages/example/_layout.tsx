@@ -1,13 +1,14 @@
 import { Outlet } from 'react-router-dom';
-import Examples from '@components/examples.tsx';
+import Aside from '@/components/layouts/aside.tsx';
 
 export default function Example() {
   return (
-    <main className="flex">
-      <Examples />
-      <div className="container">
+    <div className="flex">
+      <Aside />
+      <main className="container">
+        <h1 className="text-2xl">Title</h1>
         <Outlet />
-      </div>
-    </main>
+      </main>
+    </div>
   );
 }

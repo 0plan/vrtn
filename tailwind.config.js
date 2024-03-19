@@ -1,12 +1,13 @@
-import generated from '@tailwindcss/forms';
-
 /** @type {import('tailwindcss').Config} */
-export default {
-  darkMode: 'class',
+module.exports = {
+  darkMode: ['class'],
   content: [
-    './index.html',
-    './src/**/*.{js,ts,jsx,tsx}',
+    './pages/**/*.{ts,tsx}',
+    './components/**/*.{ts,tsx}',
+    './app/**/*.{ts,tsx}',
+    './src/**/*.{ts,tsx}',
   ],
+  prefix: '',
   theme: {
     container: {
       center: true,
@@ -56,18 +57,14 @@ export default {
         md: 'calc(var(--radius) - 2px)',
         sm: 'calc(var(--radius) - 4px)',
       },
-      fontFamily: {
-        sans: ['Inter'],
-        // sans: ["var(--font-sans)", ...fontFamily.sans],
-      },
       keyframes: {
         'accordion-down': {
-          from: { height: 0 },
+          from: { height: '0' },
           to: { height: 'var(--radix-accordion-content-height)' },
         },
         'accordion-up': {
           from: { height: 'var(--radix-accordion-content-height)' },
-          to: { height: 0 },
+          to: { height: '0' },
         },
       },
       animation: {
@@ -76,7 +73,5 @@ export default {
       },
     },
   },
-  plugins: [
-    generated,
-  ],
+  plugins: [require('tailwindcss-animate')],
 };

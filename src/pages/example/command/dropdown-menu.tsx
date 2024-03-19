@@ -1,9 +1,9 @@
 import * as React from 'react';
 
-import { Button } from '@components/ui/button';
+import { Button } from '@/components/ui/button';
 import {
   Command, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList,
-} from '@components/ui/command';
+} from '@/components/ui/command';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -16,7 +16,7 @@ import {
   DropdownMenuSubContent,
   DropdownMenuSubTrigger,
   DropdownMenuTrigger,
-} from '@components/ui/dropdown-menu';
+} from '@/components/ui/dropdown-menu';
 
 const labels = [
   'feature',
