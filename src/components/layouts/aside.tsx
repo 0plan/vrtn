@@ -1,5 +1,4 @@
 import { Button } from '@/components/ui/button.tsx';
-import { Play } from 'lucide-react';
 import { useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { ScrollArea } from '@/components/ui/scroll-area.tsx';
@@ -13,6 +12,11 @@ export default function Aside() {
     setPath(path);
   };
   const examples = [
+    { title: 'Accordion', children: [{ title: 'demo', path: '/example/accordion' }] },
+    { title: 'Alert', children: [{ title: 'demo', path: '/example/alert' }] },
+    { title: 'Alert Dialog', children: [{ title: 'demo', path: '/example/alert-dialog' }] },
+    { title: 'Aspect Ratio', children: [{ title: 'demo', path: '/example/aspect-ratio' }] },
+    { title: 'Avatar', children: [{ title: 'demo', path: '/example/avatar' }] },
     {
       title: 'Command',
       children: [{ title: 'combobox', path: '/example/command/combobox' },
@@ -34,7 +38,12 @@ export default function Aside() {
     {
       title: 'dialog',
       children: [
-        { title: '/example/dialog/demo', path: '/example/dialog/demo' },
+        { title: 'demo', path: '/example/dialog/demo' },
+      ],
+    },
+    {
+      title: 'dropdown-menu',
+      children: [
         {
           title: '/example/dropdown-menu/checkboxes',
           path: '/example/dropdown-menu/checkboxes',
@@ -124,9 +133,9 @@ export default function Aside() {
   ];
   return (
     <aside className="max-w-sm">
-      <ScrollArea className="h-[calc(100vh-132px-72px-2.5rem)]">
+      <ScrollArea className="h-[calc(100vh-144px-2.5rem)]">
         {examples?.map((example) => (
-          <div className="y-4">
+          <div className="y-4" key={example.title}>
             <h2 className="mb-2 text-lg font-semibold tracking-tight">
               {example.title}
             </h2>
@@ -136,6 +145,7 @@ export default function Aside() {
                   variant="ghost"
                   className="w-full justify-start"
                   onClick={() => handleListItemClick(child?.path)}
+                  key={`${example.title}-${child.title}`}
                 >
                   {child?.icon}
                   {child.title}

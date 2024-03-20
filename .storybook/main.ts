@@ -19,7 +19,6 @@ const config: StorybookConfig = {
     "autodocs": "tag"
   },
   viteFinal(config){
-    config.plugins?.push(Unocss())
     // Add other configuration here depending on your use case
     return config
   }

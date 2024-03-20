@@ -7,6 +7,10 @@ export type Path =
   | `/`
   | `/example`
   | `/example/accordion`
+  | `/example/alert`
+  | `/example/alert-dialog`
+  | `/example/aspect-ratio`
+  | `/example/avatar`
   | `/example/command/combobox`
   | `/example/command/demo`
   | `/example/command/dialog`
