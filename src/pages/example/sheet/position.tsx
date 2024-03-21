@@ -1,9 +1,9 @@
 import { useState } from 'react';
 
-import { Button } from '@components/ui/button';
-import { Input } from '@components/ui/input';
-import { Label } from '@components/ui/label';
-import { RadioGroup, RadioGroupItem } from '@components/ui/radio-group';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
+import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import {
   Sheet,
   SheetContent,
@@ -12,7 +12,7 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from '@components/ui/sheet';
+} from '@/components/ui/sheet';
 
 const SHEET_POSITIONS = ['top', 'right', 'bottom', 'left'] as const;
 

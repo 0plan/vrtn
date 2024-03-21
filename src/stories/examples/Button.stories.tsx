@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Button } from '@components/ui/button.tsx';
+import { Button } from '@/components/ui/button.tsx';
+import { Loader2, Mail } from 'lucide-react';
 
 const meta = {
   title: 'Examples/Button',
@@ -65,7 +66,7 @@ export const Ghost: Story = {
 export const Loading: Story = {
   render: () => (
     <Button disabled>
-      <div className="i-lucide:loader-2 mr-2 h-4 w-4 animate-spin" />
+      <Loader2 className="mr-2 h-4 w-4 animate-spin" />
       Please wait
     </Button>
   ),
@@ -74,7 +75,7 @@ export const Loading: Story = {
 export const IconButton: Story = {
   render: () => (
     <Button>
-      <div className="i-lucide:mail mr-2 h-4 w-4" />
+      <Mail className="mr-2 h-4 w-4" />
       Login with Email
     </Button>
   ),

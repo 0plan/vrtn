@@ -1,5 +1,7 @@
 import * as React from 'react';
 
+import { Link } from 'react-router-dom';
+import { cn } from '@/lib/utils.ts';
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -8,9 +10,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
-} from '@components/ui/navigation-menu';
-import { Link } from 'react-router-dom';
-import { cn } from '~/lib/utils.ts';
+} from '@/components/ui/navigation-menu';
 
 const components: { title: string; href: string; description: string }[] = [
   {

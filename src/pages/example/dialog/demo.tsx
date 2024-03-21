@@ -1,4 +1,5 @@
-import { Button } from '@components/ui/button';
+import { useState } from 'react';
+import { Button } from '@/components/ui/button';
 import {
   Dialog,
   DialogContent,
@@ -7,11 +8,13 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from '@components/ui/dialog';
-import { Input } from '@components/ui/input';
-import { Label } from '@components/ui/label';
+} from '@/components/ui/dialog';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
 
 export default function DialogDemo() {
+  const [name, setName] = useState('Pedro Duarte');
+  const [userName, setUserName] = useState('@peduarte');
   return (
     <Dialog>
       <DialogTrigger asChild>
@@ -29,13 +32,13 @@ export default function DialogDemo() {
             <Label htmlFor="name" className="text-right">
               Name
             </Label>
-            <Input id="name" value="Pedro Duarte" className="col-span-3" />
+            <Input id="name" value={name} className="col-span-3" onChange={(e) => setName(e.target.value)} />
           </div>
           <div className="grid grid-cols-4 items-center gap-4">
             <Label htmlFor="username" className="text-right">
               Username
             </Label>
-            <Input id="username" value="@peduarte" className="col-span-3" />
+            <Input id="username" value={userName} onChange={(e) => setUserName(e.target.value)} className="col-span-3" />
           </div>
         </div>
         <DialogFooter>

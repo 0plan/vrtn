@@ -1,5 +1,4 @@
 import type { StorybookConfig } from '@storybook/react-vite'
-import Unocss from 'unocss/vite'
 
 const config: StorybookConfig = {
   "stories": [
@@ -10,7 +9,8 @@ const config: StorybookConfig = {
     "@storybook/addon-links",
     "@storybook/addon-essentials",
     "@storybook/addon-onboarding",
-    "@storybook/addon-interactions"
+    "@storybook/addon-interactions",
+    "@storybook/addon-mdx-gfm"
   ],
   "framework": {
     "name": "@storybook/react-vite",
@@ -20,7 +20,6 @@ const config: StorybookConfig = {
     "autodocs": "tag"
   },
   viteFinal(config){
-    config.plugins?.push(Unocss())
     // Add other configuration here depending on your use case
     return config
   }

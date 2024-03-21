@@ -1,43 +1,46 @@
 import * as React from 'react';
 
-import { Button } from '@components/ui/button';
+import { cn } from '@/lib/utils.ts';
+import {
+  ArrowUpCircle, CheckCircle2, Circle, HelpCircle, LucideIcon, XCircle,
+} from 'lucide-react';
+import { Button } from '@/components/ui/button';
 import {
   Command, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList,
-} from '@components/ui/command';
-import { Popover, PopoverContent, PopoverTrigger } from '@components/ui/popover';
-import { cn } from '~/lib/utils.ts';
+} from '@/components/ui/command';
+import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
 
 type Status = {
   value: string
   label: string
-  icon: string
+  icon: LucideIcon
 }
 
 const statuses: Status[] = [
   {
     value: 'backlog',
     label: 'Backlog',
-    icon: 'i-lucide:help-circle',
+    icon: HelpCircle,
   },
   {
     value: 'todo',
     label: 'Todo',
-    icon: 'i-lucide:circle',
+    icon: Circle,
   },
   {
     value: 'in progress',
     label: 'In Progress',
-    icon: 'i-lucide:arrow-up-circle',
+    icon: ArrowUpCircle,
   },
   {
     value: 'done',
     label: 'Done',
-    icon: 'i-lucide:check-circle-2',
+    icon: CheckCircle2,
   },
   {
     value: 'canceled',
     label: 'Canceled',
-    icon: 'i-lucide:x-circle',
+    icon: XCircle,
   },
 ];
 
@@ -59,7 +62,7 @@ export default function CommandPopover() {
           >
             {selectedStatus ? (
               <>
-                <div className={`${selectedStatus.icon} mr-2 h-4 w-4 shrink-0`} />
+                <selectedStatus.icon className="mr-2 h-4 w-4 shrink-0" />
                 {selectedStatus.label}
               </>
             ) : (
@@ -84,14 +87,13 @@ export default function CommandPopover() {
                       setOpen(false);
                     }}
                   >
-                    <div
-                      className={`${status.icon}
-                      ${cn(
+                    <status.icon
+                      className={cn(
                         'mr-2 h-4 w-4',
                         status.value === selectedStatus?.value
                           ? 'opacity-100'
                           : 'opacity-40',
-                      )}`}
+                      )}
                     />
                     <span>{status.label}</span>
                   </CommandItem>

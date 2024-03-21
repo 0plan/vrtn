@@ -1,13 +1,23 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import {
   Accordion, AccordionContent, AccordionItem, AccordionTrigger,
-} from '@components/ui/accordion.tsx';
+} from '@/components/ui/accordion.tsx';
 
 const meta = {
   title: 'Examples/Accordion',
   component: Accordion,
   parameters: {
     layout: 'centered',
+  },
+  argTypes: {
+    type: {
+      defaultValue: 'multiple',
+      control: 'select',
+      options: ['single', 'multiple'],
+    },
+    collapsible: {
+      control: { type: 'boolean' },
+    },
   },
   tags: ['autodocs'],
 } satisfies Meta<typeof Accordion>;
@@ -17,11 +27,7 @@ type Story = StoryObj<typeof meta>
 
 const AccordionTemplate: Story = {
   render: ({ ...args }) => (
-    <Accordion
-      type="single"
-      collapsible
-      className="w-[300px]"
-    >
+    <Accordion {...args}>
       <AccordionItem value="item-1">
         <AccordionTrigger>Is it accessible?</AccordionTrigger>
         <AccordionContent>
@@ -32,21 +38,22 @@ const AccordionTemplate: Story = {
         <AccordionTrigger>Is it styled?</AccordionTrigger>
         <AccordionContent>
           Yes. It comes with default styles that matches the other
-          components aesthetic.
+          components&apos; aesthetic.
         </AccordionContent>
       </AccordionItem>
       <AccordionItem value="item-3">
         <AccordionTrigger>Is it animated?</AccordionTrigger>
         <AccordionContent>
-          Yes. It's animated by default, but you can disable it if you
+          Yes. It&apos;s animated by default, but you can disable it if you
           prefer.
         </AccordionContent>
       </AccordionItem>
     </Accordion>
   ),
 };
-
-export const Primary: Story = {
+export const Default: Story = {
   ...AccordionTemplate,
-  args: {},
+  args: {
+    className: 'w-96',
+  },
 };
