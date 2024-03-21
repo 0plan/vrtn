@@ -1,9 +1,10 @@
+import { Underline } from 'lucide-react';
 import { Toggle } from '@/components/ui/toggle';
 
 export default function ToggleDisabled() {
   return (
     <Toggle aria-label="Toggle italic" disabled>
-      <div className="i-lucide:underline h-4 w-4" />
+      <Underline className="h-4 w-4" />
     </Toggle>
   );
 }

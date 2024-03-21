@@ -6,6 +6,7 @@ import {
   Select, SelectContent, SelectItem, SelectTrigger, SelectValue,
 } from '@/components/ui/select.tsx';
 import { cn } from '@/lib/utils.ts';
+import { Check } from 'lucide-react';
 import {
   Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle,
 } from '@/components/ui/card';
@@ -32,7 +33,7 @@ const CardTemplate: Story = {
       </CardHeader>
       <CardContent className="grid gap-4">
         <div className=" flex items-center space-x-4 rounded-md border p-4">
-          <div className="i-lucide:bell-ring" />
+          <BellRing />
           <div className="flex-1 space-y-1">
             <p className="text-sm font-medium leading-none">
               Push Notifications
@@ -77,7 +78,7 @@ const CardTemplate: Story = {
       </CardContent>
       <CardFooter>
         <Button className="w-full">
-          <div className="i-lucide:check mr-2 h-4 w-4" /> Mark all as read
+          <Check className="mr-2 h-4 w-4" /> Mark all as read
         </Button>
       </CardFooter>
     </Card>

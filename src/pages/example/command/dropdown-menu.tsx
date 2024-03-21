@@ -1,5 +1,8 @@
 import * as React from 'react';
 
+import {
+  Calendar, MoreHorizontal, Tags, Trash, User,
+} from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {
   Command, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList,
@@ -43,24 +46,24 @@ export default function CommandDropdownMenu() {
       <DropdownMenu open={open} onOpenChange={setOpen}>
         <DropdownMenuTrigger asChild>
           <Button variant="ghost" size="sm">
-            <div className="i-lucide:more-horizontal" />
+            <MoreHorizontal />
           </Button>
         </DropdownMenuTrigger>
         <DropdownMenuContent align="end" className="w-[200px]">
           <DropdownMenuLabel>Actions</DropdownMenuLabel>
           <DropdownMenuGroup>
             <DropdownMenuItem>
-              <div className="i-lucide:user mr-2 h-4 w-4" />
+              <User className="mr-2 h-4 w-4" />
               Assign to...
             </DropdownMenuItem>
             <DropdownMenuItem>
-              <div className="i-lucide:calendar mr-2 h-4 w-4" />
+              <Calendar className="mr-2 h-4 w-4" />
               Set due date...
             </DropdownMenuItem>
             <DropdownMenuSeparator />
             <DropdownMenuSub>
               <DropdownMenuSubTrigger>
-                <div className="i-lucide:tags mr-2 h-4 w-4" />
+                <Tags className="mr-2 h-4 w-4" />
                 Apply label
               </DropdownMenuSubTrigger>
               <DropdownMenuSubContent className="p-0">
@@ -90,7 +93,7 @@ export default function CommandDropdownMenu() {
             </DropdownMenuSub>
             <DropdownMenuSeparator />
             <DropdownMenuItem className="text-red-600">
-              <div className="i-lucide:trash mr-2 h-4 w-4" />
+              <Trash className="mr-2 h-4 w-4" />
               Delete
               <DropdownMenuShortcut>⌘⌫</DropdownMenuShortcut>
             </DropdownMenuItem>

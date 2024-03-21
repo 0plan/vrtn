@@ -1,3 +1,4 @@
+import { Settings } from 'lucide-react';
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -8,7 +9,7 @@ export default function PopoverDemo() {
     <Popover>
       <PopoverTrigger asChild>
         <Button variant="outline" className="w-10 rounded-full p-0">
-          <div className="i-lucide:settings-2 h-4 w-4" />
+          <Settings className="h-4 w-4" />
           <span className="sr-only">Open popover</span>
         </Button>
       </PopoverTrigger>

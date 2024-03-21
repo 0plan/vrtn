@@ -1,4 +1,7 @@
 import {
+  Calculator, Calendar, CreditCard, Settings, Smile, User,
+} from 'lucide-react';
+import {
   Command,
   CommandEmpty,
   CommandGroup,
@@ -17,32 +20,32 @@ export default function CommandDemo() {
         <CommandEmpty>No results found.</CommandEmpty>
         <CommandGroup heading="Suggestions">
           <CommandItem>
-            <div className="i-lucide:calendar mr-2 h-4 w-4" />
+            <Calendar className="mr-2 h-4 w-4" />
             <span>Calendar</span>
           </CommandItem>
           <CommandItem>
-            <div className="i-lucide:smile mr-2 h-4 w-4" />
+            <Smile className="mr-2 h-4 w-4" />
             <span>Search Emoji</span>
           </CommandItem>
           <CommandItem>
-            <div className="i-lucide:calculator mr-2 h-4 w-4" />
+            <Calculator className="mr-2 h-4 w-4" />
             <span>Calculator</span>
           </CommandItem>
         </CommandGroup>
         <CommandSeparator />
         <CommandGroup heading="Settings">
           <CommandItem>
-            <div className="i-lucide:user mr-2 h-4 w-4" />
+            <User className="mr-2 h-4 w-4" />
             <span>Profile</span>
             <CommandShortcut>⌘P</CommandShortcut>
           </CommandItem>
           <CommandItem>
-            <div className="i-lucide:credit-card mr-2 h-4 w-4" />
+            <CreditCard className="mr-2 h-4 w-4" />
             <span>Billing</span>
             <CommandShortcut>⌘B</CommandShortcut>
           </CommandItem>
           <CommandItem>
-            <div className="i-lucide:settings mr-2 h-4 w-4" />
+            <Settings className="mr-2 h-4 w-4" />
             <span>Settings</span>
             <CommandShortcut>⌘S</CommandShortcut>
           </CommandItem>

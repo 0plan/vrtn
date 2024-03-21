@@ -50,7 +50,7 @@ export default function Aside() {
         },
         {
           title: '/example/dropdown-menu/demo',
-          path: '/example/dropdown-menu/demo',
+          path: '/example/dropdown-menu',
         },
         {
           title: '/example/dropdown-menu/radio-group',
