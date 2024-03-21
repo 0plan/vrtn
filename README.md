@@ -14,6 +14,7 @@ VRTN is Vite React Typescript i18n template
 - [File based routing](https://github.com/oedotme/generouted)
 - [Layout](https://github.com/oedotme/generouted?tab=readme-ov-file#file-and-directories-naming-and-conventions)
 - [Storybook](https://storybook.js.org/)
+- Docker
 
 ## 🚧 TO-DO
 
@@ -21,7 +22,6 @@ VRTN is Vite React Typescript i18n template
 - [Markdown Support]()
 - Unit Testing with [Vitest](https://github.com/vitest-dev/vitest), E2E Testing with [Playwright](https://playwright.dev/)
   on [GitHub Actions](https://github.com/features/actions)
-- Docker
 
 [//]: # (## Try it now!)
 
