@@ -15,10 +15,9 @@ VRTN is Vite React Typescript i18n template
 - [Layout](https://github.com/oedotme/generouted?tab=readme-ov-file#file-and-directories-naming-and-conventions)
 - [Storybook](https://storybook.js.org/)
 - Docker
+- [PWA](https://vite-pwa-org.netlify.app/)
 
 ## 🚧 TO-DO
-
-- [PWA]()
 - [Markdown Support]()
 - Unit Testing with [Vitest](https://github.com/vitest-dev/vitest), E2E Testing with [Playwright](https://playwright.dev/)
   on [GitHub Actions](https://github.com/features/actions)
