@@ -17,7 +17,7 @@ function Header() {
     { path: '/example', name: t('menu.example') },
   ];
   return (
-    <header className="z-50 flex w-full flex-wrap justify-start py-4 text-sm ">
+    <header className="z-50 flex w-full flex-wrap justify-start py-4 text-sm fixed top-0 backdrop-blur-sm">
       <nav className="mx-auto flex w-full max-w-[85rem] items-center justify-between px-4">
         <div className="sm:hidden">
           <MobileMenu menuItems={menuItems} />

@@ -10,10 +10,15 @@ import {
 import { Button } from '@/components/ui/button.tsx';
 import { Label } from '@/components/ui/label.tsx';
 import { Input } from '@/components/ui/input.tsx';
+import { useToast } from '@/components/ui/use-toast.ts';
 
-export default function Signin() {
+export default function SignIn() {
+  const { toast } = useToast();
+
   const signIn = () => {
-    alert('Sign in');
+    toast({
+      description: 'Signed in successfully!',
+    });
   };
   const handleEmailKeyPress = (e) => {
     if (e.key === 'Enter') document.getElementById('password').focus();

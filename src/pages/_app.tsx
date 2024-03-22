@@ -8,7 +8,7 @@ export default function App() {
     <div>
       <Toaster />
       <Header />
-      <main className="mx-auto w-full max-w-[85rem] px-4 py-5">
+      <main className="mx-auto w-full max-w-[85rem] px-4 py-5 mt-[72px]">
         <Outlet />
       </main>
       <Footer />
