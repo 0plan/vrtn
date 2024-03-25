@@ -11,15 +11,20 @@ import { Button } from '@/components/ui/button';
 import { Label } from '@/components/ui/label';
 import { Input } from '@/components/ui/input';
 import { useToast } from '@/components/ui/use-toast';
+import { useState } from 'react';
 
 export default function SignIn() {
   const { toast } = useToast();
+  const [open, setOpen] = useState(false);
 
-  const signIn = () => {
+  const signIn = () => new Promise((resolve) => {
+    setTimeout(resolve, 1000);
+  }).then(() => {
+    setOpen(false);
     toast({
       description: 'Signed in successfully!',
     });
-  };
+  });
   const handleEmailKeyPress = (e) => {
     if (e.key === 'Enter') document.getElementById('password').focus();
   };
@@ -28,7 +33,7 @@ export default function SignIn() {
   };
 
   return (
-    <Dialog>
+    <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
         <Button>Sign in</Button>
       </DialogTrigger>

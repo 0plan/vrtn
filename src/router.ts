@@ -30,6 +30,7 @@ export type Path =
   | `/example/input/with-text`
   | `/example/label/demo`
   | `/example/markdown/editor`
+  | `/example/markdown/viewer`
   | `/example/menubar/demo`
   | `/example/navigation-menu/demo`
   | `/example/popover/demo`

@@ -233,7 +233,8 @@ export const examples : IExample[] = [
   {
     title: 'Markdown Editor',
     children: [
-      { title: 'markdown editor', path: '/example/markdown/editor' },
+      { title: 'Editor', path: '/example/markdown/editor' },
+      { title: 'Viewer', path: '/example/markdown/viewer' },
     ],
   },
 ];
