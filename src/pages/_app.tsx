@@ -1,6 +1,6 @@
-import Footer from '@/components/layouts/footer.tsx';
+import Footer from '@/components/layouts/footer';
 import { Outlet } from 'react-router-dom';
-import Header from '@/components/layouts/header/index.tsx';
+import Header from '@/components/layouts/header/index';
 import { Toaster } from '@/components/ui/toaster';
 
 export default function App() {

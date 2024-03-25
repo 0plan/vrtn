@@ -1,6 +1,6 @@
 import MDEditor from '@uiw/react-md-editor';
 import { useState } from 'react';
-import { useDarkMode } from '@/lib/dark-mode.ts';
+import { useDarkMode } from '@/lib/dark-mode';
 
 interface IProps {
   height: number;

@@ -1,12 +1,12 @@
 import { Link } from 'react-router-dom';
-import Menu from '@/components/layouts/header/menu.tsx';
-import MobileMenu from '@/components/layouts/header/mobileMenu.tsx';
+import Menu from '@/components/layouts/header/menu';
+import MobileMenu from '@/components/layouts/header/mobileMenu';
 import { useTranslation } from 'react-i18next';
 import { Globe, Moon, Sun } from 'lucide-react';
-import { useDarkMode } from '@/lib/dark-mode.ts';
-import useLanguage from '@/stores/language.ts';
-import { Button } from '@/components/ui/button.tsx';
-import SignIn from '@/components/SignIn.tsx';
+import useLanguage from '@/stores/language';
+import { Button } from '@/components/ui/button';
+import SignIn from '@/components/SignIn';
+import { useDarkMode } from '@/lib/dark-mode';
 
 function Header() {
   const { t } = useTranslation();

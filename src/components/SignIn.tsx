@@ -6,11 +6,11 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from '@/components/ui/dialog.tsx';
-import { Button } from '@/components/ui/button.tsx';
-import { Label } from '@/components/ui/label.tsx';
-import { Input } from '@/components/ui/input.tsx';
-import { useToast } from '@/components/ui/use-toast.ts';
+} from '@/components/ui/dialog';
+import { Button } from '@/components/ui/button';
+import { Label } from '@/components/ui/label';
+import { Input } from '@/components/ui/input';
+import { useToast } from '@/components/ui/use-toast';
 
 export default function SignIn() {
   const { toast } = useToast();
