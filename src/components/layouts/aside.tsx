@@ -1,8 +1,8 @@
-import { Button } from '@/components/ui/button.tsx';
+import { Button } from '@/components/ui/button';
 import { useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { ScrollArea } from '@/components/ui/scroll-area.tsx';
-import { IExample } from '@/data/example.ts';
+import { ScrollArea } from '@/components/ui/scroll-area';
+import { IExample } from '@/data/example';
 
 export default function Aside({ examples } : { examples: IExample[] }) {
   const navigate = useNavigate();

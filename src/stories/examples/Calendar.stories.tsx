@@ -1,16 +1,16 @@
-import type { ComponentStory, Meta, StoryObj } from '@storybook/react';
-import { Calendar } from '@/components/ui/calendar.tsx';
+import type { Meta, StoryObj } from '@storybook/react';
+import { Calendar } from '@/components/ui/calendar';
 import { Calendar as LucideCalendar } from 'lucide-react';
 import * as React from 'react';
 import { useState } from 'react';
-import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover.tsx';
-import { Button } from '@/components/ui/button.tsx';
+import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
+import { Button } from '@/components/ui/button';
 import { addDays, format } from 'date-fns';
 import { DateRange } from 'react-day-picker';
 import {
   Select, SelectContent, SelectItem, SelectTrigger, SelectValue,
-} from '@/components/ui/select.tsx';
-import { cn } from '@/lib/utils.ts';
+} from '@/components/ui/select';
+import { cn } from '@/lib/utils';
 
 const meta = {
   title: 'Examples/Calendar',
@@ -22,9 +22,9 @@ const meta = {
 } satisfies Meta<typeof Calendar>;
 
 export default meta;
-type Story = StoryObj<typeof meta>
+type Story = StoryObj<typeof Calendar>
 
-const CalendarTemplate: ComponentStory<typeof Calendar> = (args) => {
+const CalendarTemplate: Story = (args) => {
   const [date, setDate] = useState<Date | undefined>(new Date());
   return (
     <Calendar
@@ -128,7 +128,7 @@ function CalendarDatePickerWithPresetsTemplate(args) {
       </PopoverTrigger>
       <PopoverContent className="flex w-auto flex-col space-y-2 p-2">
         <Select
-          onValueChange={(value) => setDate(addDays(new Date(), parseInt(value)))}
+          onValueChange={(value) => setDate(addDays(new Date(), parseInt(value, 10)))}
         >
           <SelectTrigger>
             <SelectValue placeholder="Select" />

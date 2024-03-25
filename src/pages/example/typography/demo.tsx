@@ -1,8 +1,8 @@
-import TypographyH1 from '@/pages/example/typography/h1.tsx';
-import TypographyH2 from '@/pages/example/typography/h2.tsx';
-import TypographyH3 from '@/pages/example/typography/h3.tsx';
-import TypographyH4 from '@/pages/example/typography/h4.tsx';
-import TypographyInlineCode from '@/pages/example/typography/inline-code.tsx';
+import TypographyH1 from '@/pages/example/typography/h1';
+import TypographyH2 from '@/pages/example/typography/h2';
+import TypographyH3 from '@/pages/example/typography/h3';
+import TypographyH4 from '@/pages/example/typography/h4';
+import TypographyInlineCode from '@/pages/example/typography/inline-code';
 
 export default function TypographyDemo() {
   return (

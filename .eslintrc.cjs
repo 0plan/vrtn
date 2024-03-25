@@ -11,7 +11,7 @@ module.exports = {
   ignorePatterns: ["dist", ".eslintrc.cjs"],
   parser: "@typescript-eslint/parser",
   parserOptions: {
-    ecmaVersion: 6,
+    ecmaVersion: 2020,
     sourceType: "module",
     ecmaFeatures: {
       jsx: true,
@@ -19,11 +19,7 @@ module.exports = {
   },
   settings: {
     "import/resolver": {
-      alias: {
-        map: [
-          ["@", "./src"],
-        ],
-      },
+      typescript: {},
     },
   },
   plugins: ["react-refresh"],
@@ -39,5 +35,15 @@ module.exports = {
     "no-console": "off",
     "react/prefer-stateless-function": 0,
     "react/jsx-one-expression-per-line": 0,
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ]
   },
 };
