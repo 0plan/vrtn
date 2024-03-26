@@ -11,7 +11,7 @@ VRTN is Vite React Typescript i18n template
 - [Zustand](https://zustand-demo.pmnd.rs/)
 - [I18n ready](./public/locales)
 - [Deploy on Vercel](https://vercel.com)
-- [File based routing](https://github.com/oedotme/generouted)
+- [File based routing](https://github.com/oedotme/generouted) support with [mdx](https://github.com/oedotme/generouted/tree/main/examples/react-router-mdx)
 - [Layout](https://github.com/oedotme/generouted?tab=readme-ov-file#file-and-directories-naming-and-conventions)
 - [Storybook](https://storybook.js.org/)
 - Docker
