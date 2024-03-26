@@ -29,8 +29,8 @@ export type Path =
   | `/example/input/with-label`
   | `/example/input/with-text`
   | `/example/label/demo`
+  | `/example/markdown`
   | `/example/markdown/editor`
-  | `/example/markdown/viewer`
   | `/example/menubar/demo`
   | `/example/navigation-menu/demo`
   | `/example/popover/demo`
@@ -76,7 +76,8 @@ export type Path =
   | `/example/typography/muted`
   | `/example/typography/p`
   | `/example/typography/small`
-  | `/example/typography/table`;
+  | `/example/typography/table`
+  | `/login`;
 
 export type Params = {};
 

@@ -58,6 +58,7 @@ export default function CommandCombobox() {
             {frameworks.map((framework) => (
               <CommandItem
                 key={framework.value}
+                value={framework.value}
                 onSelect={(currentValue) => {
                   setValue(currentValue === value ? '' : currentValue);
                   setOpen(false);

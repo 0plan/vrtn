@@ -5,10 +5,11 @@ import tsconfigPaths from 'vite-tsconfig-paths';
 import generouted from '@generouted/react-router/plugin';
 import { VitePWA } from 'vite-plugin-pwa';
 import { Mode, plugin } from 'vite-plugin-markdown';
-
+import mdx from '@mdx-js/rollup';
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
+    { enforce: 'pre', ...mdx() },
     react(),
     generouted(),
     tsconfigPaths(),
