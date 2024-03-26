@@ -7,7 +7,7 @@ import { IExample } from '@/data/example';
 export default function Aside({ examples } : { examples: IExample[] }) {
   const navigate = useNavigate();
   const location = useLocation();
-  const [, setPath] = useState(location.pathname);
+  const [path, setPath] = useState(location.pathname);
   const handleListItemClick = (path: string) => {
     navigate(path);
     setPath(path);
@@ -24,7 +24,7 @@ export default function Aside({ examples } : { examples: IExample[] }) {
             <div className="space-y-1 pb-4">
               {example.children?.map((child) => (
                 <Button
-                  variant="ghost"
+                  variant={child.path === path ? 'secondary' : 'ghost'}
                   className="w-full justify-start"
                   onClick={() => handleListItemClick(child?.path)}
                   key={`${example.title}-${child.title}`}
