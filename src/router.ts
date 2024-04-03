@@ -76,8 +76,7 @@ export type Path =
   | `/example/typography/muted`
   | `/example/typography/p`
   | `/example/typography/small`
-  | `/example/typography/table`
-  | `/login`;
+  | `/example/typography/table`;
 
 export type Params = {};
 
