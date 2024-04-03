@@ -1,7 +1,7 @@
 // Generouted, changes to this file will be overriden
 /* eslint-disable */
 
-import { components, hooks, utils } from "@generouted/react-router/client";
+import { components, hooks, utils } from '@generouted/react-router/client';
 
 export type Path =
   | `/`
@@ -76,7 +76,8 @@ export type Path =
   | `/example/typography/muted`
   | `/example/typography/p`
   | `/example/typography/small`
-  | `/example/typography/table`;
+  | `/example/typography/table`
+  | `/mypage`;
 
 export type Params = {};
 
