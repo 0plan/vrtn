@@ -23,7 +23,7 @@ export default function SignIn({ setIsAuth, setStoreAuth }) {
     new Promise((resolve) => {
       NProgress.start();
       setLoading(true);
-      setTimeout(resolve, 5000);
+      setTimeout(resolve, 1000);
     }).then(() => {
       NProgress.done();
       setLoading(false);

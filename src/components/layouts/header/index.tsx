@@ -61,10 +61,13 @@ function Header() {
           ) : (
             <SignIn setIsAuth={setIsAuth} setStoreAuth={setStoreAuth} />
           )}
-          
-          <Sun className="cursor-pointer ml-2 hidden dark:block" onClick={toggle} />
-          <Moon className="cursor-pointer ml-2 dark:hidden" onClick={toggle} />
-          <Globe className="cursor-pointer ml-2" onClick={toggleLang} />
+
+          <Sun
+            className='cursor-pointer ml-2 hidden dark:block'
+            onClick={toggle}
+          />
+          <Moon className='cursor-pointer ml-2 dark:hidden' onClick={toggle} />
+          <Globe className='cursor-pointer ml-2' onClick={toggleLang} />
           {isAuth ? (
             <Link to='/mypage' className='text-xl font-semibold text-left'>
               <Button
@@ -78,6 +81,7 @@ function Header() {
           ) : (
             ''
           )}
+        </div>
       </nav>
     </header>
   );
