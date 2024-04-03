@@ -53,7 +53,6 @@ function Header() {
         <div className='hidden grow basis-full sm:block'>
           <Menu menuItems={menuItems} />
         </div>
-
         <div className='flex items-center justify-end sm:px-10'>
           {isAuth ? (
             <Button onClick={signOut} variant='destructive'>
@@ -62,24 +61,10 @@ function Header() {
           ) : (
             <SignIn setIsAuth={setIsAuth} setStoreAuth={setStoreAuth} />
           )}
-
-          <Button
-            className='h-10 px-2 rounded-full'
-            size='sm'
-            variant='ghost'
-            onClick={toggle}
-          >
-            {isDarkMode ? <Sun /> : <Moon />}
-          </Button>
-          <Button
-            onClick={toggleLang}
-            size='sm'
-            variant='ghost'
-            className='h-10 px-2 rounded-full'
-          >
-            <Globe />
-          </Button>
-
+          
+          <Sun className="cursor-pointer ml-2 hidden dark:block" onClick={toggle} />
+          <Moon className="cursor-pointer ml-2 dark:hidden" onClick={toggle} />
+          <Globe className="cursor-pointer ml-2" onClick={toggleLang} />
           {isAuth ? (
             <Link to='/mypage' className='text-xl font-semibold text-left'>
               <Button
@@ -93,7 +78,6 @@ function Header() {
           ) : (
             ''
           )}
-        </div>
       </nav>
     </header>
   );
