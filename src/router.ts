@@ -77,7 +77,7 @@ export type Path =
   | `/example/typography/p`
   | `/example/typography/small`
   | `/example/typography/table`
-  | `/login`;
+  | `/mypage`;
 
 export type Params = {};
 
