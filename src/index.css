@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer {
+    @import '../node_modules/react-data-mapping/dist/index.css';
+    @import '../node_modules/react-visual-modeling/dist/index.css';
+}
+
 @layer base {
     :root {
         --background: #f2f5f9;
