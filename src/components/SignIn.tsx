@@ -13,8 +13,10 @@ import { Input } from '@/components/ui/input';
 import { useToast } from '@/components/ui/use-toast';
 import { useState, useEffect } from 'react';
 import NProgress from 'nprogress';
+import { useTranslation } from 'react-i18next';
 
 export default function SignIn({ setIsAuth, setStoreAuth }) {
+  const { t } = useTranslation();
   const { toast } = useToast();
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -44,11 +46,11 @@ export default function SignIn({ setIsAuth, setStoreAuth }) {
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
-        <Button>Sign in</Button>
+        <Button>{t('signIn')}</Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
-          <DialogTitle>Sign in</DialogTitle>
+          <DialogTitle>{t('signIn')}</DialogTitle>
           <DialogDescription>
             Sign in to your account to continue.
           </DialogDescription>

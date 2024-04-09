@@ -58,7 +58,7 @@ function Header() {
         <div className="flex items-center justify-end sm:px-10">
           {isAuth ? (
             <Button onClick={signOut} variant="destructive">
-              로그아웃
+              {t('signOut')}
             </Button>
           ) : (
             <SignIn setIsAuth={setIsAuth} setStoreAuth={setStoreAuth} />
@@ -70,19 +70,13 @@ function Header() {
           />
           <Moon className="cursor-pointer ml-2 dark:hidden" onClick={toggle} />
           <Globe className="cursor-pointer ml-2" onClick={toggleLang} />
-          {isAuth ? (
-            <Link to="/mypage" className="text-xl font-semibold text-left">
-              <Button
-                className="h-10 px-2 rounded-full"
-                size="sm"
-                variant="ghost"
-              >
-                <User />
-              </Button>
-            </Link>
-          ) : (
-            ''
-          )}
+          {
+           isAuth && (
+           <Link to="/mypage" className="ml-2">
+             <User />
+           </Link>
+           )
+          }
         </div>
       </nav>
     </header>
