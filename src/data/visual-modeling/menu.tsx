@@ -1,21 +1,21 @@
 // 节点菜单
 import {
-  DoorOpen, Minus, Plus, Star,
+  DoorOpen, Frame, Minus, Plus, Star,
 } from 'lucide-react';
 
 export const nodeMenu = [
   {
     key: 'setting',
-    title: '节点设置',
+    title: 'Node 설정',
     onClick: (key, data) => {
-      console.log('click setting');
+      console.log('click setting: ', key, data);
     },
   },
   {
     key: 'delete',
-    render: (key, data) => <span>节点删除</span>,
+    title: 'Node 삭제',
     onClick: (key, data) => {
-      console.log('delete node');
+      console.log('delete node: ', key, data);
     },
   },
 ];
@@ -24,58 +24,34 @@ export const nodeMenu = [
 export const edgeMenu = [
   {
     key: 'setting',
-    title: '线段设置',
+    title: 'Edge 설정',
     onClick: (key, data) => {
       console.log('click setting');
     },
   },
   {
     key: 'delete',
-    render: (key, data) => <span>线段删除</span>,
+    title: 'Edge 삭제',
     onClick: (key, data) => {
       console.log('delete node');
     },
   },
 ];
 
-export const actionMenu = ({
-  onAddEdge,
-  onDelEdge,
-  onSetGridMode,
-}) => [
+export const actionMenu = [
   {
-    key: 'zoom-in',
-    disable: true,
-  },
-  {
-    icon: <Star />,
-    key: 'star',
-    onClick: () => {
-      alert('点击收藏！');
-    },
+    icon: <Frame />,
+    key: 'fit',
+    title: '맞춤',
   },
   {
     icon: <Plus />,
-    key: 'plus',
-    title: '添加一条连线',
-    onClick: () => {
-      onAddEdge();
-    },
+    key: 'zoom-in',
+    title: '확대',
   },
   {
     icon: <Minus />,
-    key: 'minus',
-    title: '删除一条连线',
-    onClick: () => {
-      onDelEdge();
-    },
-  },
-  {
-    icon: <DoorOpen />,
-    title: '框选',
-    key: 'select',
-    onClick: () => {
-      onSetGridMode();
-    },
+    key: 'zoom-out',
+    title: '축소',
   },
 ];

@@ -2,6 +2,7 @@ import ButterflyDataMapping from 'react-data-mapping';
 import {
   columns, mappingData, sourceData, targetData,
 } from '@/data/data-mapping/data';
+import 'react-data-mapping/dist/index.css';
 
 export default function DataMapping() {
   return (

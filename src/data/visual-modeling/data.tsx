@@ -21,7 +21,7 @@ export const data = {
       top: 300,
       left: 200,
       id: 'aaa',
-      title: 'aaa',
+      title: 'First',
       fields: [
         {
           id: 'field_1',

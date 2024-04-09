@@ -1,6 +1,3 @@
-@import '../node_modules/react-visual-modeling/dist/index.css';
-@import '../node_modules/react-data-mapping/dist/index.css';
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
