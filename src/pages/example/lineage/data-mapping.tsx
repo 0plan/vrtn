@@ -5,9 +5,10 @@ import {
 
 export default function DataMapping() {
   return (
+    sourceData && (
     <ButterflyDataMapping
       width={500}
-      height={1000}
+      height={500}
       type="single"
       columns={columns}
       sourceData={sourceData}
@@ -17,5 +18,6 @@ export default function DataMapping() {
       sourceClassName="source-column"
       targetClassName="target-column"
     />
+    )
   );
 }

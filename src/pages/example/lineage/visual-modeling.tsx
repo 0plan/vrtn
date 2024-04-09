@@ -6,24 +6,14 @@ export default function VisualModel() {
   return (
     data && (
     <VisualModeling
-      height={1000}
-      width={1000}
+      width={500}
+      height={500}
       data={data}
       column={columns}
       nodeMenu={nodeMenu}
       edgeMenu={edgeMenu}
       onLoaded={() => {
         console.log('onLoaded: ', data);
-      }}
-      onChange={() => {
-      }}
-      onFocusNode={() => {
-      }}
-      onFocusEdge={() => {
-      }}
-      onFocusCanvas={() => {
-      }}
-      onDblClickNode={() => {
       }}
     />
     )
