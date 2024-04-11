@@ -9,7 +9,6 @@ import createEngine, {
 } from '@projectstorm/react-diagrams';
 import { useLayoutEffect, useRef } from 'react';
 import { CanvasWidget } from '@projectstorm/react-canvas-core';
-import { DemoButton, DemoWorkspaceWidget } from './DemoWorkspaceWidget';
 
 function createNode(name): any {
   return new DefaultNodeModel(name, 'rgb(0,192,255)');
@@ -74,25 +73,8 @@ function DemoWidget(props) {
     autoRefreshLinks(engine);
   }, []);
 
-  const redistribute = () => {
-    autoDistribute(engine);
-  };
-
-  const refreshLinks = () => {
-    autoRefreshLinks(engine);
-  };
-
   return (
-    <DemoWorkspaceWidget
-      buttons={(
-        <div>
-          <DemoButton onClick={redistribute}>Re-distribute</DemoButton>
-          <DemoButton onClick={refreshLinks}>Refresh Links</DemoButton>
-        </div>
-      )}
-    >
-      <CanvasWidget engine={engine} className="h-screen w-full" />
-    </DemoWorkspaceWidget>
+    <CanvasWidget engine={engine} className="h-screen w-full" />
   );
 }
 
