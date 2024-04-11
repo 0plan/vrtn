@@ -4,7 +4,7 @@ export default function Index() {
   const { t } = useTranslation();
   return (
     <main>
-      <h1>Examples</h1>
+      <h1>{t('menu.example')}</h1>
     </main>
   );
 }

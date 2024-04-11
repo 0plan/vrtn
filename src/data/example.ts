@@ -237,4 +237,10 @@ export const examples : IExample[] = [
       { title: 'Editor', path: '/example/markdown/editor' },
     ],
   },
+  {
+    title: 'Lineage',
+    children: [
+      { title: 'React Diagrams', path: '/example/lineage/react-diagram' },
+    ],
+  },
 ];
