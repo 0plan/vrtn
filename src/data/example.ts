@@ -240,7 +240,6 @@ export const examples : IExample[] = [
   {
     title: 'Lineage',
     children: [
-      { title: 'Data Mapping', path: '/example/lineage/data-mapping' },
       { title: 'Visual Modeling', path: '/example/lineage/visual-modeling' },
     ],
   },

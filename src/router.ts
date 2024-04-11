@@ -29,7 +29,6 @@ export type Path =
   | `/example/input/with-label`
   | `/example/input/with-text`
   | `/example/label/demo`
-  | `/example/lineage/data-mapping`
   | `/example/lineage/visual-modeling`
   | `/example/markdown`
   | `/example/markdown/editor`

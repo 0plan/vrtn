@@ -1,5 +1,9 @@
+import Lineage from '@/components/lineage';
+
 export default function VisualModel() {
   return (
-    <div>Visual Model</div>
+    <div>
+      <Lineage />
+    </div>
   );
 }
