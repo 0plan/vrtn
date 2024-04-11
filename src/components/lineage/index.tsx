@@ -17,16 +17,12 @@ function createNode(name): any {
 
 let count = 0;
 
-function connectNodes(nodeFrom, nodeTo, engine: DiagramEngine) {
+function connectNodes(nodeFrom, nodeTo, engine: DiagramEngine, columnName:string) {
   // just to get id-like structure
   count++;
-  const portOut = nodeFrom.addPort(new DefaultPortModel(true, `${nodeFrom.name}-out-${count}`, 'Out'));
-  const portTo = nodeTo.addPort(new DefaultPortModel(false, `${nodeFrom.name}-to-${count}`, 'IN'));
+  const portOut = nodeFrom.addPort(new DefaultPortModel(true, `${nodeFrom.name}-out-${count}`, columnName));
+  const portTo = nodeTo.addPort(new DefaultPortModel(false, `${nodeFrom.name}-to-${count}`));
   return portOut.link(portTo);
-
-  // ################# UNCOMMENT THIS LINE FOR PATH FINDING #############################
-  // return portOut.link(portTo, engine.getLinkFactories().getFactory(PathFindingLinkFactory.NAME));
-  // #####################################################################################
 }
 
 /**
@@ -75,6 +71,7 @@ function DemoWidget(props) {
 
   useLayoutEffect(() => {
     autoDistribute(engine);
+    autoRefreshLinks(engine);
   }, []);
 
   const redistribute = () => {
@@ -115,19 +112,19 @@ export default function () {
   nodesFrom.push(createNode('from-2'));
   nodesFrom.push(createNode('from-3'));
 
-  nodesTo.push(createNode('to-1'));
-  nodesTo.push(createNode('to-2'));
-  nodesTo.push(createNode('to-3'));
+  nodesTo.push(createNode('Table1'));
+  nodesTo.push(createNode('Table2'));
+  nodesTo.push(createNode('Table3'));
+  nodesTo.push(createNode('Table4'));
 
   // 4) link nodes together
-  const links = nodesFrom.map((node, index) => connectNodes(node, nodesTo[index], engine));
-
+  const links = []; // nodesFrom.map((node, index) => connectNodes(node, nodesTo[index], engine));
   // more links for more complicated diagram
-  links.push(connectNodes(nodesTo[0], nodesTo[1], engine));
-  links.push(connectNodes(nodesTo[1], nodesTo[2], engine));
-  links.push(connectNodes(nodesTo[0], nodesTo[2], engine));
-  links.push(connectNodes(nodesFrom[0], nodesFrom[2], engine));
-  links.push(connectNodes(nodesFrom[0], nodesTo[2], engine));
+  links.push(connectNodes(nodesTo[0], nodesTo[1], engine, 'column1'));
+  links.push(connectNodes(nodesTo[1], nodesTo[2], engine, 'column2'));
+  // links.push(connectNodes(nodesTo[0], nodesTo[2], engine));
+  // links.push(connectNodes(nodesFrom[0], nodesFrom[2], engine));
+  // links.push(connectNodes(nodesFrom[0], nodesTo[2], engine));
 
   // initial random position
   nodesFrom.forEach((node, index) => {
