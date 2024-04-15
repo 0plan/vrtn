@@ -16,12 +16,11 @@ function Header() {
   const { toast } = useToast();
   const { toggle } = useDarkMode();
   const { toggleLang } = useLanguage();
-  const { isAuth, setIsAuth } = authStore();
+  const { logout, isAuth } = authStore();
   const menuItems = [{ path: '/example', name: t('menu.example') }];
 
   const signOut = () => {
-    setIsAuth(false);
-    localStorage.setItem('isAuth', 'false');
+    logout();
     toast({
       description: 'Signed out successfully!',
     });
@@ -56,7 +55,8 @@ function Header() {
           {isAuth ? (
             <LogOut onClick={signOut} className="cursor-pointer ml-2" />
           ) : (
-            <SignIn setIsAuth={setIsAuth} />
+
+            <SignIn />
           )}
         </div>
       </nav>

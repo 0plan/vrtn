@@ -22,17 +22,17 @@ export default function SignIn() {
   const { toast } = useToast();
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(false);
-  const { setIsAuth } = authStore();
+  const { login } = authStore();
+
   const signIn = () => new Promise((resolve) => {
     NProgress.start();
     setLoading(true);
     setTimeout(resolve, 1000);
   }).then(() => {
     NProgress.done();
+    login();
     setLoading(false);
     setOpen(false);
-    setIsAuth(true);
-    localStorage.setItem('isAuth', true);
     toast({
       description: 'Signed in successfully!',
     });
@@ -47,7 +47,7 @@ export default function SignIn() {
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
-        <LogIn className="mr-2" />
+        <LogIn className="ml-2" />
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
