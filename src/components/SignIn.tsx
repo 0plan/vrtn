@@ -11,16 +11,18 @@ import { Button } from '@/components/ui/button';
 import { Label } from '@/components/ui/label';
 import { Input } from '@/components/ui/input';
 import { useToast } from '@/components/ui/use-toast';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import NProgress from 'nprogress';
 import { useTranslation } from 'react-i18next';
+import { LogIn } from 'lucide-react';
+import authStore from '@/stores/auth';
 
-export default function SignIn({ setIsAuth, setStoreAuth }) {
+export default function SignIn() {
   const { t } = useTranslation();
   const { toast } = useToast();
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(false);
-
+  const { setIsAuth } = authStore();
   const signIn = () => new Promise((resolve) => {
     NProgress.start();
     setLoading(true);
@@ -31,7 +33,6 @@ export default function SignIn({ setIsAuth, setStoreAuth }) {
     setOpen(false);
     setIsAuth(true);
     localStorage.setItem('isAuth', true);
-    setStoreAuth(true);
     toast({
       description: 'Signed in successfully!',
     });
@@ -39,14 +40,14 @@ export default function SignIn({ setIsAuth, setStoreAuth }) {
   const handleEmailKeyPress = (e) => {
     if (e.key === 'Enter') document.getElementById('password').focus();
   };
-  const handlePasswordKeyPress = (e) => {
-    if (e.key === 'Enter') signIn();
+  const handlePasswordKeyPress = async (e) => {
+    if (e.key === 'Enter') await signIn();
   };
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
-        <Button>{t('signIn')}</Button>
+        <LogIn className="mr-2" />
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
