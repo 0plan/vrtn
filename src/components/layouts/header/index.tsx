@@ -1,47 +1,30 @@
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Menu from '@/components/layouts/header/menu';
 import MobileMenu from '@/components/layouts/header/mobileMenu';
 import { useTranslation } from 'react-i18next';
 import {
-  Globe, Moon, Sun, User,
+  Globe, LogOut, Moon, Sun, User,
 } from 'lucide-react';
 import useLanguage from '@/stores/language';
-import { Button } from '@/components/ui/button';
 import SignIn from '@/components/SignIn';
 import { useDarkMode } from '@/lib/dark-mode';
-import { useState, useEffect } from 'react';
-import { useLocalStorage } from 'usehooks-ts';
 import { useToast } from '@/components/ui/use-toast';
+import authStore from '@/stores/auth';
 
 function Header() {
   const { t } = useTranslation();
   const { toast } = useToast();
-  const { isDarkMode, toggle } = useDarkMode();
+  const { toggle } = useDarkMode();
   const { toggleLang } = useLanguage();
-  const [isAuth, setIsAuth] = useState(false);
-  const [storeauth, setStoreAuth] = useLocalStorage('isAuth', false);
-
-  const navigate = useNavigate();
+  const { logout, isAuth } = authStore();
   const menuItems = [{ path: '/example', name: t('menu.example') }];
 
   const signOut = () => {
-    setIsAuth(false);
-    setStoreAuth(false);
-    localStorage.setItem('isAuth', 'false');
+    logout();
     toast({
       description: 'Signed out successfully!',
     });
   };
-
-  useEffect(() => {
-    const storedAuth = localStorage.getItem('isAuth');
-    if (storedAuth === 'true') {
-      setIsAuth(true);
-      setStoreAuth(true);
-    } else {
-      navigate('/');
-    }
-  }, [isAuth]);
 
   return (
     <header className="z-50 flex w-full flex-wrap justify-start py-4 text-sm fixed top-0 backdrop-blur-sm">
@@ -56,14 +39,6 @@ function Header() {
           <Menu menuItems={menuItems} />
         </div>
         <div className="flex items-center justify-end sm:px-10">
-          {isAuth ? (
-            <Button onClick={signOut} variant="destructive">
-              {t('signOut')}
-            </Button>
-          ) : (
-            <SignIn setIsAuth={setIsAuth} setStoreAuth={setStoreAuth} />
-          )}
-
           <Sun
             className="cursor-pointer ml-2 hidden dark:block"
             onClick={toggle}
@@ -77,6 +52,12 @@ function Header() {
            </Link>
            )
           }
+          {isAuth ? (
+            <LogOut onClick={signOut} className="cursor-pointer ml-2" />
+          ) : (
+
+            <SignIn />
+          )}
         </div>
       </nav>
     </header>
