@@ -76,18 +76,40 @@
     @apply bg-background text-foreground;
   }
   h1 {
-    @apply text-3xl font-bold;
+    @apply scroll-m-20 text-4xl font-extrabold ;
   }
   h2 {
-    @apply text-2xl font-bold;
+    @apply scroll-m-20 text-3xl font-semibold ;
   }
   h3 {
-    @apply text-xl font-bold;
+    @apply scroll-m-20 text-2xl font-semibold ;
   }
   h4 {
-    @apply text-lg font-bold;
+    @apply scroll-m-20 text-xl font-semibold ;
   }
   pre {
     @apply text-card dark:text-blue-200 text-blue-700;
+  }  
+  code{
+    @apply relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold
   }
+  large{
+    @apply text-lg font-semibold
+  }
+  small{
+    @apply text-sm font-medium leading-none
+  }
+  lead{
+    @apply text-xl text-muted-foreground
+  }
+  list{
+    @apply my-6 ml-6 list-disc [&>li]:mt-2
+  }
+  muted{
+    @apply text-sm text-muted-foreground
+  }
+  blockquote{
+    @apply mt-6 border-l-2 pl-6 italic
+  }
+  
 }
