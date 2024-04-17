@@ -16,9 +16,9 @@ VRTN is Vite React Typescript i18n template
 - [Storybook](https://storybook.js.org/)
 - Docker
 - [PWA](https://vite-pwa-org.netlify.app/)
+- [File-based MDX routes with React](https://github.com/oedotme/generouted/tree/main/examples/react-router-mdx)
 
 ## 🚧 TO-DO
-- [Markdown Support]()
 - Unit Testing with [Vitest](https://github.com/vitest-dev/vitest), E2E Testing with [Playwright](https://playwright.dev/)
   on [GitHub Actions](https://github.com/features/actions)
 
