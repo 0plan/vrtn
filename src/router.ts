@@ -76,6 +76,7 @@ export type Path =
   | `/example/typography/list`
   | `/example/typography/muted`
   | `/example/typography/p`
+  | `/example/typography/readme`
   | `/example/typography/small`
   | `/example/typography/table`
   | `/mypage`;
