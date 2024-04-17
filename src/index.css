@@ -79,7 +79,7 @@
     @apply scroll-m-20 text-4xl font-extrabold ;
   }
   h2 {
-    @apply scroll-m-20 text-xl font-semibold ;
+    @apply scroll-m-20 text-3xl font-semibold ;
   }
   h3 {
     @apply scroll-m-20 text-2xl font-semibold ;
