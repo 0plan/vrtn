@@ -14,3 +14,9 @@ home:
     cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 signIn: Sign In
 signOut: Sign Out
+
+error:
+  notFound:
+    title: Oops!
+    content: Sorry, an unexpected error has occurred.
+    button: Go back to the home page
