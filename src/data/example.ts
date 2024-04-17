@@ -228,6 +228,8 @@ export const examples : IExample[] = [
       { title: 'p', path: '/example/typography/p' },
       { title: 'small', path: '/example/typography/small' },
       { title: 'table', path: '/example/typography/table' },
+      { title: 'mark down exmaple', path: '/example/typography/readme' },
+
     ],
   },
   {
