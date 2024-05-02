@@ -1,7 +1,7 @@
 # Vite React Typescript i18n
-VRTN is Vite React Typescript i18n template
+VRTN is Vite React Tailwindcss Typescript i18n template
 
-[Live Demo](https://vite-react-typescript-i18n-template.vercel.app/)
+[Live Demo](https://vrtn.0plan.dev/)
 
 ## 🚀 Features
 
@@ -28,7 +28,7 @@ VRTN is Vite React Typescript i18n template
 [//]: # (### GitHub Template)
 
 [//]: # ()
-[//]: # ([Create a repo from this template on GitHub]&#40;https://github.com/chlee125/vrtn/generate&#41;.)
+[//]: # ([Create a repo from this template on GitHub]&#40;https://github.com/0plan/vrtn/generate)
 
 ## Usage
 
@@ -40,7 +40,7 @@ Just run and visit http://localhost:5173
 
 ### Build
 
-To build the App, run
+Build the App
 
 ```bash
 pnpm build
