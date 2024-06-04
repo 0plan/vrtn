@@ -4,6 +4,7 @@ menu:
   example: Example
   about: About
   todo: To-Do
+  myPage: My Page
 home:
   title: Let's Start
   subtitle: Together
@@ -20,3 +21,39 @@ error:
     title: Oops!
     content: Sorry, an unexpected error has occurred.
     button: Go back to the home page
+
+example:
+  accordion:
+    - title: Is it accessible?
+      content: Yes. It adheres to the WAI-ARIA design pattern.
+    - title: Is it styled?
+      content: Yes. It comes with default styles that matches the other components` aesthetic.
+    - title: Is it animated?
+      content: Yes. It`s animated by default, but you can disable it if you prefer.
+  alert:
+    title: Heads up!
+    content: You can add components to your app using the cli.
+  alertDialog:
+    trigger: Show Dialog
+    title: Are you absolutely sure?
+    content: This action cannot be undone. This will permanently delete your
+      account and remove your data from our servers.
+    confirm: Continue
+    cancel: Cancel
+  command:
+    combobox:
+      placeholder: Select framework...
+      search:
+        placeholder: Search framework...
+        empty: No framework found.
+    demo:
+      search:
+        placeholder: Type a command or search...
+      empty: No results found.
+      suggestions: Suggestions
+      settings: Settings
+      calendar: Calendar
+      searchEmoji: Search Emoji
+      calculator: Calculator
+      profile: Profile
+      billing: Billing

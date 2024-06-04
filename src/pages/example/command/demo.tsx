@@ -11,45 +11,75 @@ import {
   CommandSeparator,
   CommandShortcut,
 } from '@/components/ui/command';
+import { useTranslation } from 'react-i18next';
 
+interface ICommandItem {
+  icon: JSX.Element;
+  label: string;
+  shortcut?: string;
+}
+interface ICommandGroup {
+  title: string;
+  items: ICommandItem[];
+}
 export default function CommandDemo() {
+  const { t } = useTranslation();
+  const commands: ICommandGroup[] = [
+    {
+      title: t('example.command.demo.suggestions'),
+      items: [
+        {
+          icon: <Calendar className="mr-2 h-4 w-4" />,
+          label: t('example.command.demo.calendar'),
+        },
+        {
+          icon: <Smile className="mr-2 h-4 w-4" />,
+          label: t('example.command.demo.searchEmoji'),
+        },
+        {
+          icon: <Calculator className="mr-2 h-4 w-4" />,
+          label: t('example.command.demo.calculator'),
+        },
+      ],
+    },
+    {
+      title: t('example.command.demo.settings'),
+      items: [
+        {
+          icon: <User className="mr-2 h-4 w-4" />,
+          label: t('example.command.demo.profile'),
+          shortcut: '⌘P',
+        },
+        {
+          icon: <CreditCard className="mr-2 h-4 w-4" />,
+          label: t('example.command.demo.billing'),
+          shortcut: '⌘B',
+        },
+        {
+          icon: <Settings className="mr-2 h-4 w-4" />,
+          label: t('example.command.demo.settings'),
+          shortcut: '⌘S',
+        },
+      ],
+    },
+  ];
   return (
     <Command className="rounded-lg border shadow-md">
-      <CommandInput placeholder="Type a command or search..." />
+      <CommandInput placeholder={t('example.command.demo.search.placeholder')} />
       <CommandList>
-        <CommandEmpty>No results found.</CommandEmpty>
-        <CommandGroup heading="Suggestions">
-          <CommandItem>
-            <Calendar className="mr-2 h-4 w-4" />
-            <span>Calendar</span>
-          </CommandItem>
-          <CommandItem>
-            <Smile className="mr-2 h-4 w-4" />
-            <span>Search Emoji</span>
-          </CommandItem>
-          <CommandItem>
-            <Calculator className="mr-2 h-4 w-4" />
-            <span>Calculator</span>
-          </CommandItem>
-        </CommandGroup>
-        <CommandSeparator />
-        <CommandGroup heading="Settings">
-          <CommandItem>
-            <User className="mr-2 h-4 w-4" />
-            <span>Profile</span>
-            <CommandShortcut>⌘P</CommandShortcut>
-          </CommandItem>
-          <CommandItem>
-            <CreditCard className="mr-2 h-4 w-4" />
-            <span>Billing</span>
-            <CommandShortcut>⌘B</CommandShortcut>
-          </CommandItem>
-          <CommandItem>
-            <Settings className="mr-2 h-4 w-4" />
-            <span>Settings</span>
-            <CommandShortcut>⌘S</CommandShortcut>
-          </CommandItem>
-        </CommandGroup>
+        <CommandEmpty>{t('example.command.demo.empty')}</CommandEmpty>
+        {commands.map((group) => (
+          <CommandGroup heading={group.title}>
+            {group.items.map((item) => (
+              <CommandItem>
+                {item.icon}
+                <span>{item.label}</span>
+                {item.shortcut && <CommandShortcut>{item.shortcut}</CommandShortcut>}
+              </CommandItem>
+            ))}
+          </CommandGroup>
+
+        ))}
       </CommandList>
     </Command>
   );

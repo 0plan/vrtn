@@ -2,6 +2,7 @@ menu:
   example: 예제
   about: About
   todo: 할 일
+  myPage: 마이 페이지
 home:
   title: Let's Start
   subtitle: Together
@@ -18,3 +19,38 @@ error:
     title: 이런!
     content: 죄송합니다, 예기치 못한 오류가 발생했습니다.
     button: 홈페이지로 돌아가기
+
+example:
+  accordion:
+    - title: 접근성이 좋나요?
+      content: 네. WAI-ARIA 디자인 패턴을 준수합니다.
+    - title: 스타일이 있나요?
+      content: 네. 다른 컴포넌트의 미적 요소와 일치하는 기본 스타일이 제공됩니다.
+    - title: 애니메이션이 있나요?
+      content: 네. 기본적으로 애니메이션이 적용되지만, 선호하는 경우 비활성화할 수 있습니다.
+  alert:
+    title: 주의!
+    content: cli를 사용하여 앱에 컴포넌트를 추가할 수 있습니다.
+  alertDialog:
+    trigger: 다이얼로그 표시
+    title: 정말 확실한가요?
+    content: 이 작업은 되돌릴 수 없습니다. 계정이 영구적으로 삭제되고 데이터가 서버에서 제거됩니다.
+    confirm: 계속
+    cancel: 취소
+  command:
+    combobox:
+      placeholder: 프레임워크를 선택해 주세요.
+      search:
+        placeholder: 프레임워크 검색
+        empty: 프레임워크가 없습니다.
+    demo:
+      search:
+        placeholder: 명령어를 입력하거나 검색하세요.
+      empty: 결과가 없습니다.
+      suggestions: 추천
+      settings: 설정
+      calendar: 캘린더
+      searchEmoji: 이모지 검색
+      calculator: 계산기
+      profile: 프로필
+      billing: 결제

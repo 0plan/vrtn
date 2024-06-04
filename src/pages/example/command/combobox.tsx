@@ -7,6 +7,7 @@ import {
   Command, CommandEmpty, CommandGroup, CommandInput, CommandItem,
 } from '@/components/ui/command';
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
+import { useTranslation } from 'react-i18next';
 
 const frameworks = [
   {
@@ -34,7 +35,7 @@ const frameworks = [
 export default function CommandCombobox() {
   const [open, setOpen] = useState(false);
   const [value, setValue] = useState('');
-
+  const { t } = useTranslation();
   return (
     <Popover open={open} onOpenChange={setOpen}>
       <PopoverTrigger asChild>
@@ -46,14 +47,14 @@ export default function CommandCombobox() {
         >
           {value
             ? frameworks.find((framework) => framework.value === value)?.label
-            : 'Select framework...'}
+            : t('example.command.combobox.placeholder')}
           <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
         </Button>
       </PopoverTrigger>
       <PopoverContent className="w-[200px] p-0">
         <Command>
-          <CommandInput placeholder="Search framework..." />
-          <CommandEmpty>No framework found.</CommandEmpty>
+          <CommandInput placeholder={t('example.command.combobox.search.placeholder')} />
+          <CommandEmpty>{t('example.command.combobox.search.empty')}</CommandEmpty>
           <CommandGroup>
             {frameworks.map((framework) => (
               <CommandItem
