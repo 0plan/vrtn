@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "engines": {
-    "node": "22.x"
+    "node": "24.x"
   },
   "packageManager": "pnpm@10.10.0",
   "scripts": {
@@ -59,7 +59,7 @@
     "cmdk": "^1.1.1",
     "date-fns": "^3.6.0",
     "embla-carousel-react": "^8.6.0",
-    "i18next": "^25.7.1",
+    "i18next": "^25.7.2",
     "i18next-browser-languagedetector": "^8.2.0",
     "i18next-http-backend": "^3.0.2",
     "input-otp": "^1.4.2",
@@ -88,7 +88,7 @@
     "zustand": "^5.0.9"
   },
   "devDependencies": {
-    "@iconify/json": "^2.2.415",
+    "@iconify/json": "^2.2.416",
     "@storybook/addon-essentials": "^8.6.14",
     "@storybook/addon-interactions": "^8.6.14",
     "@storybook/addon-links": "^8.6.14",
@@ -102,8 +102,8 @@
     "@types/js-yaml": "^4.0.9",
     "@types/react": "^18.3.27",
     "@types/react-dom": "^18.3.7",
-    "@typescript-eslint/eslint-plugin": "^8.48.1",
-    "@typescript-eslint/parser": "^8.48.1",
+    "@typescript-eslint/eslint-plugin": "^8.49.0",
+    "@typescript-eslint/parser": "^8.49.0",
     "@vitejs/plugin-react": "^4.7.0",
     "@vitejs/plugin-react-swc": "^3.11.0",
     "autoprefixer": "^10.4.22",
@@ -116,7 +116,7 @@
     "lint-staged": "^15.5.2",
     "nprogress": "^0.2.0",
     "postcss": "^8.5.6",
-    "sass": "^1.94.2",
+    "sass": "^1.95.0",
     "storybook": "^8.6.14",
     "tailwindcss": "^3.4.18",
     "typescript": "^5.9.3",
