@@ -13,7 +13,10 @@ export default defineConfig({
     react(),
     generouted(),
     tsconfigPaths(),
-    VitePWA({ registerType: 'autoUpdate' }),
+    VitePWA({ registerType: 'autoUpdate',
+      workbox: {
+        maximumFileSizeToCacheInBytes: 3000000
+      }}),
     plugin({
       mode: [Mode.MARKDOWN],
     }),
