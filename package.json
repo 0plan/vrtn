@@ -88,7 +88,7 @@
     "zustand": "^5.0.11"
   },
   "devDependencies": {
-    "@iconify/json": "^2.2.442",
+    "@iconify/json": "^2.2.443",
     "@storybook/addon-essentials": "^8.6.14",
     "@storybook/addon-interactions": "^8.6.14",
     "@storybook/addon-links": "^8.6.17",
@@ -106,7 +106,7 @@
     "@typescript-eslint/parser": "^8.56.1",
     "@vitejs/plugin-react": "^4.7.0",
     "@vitejs/plugin-react-swc": "^3.11.0",
-    "autoprefixer": "^10.4.24",
+    "autoprefixer": "^10.4.27",
     "eslint": "^9.39.3",
     "eslint-import-resolver-alias": "^1.1.2",
     "eslint-import-resolver-typescript": "^4.4.4",
