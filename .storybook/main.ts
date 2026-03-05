@@ -5,20 +5,18 @@ const config: StorybookConfig = {
     "../src/**/*.mdx",
     "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"
   ],
+
   "addons": [
     "@storybook/addon-links",
-    "@storybook/addon-essentials",
     "@storybook/addon-onboarding",
-    "@storybook/addon-interactions",
-    "@storybook/addon-mdx-gfm"
+    "@storybook/addon-docs"
   ],
+
   "framework": {
     "name": "@storybook/react-vite",
     "options": {}
   },
-  "docs": {
-    "autodocs": "tag"
-  },
+
   viteFinal(config){
     // Add other configuration here depending on your use case
     return config

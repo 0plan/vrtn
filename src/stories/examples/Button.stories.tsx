@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Button } from '@/components/ui/button.tsx';
 import { Loader2, Mail } from 'lucide-react';
 

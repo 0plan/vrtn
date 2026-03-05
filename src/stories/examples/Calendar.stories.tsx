@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Calendar } from '@/components/ui/calendar';
 import { Calendar as LucideCalendar } from 'lucide-react';
 import * as React from 'react';

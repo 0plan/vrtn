@@ -1,4 +1,4 @@
-import type { ComponentStory, Meta, StoryObj } from '@storybook/react';
+import type { ComponentStory, Meta, StoryObj } from '@storybook/react-vite';
 import { useState } from 'react';
 import { ChevronsUpDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
