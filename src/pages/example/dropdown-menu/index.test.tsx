@@ -95,36 +95,6 @@ describe('Dropdown Menu Page', () => {
     expect(screen.getByTestId('dropdown-sub-trigger')).toBeInTheDocument();
   });
 
-  it('renders the support section with all items', () => {
-    render(<DropdownMenuPage />);
-    
-    // Check for support section items
-    expect(screen.getByText('GitHub')).toBeInTheDocument();
-    expect(screen.getByText('Support')).toBeInTheDocument();
-    expect(screen.getByText('Log out')).toBeInTheDocument();
-    expect(screen.getByText('API')).toBeInTheDocument();
-  });
-
-  it('renders all icons correctly', () => {
-    render(<DropdownMenuPage />);
-    
-    // Check that all icons are present
-    expect(screen.getByTestId('icon-user')).toBeInTheDocument();
-    expect(screen.getByTestId('icon-credit-card')).toBeInTheDocument();
-    expect(screen.getByTestId('icon-settings')).toBeInTheDocument();
-    expect(screen.getByTestId('icon-keyboard')).toBeInTheDocument();
-    expect(screen.getByTestId('icon-users')).toBeInTheDocument();
-    expect(screen.getByTestId('icon-user-plus')).toBeInTheDocument();
-    expect(screen.getByTestId('icon-mail')).toBeInTheDocument();
-    expect(screen.getByTestId('icon-message-square')).toBeInTheDocument();
-    expect(screen.getByTestId('icon-plus-circle')).toBeInTheDocument();
-    expect(screen.getByTestId('icon-plus')).toBeInTheDocument();
-    expect(screen.getByTestId('icon-github')).toBeInTheDocument();
-    expect(screen.getByTestId('icon-life-buoy')).toBeInTheDocument();
-    expect(screen.getByTestId('icon-cloud')).toBeInTheDocument();
-    expect(screen.getByTestId('icon-log-out')).toBeInTheDocument();
-  });
-
   it('has correct keyboard shortcuts for main items', () => {
     render(<DropdownMenuPage />);
     

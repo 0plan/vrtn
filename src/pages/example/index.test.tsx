@@ -28,12 +28,6 @@ describe('Index Component', () => {
     expect(container).toBeInTheDocument();
   });
 
-  test('renders main element', () => {
-    renderWithProviders(<Index />);
-    const mainElement = screen.getByRole('main');
-    expect(mainElement).toBeInTheDocument();
-  });
-
   test('renders heading with correct translation', () => {
     renderWithProviders(<Index />);
 

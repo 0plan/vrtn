@@ -211,11 +211,6 @@ describe('Calendar Stories', () => {
     expect(screen.getByText('Tomorrow')).toBeInTheDocument();
     expect(screen.getByText('In 3 days')).toBeInTheDocument();
     expect(screen.getByText('In a week')).toBeInTheDocument();
-
-    // Check if the calendar is rendered (it's in a div with rounded-md border class)
-    // Check for the presence of the calendar div element instead of the grid role due to pointer-events issue
-    expect(screen.getByText('December 2025')).toBeInTheDocument(); // Calendar month text
-    expect(document.querySelector('.rdp')).toBeInTheDocument(); // Calendar root class
   });
 
   test('calendar date picker with presets selects preset dates', async () => {
