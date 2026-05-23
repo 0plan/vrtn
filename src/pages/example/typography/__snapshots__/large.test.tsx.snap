@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`TypographyLarge matches the snapshot 1`] = `
+<div
+  class="text-lg font-semibold"
+>
+  Are you sure absolutely sure?
+</div>
+`;

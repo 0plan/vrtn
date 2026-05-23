@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`AlertDialog Stories should match the default story snapshot 1`] = `
+<div
+  data-testid="alert-dialog"
+>
+  <div
+    data-testid="alert-dialog-trigger"
+  >
+    <button
+      class="btn-outline"
+      data-testid="button"
+    >
+      Show Dialog
+    </button>
+  </div>
+  <div
+    data-testid="alert-dialog-content"
+  >
+    <div
+      data-testid="alert-dialog-header"
+    >
+      <h2
+        data-testid="alert-dialog-title"
+      >
+        Are you absolutely sure?
+      </h2>
+      <div
+        data-testid="alert-dialog-description"
+      >
+        This action cannot be undone. This will permanently delete your account and remove your data from our servers.
+      </div>
+    </div>
+    <div
+      data-testid="alert-dialog-footer"
+    >
+      <button
+        data-testid="alert-dialog-cancel"
+      >
+        Cancel
+      </button>
+      <button
+        data-testid="alert-dialog-action"
+      >
+        Continue
+      </button>
+    </div>
+  </div>
+</div>
+`;
