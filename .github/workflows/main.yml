@@ -9,12 +9,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout source code.
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
-      - name: Install pnpm
-        run: npm install -g pnpm
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Enable corepack
+        run: corepack enable
       - name: install dependencies
         run: pnpm install
       - name: Build
         run: pnpm run build
-        
