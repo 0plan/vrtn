@@ -2,7 +2,6 @@ import createEngine, {
   DiagramModel,
   DefaultNodeModel,
   DefaultPortModel,
-  NodeModel,
   DagreEngine,
   DiagramEngine,
   PathFindingLinkFactory,
@@ -10,17 +9,18 @@ import createEngine, {
 import { useLayoutEffect, useRef } from 'react';
 import { CanvasWidget } from '@projectstorm/react-canvas-core';
 
-function createNode(name): any {
+function createNode(name: string): DefaultNodeModel {
   return new DefaultNodeModel(name, 'rgb(0,192,255)');
 }
 
 let count = 0;
 
-function connectNodes(nodeFrom, nodeTo, engine: DiagramEngine, columnName:string) {
+function connectNodes(nodeFrom: DefaultNodeModel, nodeTo: DefaultNodeModel, columnName: string) {
   // just to get id-like structure
   count++;
-  const portOut = nodeFrom.addPort(new DefaultPortModel(true, `${nodeFrom.name}-out-${count}`, columnName));
-  const portTo = nodeTo.addPort(new DefaultPortModel(false, `${nodeFrom.name}-to-${count}`));
+  const name = nodeFrom.getOptions().name;
+  const portOut = nodeFrom.addPort(new DefaultPortModel(true, `${name}-out-${count}`, columnName));
+  const portTo = nodeTo.addPort(new DefaultPortModel(false, `${name}-to-${count}`));
   return portOut.link(portTo);
 }
 
@@ -65,7 +65,7 @@ function reroute(engine: DiagramEngine) {
   engine.getLinkFactories().getFactory<PathFindingLinkFactory>(PathFindingLinkFactory.NAME).calculateRoutingMatrix();
 }
 
-function DemoWidget(props) {
+function DemoWidget(props: { engine: DiagramEngine; model: DiagramModel }) {
   const { engine } = props;
 
   useLayoutEffect(() => {
@@ -78,7 +78,7 @@ function DemoWidget(props) {
   );
 }
 
-export default function () {
+export default function Lineage() {
   // 1) setup the diagram engine
   const engineRef = useRef(createEngine());
   const engine = engineRef.current;
@@ -87,8 +87,8 @@ export default function () {
   const model = new DiagramModel();
 
   // 3) create a default nodes
-  const nodesFrom: NodeModel[] = [];
-  const nodesTo: NodeModel[] = [];
+  const nodesFrom: DefaultNodeModel[] = [];
+  const nodesTo: DefaultNodeModel[] = [];
 
   nodesFrom.push(createNode('from-1'));
   nodesFrom.push(createNode('from-2'));
@@ -102,8 +102,8 @@ export default function () {
   // 4) link nodes together
   const links = []; // nodesFrom.map((node, index) => connectNodes(node, nodesTo[index], engine));
   // more links for more complicated diagram
-  links.push(connectNodes(nodesTo[0], nodesTo[1], engine, 'column1'));
-  links.push(connectNodes(nodesTo[1], nodesTo[2], engine, 'column2'));
+  links.push(connectNodes(nodesTo[0], nodesTo[1], 'column1'));
+  links.push(connectNodes(nodesTo[1], nodesTo[2], 'column2'));
   // links.push(connectNodes(nodesTo[0], nodesTo[2], engine));
   // links.push(connectNodes(nodesFrom[0], nodesFrom[2], engine));
   // links.push(connectNodes(nodesFrom[0], nodesTo[2], engine));

@@ -10,11 +10,6 @@ const meta = {
     layout: 'centered',
   },
   argTypes: {
-    type: {
-      defaultValue: 'multiple',
-      control: 'select',
-      options: ['single', 'multiple'],
-    },
     collapsible: {
       control: { type: 'boolean' },
     },
@@ -25,8 +20,13 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>
 
-const AccordionTemplate: Story = {
-  render: ({ ...args }) => (
+export const Default: Story = {
+  args: {
+    type: 'single',
+    collapsible: true,
+    className: 'w-96',
+  },
+  render: (args) => (
     <Accordion {...args}>
       <AccordionItem value="item-1">
         <AccordionTrigger>Is it accessible?</AccordionTrigger>
@@ -50,10 +50,4 @@ const AccordionTemplate: Story = {
       </AccordionItem>
     </Accordion>
   ),
-};
-export const Default: Story = {
-  ...AccordionTemplate,
-  args: {
-    className: 'w-96',
-  },
 };

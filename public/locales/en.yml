@@ -27,9 +27,9 @@ example:
     - title: Is it accessible?
       content: Yes. It adheres to the WAI-ARIA design pattern.
     - title: Is it styled?
-      content: Yes. It comes with default styles that matches the other components` aesthetic.
+      content: Yes. It comes with default styles that matches the other components' aesthetic.
     - title: Is it animated?
-      content: Yes. It`s animated by default, but you can disable it if you prefer.
+      content: Yes. It's animated by default, but you can disable it if you prefer.
   alert:
     title: Heads up!
     content: You can add components to your app using the cli.

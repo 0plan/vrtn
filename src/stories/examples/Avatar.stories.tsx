@@ -14,7 +14,7 @@ export default meta;
 type Story = StoryObj<typeof meta>
 
 const AvatarTemplate: Story = {
-  render: ({ ...args }) => (
+  render: () => (
     <Avatar>
       <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
       <AvatarFallback>CN</AvatarFallback>

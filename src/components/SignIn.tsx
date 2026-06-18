@@ -11,7 +11,7 @@ import { Button } from '@/components/ui/button';
 import { Label } from '@/components/ui/label';
 import { Input } from '@/components/ui/input';
 import { useToast } from '@/components/ui/use-toast';
-import { useState } from 'react';
+import { useState, type KeyboardEvent } from 'react';
 import NProgress from 'nprogress';
 import { useTranslation } from 'react-i18next';
 import { LogIn } from 'lucide-react';
@@ -37,10 +37,10 @@ export default function SignIn() {
       description: 'Signed in successfully!',
     });
   });
-  const handleEmailKeyPress = (e) => {
-    if (e.key === 'Enter') document.getElementById('password').focus();
+  const handleEmailKeyPress = (e: KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Enter') document.getElementById('password')?.focus();
   };
-  const handlePasswordKeyPress = async (e) => {
+  const handlePasswordKeyPress = async (e: KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'Enter') await signIn();
   };
 

@@ -1,6 +1,8 @@
+project:
+  title: VRTN
 menu:
   example: 예제
-  about: About
+  about: 소개
   todo: 할 일
   myPage: 마이 페이지
 home:

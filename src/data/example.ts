@@ -1,6 +1,5 @@
 import { LucideIcon } from 'lucide-react';
 
-// eslint-disable-next-line no-use-before-define
 interface IChildren extends IExample {
     path: string
     icon?: LucideIcon
