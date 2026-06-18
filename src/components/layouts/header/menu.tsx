@@ -8,12 +8,10 @@ interface IProps {
   menuItems: IMenu[];
 }
 
-const isActive = (path: string) => {
-  const location = useLocation();
-  return location.pathname.includes(path);
-};
-
 function Menu({ menuItems }: IProps) {
+  const location = useLocation();
+  const isActive = (path: string) => location.pathname.includes(path);
+
   return (
     <div className="mt-5 flex flex-col gap-5 sm:mt-0 sm:flex-row sm:items-center sm:justify-end sm:ps-5">
       {menuItems.map((menu) => (

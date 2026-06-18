@@ -13,12 +13,14 @@ interface IAccordionItem {
 
 export default function AccordionDemo() {
   const { t } = useTranslation();
-  const accordions: IAccordionItem[] = t('example.accordion', { returnObjects: true });
+  const accordions = t('example.accordion', {
+    returnObjects: true,
+  }) as unknown as IAccordionItem[];
   return (
     <Accordion type="single" collapsible className="w-full">
       {
         accordions.map((accordion, index) => (
-          <AccordionItem value={`item-${index}`}>
+          <AccordionItem key={`item-${index}`} value={`item-${index}`}>
             <AccordionTrigger>{accordion.title}</AccordionTrigger>
             <AccordionContent>{accordion.content}</AccordionContent>
           </AccordionItem>

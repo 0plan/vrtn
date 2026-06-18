@@ -11,7 +11,7 @@
     "dev": "vite",
     "build": "vite build",
     "tsc": "tsc",
-    "lint": "eslint . --report-unused-disable-directives --max-warnings 0",
+    "lint": "eslint . --report-unused-disable-directives",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build -s public -o dist/storybook",

@@ -42,7 +42,7 @@ export default function SheetSize() {
         <SheetTrigger asChild>
           <Button>Open {size} sheet</Button>
         </SheetTrigger>
-        <SheetContent position="right" size={size}>
+        <SheetContent side="right" size={size}>
           <SheetHeader>
             <SheetTitle>Edit profile</SheetTitle>
             <SheetDescription>

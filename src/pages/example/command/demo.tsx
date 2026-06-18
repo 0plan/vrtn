@@ -8,10 +8,10 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
-  CommandSeparator,
   CommandShortcut,
 } from '@/components/ui/command';
 import { useTranslation } from 'react-i18next';
+import type { JSX } from 'react';
 
 interface ICommandItem {
   icon: JSX.Element;

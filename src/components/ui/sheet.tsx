@@ -38,13 +38,36 @@ const sheetVariants = cva(
         top: 'inset-x-0 top-0 border-b data-[state=closed]:slide-out-to-top data-[state=open]:slide-in-from-top',
         bottom:
           'inset-x-0 bottom-0 border-t data-[state=closed]:slide-out-to-bottom data-[state=open]:slide-in-from-bottom',
-        left: 'inset-y-0 left-0 h-full w-3/4 border-r data-[state=closed]:slide-out-to-left data-[state=open]:slide-in-from-left sm:max-w-sm',
+        left: 'inset-y-0 left-0 h-full border-r data-[state=closed]:slide-out-to-left data-[state=open]:slide-in-from-left',
         right:
-          'inset-y-0 right-0 h-full w-3/4  border-l data-[state=closed]:slide-out-to-right data-[state=open]:slide-in-from-right sm:max-w-sm',
+          'inset-y-0 right-0 h-full border-l data-[state=closed]:slide-out-to-right data-[state=open]:slide-in-from-right',
+      },
+      size: {
+        content: '',
+        default: '',
+        sm: '',
+        lg: '',
+        xl: '',
+        full: '',
       },
     },
+    compoundVariants: [
+      { side: ['left', 'right'], size: 'content', class: 'w-auto' },
+      { side: ['left', 'right'], size: 'default', class: 'w-3/4 sm:max-w-sm' },
+      { side: ['left', 'right'], size: 'sm', class: 'w-3/4 sm:max-w-sm' },
+      { side: ['left', 'right'], size: 'lg', class: 'w-3/4 sm:max-w-lg' },
+      { side: ['left', 'right'], size: 'xl', class: 'w-3/4 sm:max-w-xl' },
+      { side: ['left', 'right'], size: 'full', class: 'w-screen' },
+      { side: ['top', 'bottom'], size: 'content', class: 'h-auto' },
+      { side: ['top', 'bottom'], size: 'default', class: 'h-1/3' },
+      { side: ['top', 'bottom'], size: 'sm', class: 'h-1/4' },
+      { side: ['top', 'bottom'], size: 'lg', class: 'h-1/2' },
+      { side: ['top', 'bottom'], size: 'xl', class: 'h-3/4' },
+      { side: ['top', 'bottom'], size: 'full', class: 'h-screen' },
+    ],
     defaultVariants: {
       side: 'right',
+      size: 'default',
     },
   },
 );
@@ -57,13 +80,13 @@ const SheetContent = React.forwardRef<
   React.ElementRef<typeof SheetPrimitive.Content>,
   SheetContentProps
 >(({
-  side = 'right', className, children, ...props
+  side = 'right', size = 'default', className, children, ...props
 }, ref) => (
   <SheetPortal>
     <SheetOverlay />
     <SheetPrimitive.Content
       ref={ref}
-      className={cn(sheetVariants({ side }), className)}
+      className={cn(sheetVariants({ side, size }), className)}
       {...props}
     >
       {children}

@@ -10,7 +10,7 @@ const localesMap = Object.fromEntries(
   Object.entries(import.meta.glob('/public/locales/*.yml')).map(
     ([path, loadLocale]) => [path.match(/([\w-]*)\.yml$/)?.[1], loadLocale],
   ),
-) as Record<Locale, () => Promise<{ default: Record<string, string> }>>;
+) as Record<string, () => Promise<{ default: Record<string, string> }>>;
 const availableLocales = Object.keys(localesMap);
 
 const useLanguage = create<Language>()((set) => ({

@@ -17,7 +17,7 @@ export default function SheetDemo() {
       <SheetTrigger asChild>
         <Button variant="outline">Open</Button>
       </SheetTrigger>
-      <SheetContent position="right" size="sm">
+      <SheetContent side="right" size="sm">
         <SheetHeader>
           <SheetTitle>Edit profile</SheetTitle>
           <SheetDescription>
