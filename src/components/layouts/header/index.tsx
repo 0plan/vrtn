@@ -9,6 +9,7 @@ import useLanguage from '@/stores/language';
 import SignIn from '@/components/SignIn';
 import { useDarkMode } from '@/lib/dark-mode';
 import { useToast } from '@/components/ui/use-toast';
+import { Button } from '@/components/ui/button';
 import authStore from '@/stores/auth';
 
 function Header() {
@@ -27,35 +28,57 @@ function Header() {
   };
 
   return (
-    <header className="z-50 flex w-full flex-wrap justify-start py-4 text-sm fixed top-0 backdrop-blur-sm">
-      <nav className="mx-auto flex w-full max-w-[85rem] items-center justify-between px-4">
-        <div className="sm:hidden">
-          <MobileMenu menuItems={menuItems} />
+    <header className="fixed top-0 z-50 w-full border-b border-border/40 bg-background/80 backdrop-blur-sm">
+      <nav className="mx-auto flex h-[72px] w-full max-w-[85rem] items-center justify-between gap-2 px-4">
+        <div className="flex items-center gap-2">
+          <div className="sm:hidden">
+            <MobileMenu menuItems={menuItems} />
+          </div>
+          <Link
+            to="/"
+            className="text-xl font-semibold tracking-tight transition-colors hover:text-primary"
+          >
+            {t('project.title')}
+          </Link>
         </div>
-        <Link to="/" className="text-xl font-semibold text-left">
-          {t('project.title')}
-        </Link>
-        <div className="hidden grow basis-full sm:block">
+        <div className="hidden grow sm:block">
           <Menu menuItems={menuItems} />
         </div>
-        <div className="flex items-center justify-end sm:px-10">
-          <Sun
-            className="cursor-pointer ml-2 hidden dark:block"
+        <div className="flex items-center justify-end gap-1">
+          <Button
+            variant="ghost"
+            size="icon"
             onClick={toggle}
-          />
-          <Moon className="cursor-pointer ml-2 dark:hidden" onClick={toggle} />
-          <Globe className="cursor-pointer ml-2" onClick={toggleLang} />
-          {
-           isAuth && (
-           <Link to="/mypage" className="ml-2">
-             <User />
-           </Link>
-           )
-          }
+            aria-label="Toggle theme"
+          >
+            <Sun className="hidden dark:block" />
+            <Moon className="dark:hidden" />
+          </Button>
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={toggleLang}
+            aria-label="Change language"
+          >
+            <Globe />
+          </Button>
+          {isAuth && (
+            <Button variant="ghost" size="icon" asChild aria-label={t('menu.myPage')}>
+              <Link to="/mypage">
+                <User />
+              </Link>
+            </Button>
+          )}
           {isAuth ? (
-            <LogOut onClick={signOut} className="cursor-pointer ml-2" />
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={signOut}
+              aria-label={t('signOut')}
+            >
+              <LogOut />
+            </Button>
           ) : (
-
             <SignIn />
           )}
         </div>

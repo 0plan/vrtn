@@ -13,6 +13,13 @@ dist-ssr
 *.local
 storybook-static
 
+# Testing
+coverage
+playwright-report
+test-results
+/playwright/.cache
+/blob-report
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

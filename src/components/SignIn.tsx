@@ -47,7 +47,9 @@ export default function SignIn() {
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
-        <LogIn className="ml-2" />
+        <Button variant="ghost" size="icon" aria-label={t('signIn')}>
+          <LogIn />
+        </Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>

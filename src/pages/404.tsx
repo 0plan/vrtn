@@ -6,19 +6,18 @@ export default function NotFound() {
   const { t } = useTranslation();
 
   return (
-    <div id="error-page">
-      <div className="relative overflow-hidden before:absolute before:start-1/2 before:top-0">
-        <div className="mx-auto max-w-[85rem] px-4 pb-10 pt-24 sm:px-6 lg:px-8">
-          <div className="mx-auto mt-5 max-w-2xl text-center">
-            <h2>{t('error.notFound.title')}</h2>
-            <p>{t('error.notFound.content')}</p>
-            <Link to="/">
-              <Button className="mt-4">{t('error.notFound.button')}</Button>
-            </Link>
-          </div>
-        </div>
-
-      </div>
+    <div
+      id="error-page"
+      className="mx-auto flex min-h-[60vh] max-w-md flex-col items-center justify-center px-4 text-center"
+    >
+      <p className="bg-gradient-to-r from-primary to-violet-500 bg-clip-text text-7xl font-extrabold text-transparent sm:text-8xl">
+        404
+      </p>
+      <h2 className="mt-4 text-2xl font-semibold">{t('error.notFound.title')}</h2>
+      <p className="mt-2 text-muted-foreground">{t('error.notFound.content')}</p>
+      <Button asChild className="mt-6">
+        <Link to="/">{t('error.notFound.button')}</Link>
+      </Button>
     </div>
   );
 }
