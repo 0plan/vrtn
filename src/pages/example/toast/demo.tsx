@@ -1,24 +1,26 @@
+import { useTranslation } from 'react-i18next';
 import { Button } from '@/components/ui/button';
 import { ToastAction } from '@/components/ui/toast';
 import { useToast } from '@/components/ui/use-toast';
 
 export default function ToastDemo() {
   const { toast } = useToast();
+  const { t } = useTranslation();
 
   return (
     <Button
       variant="outline"
       onClick={() => {
         toast({
-          title: 'Scheduled: Catch up ',
-          description: 'Friday, February 10, 2023 at 5:57 PM',
+          title: t('example.toast.title'),
+          description: t('example.toast.description'),
           action: (
-            <ToastAction altText="Goto schedule to undo">Undo</ToastAction>
+            <ToastAction altText={t('example.toast.undoAltText')}>{t('example.toast.undo')}</ToastAction>
           ),
         });
       }}
     >
-      Add to calendar
+      {t('example.toast.button')}
     </Button>
   );
 }

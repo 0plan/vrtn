@@ -7,23 +7,23 @@ export default function Index() {
   
   const features = [
     {
-      title: 'Modern Sidebar',
-      description: 'Collapsible navigation with nested groups and icons.',
+      title: t('example.overview.feature1Title'),
+      description: t('example.overview.feature1Desc'),
       icon: Layout
     },
     {
-      title: 'Quick Search',
-      description: 'Instantly find components with real-time filtering.',
+      title: t('example.overview.feature2Title'),
+      description: t('example.overview.feature2Desc'),
       icon: Search
     },
     {
-      title: 'Responsive Design',
-      description: 'Fully optimized for mobile, tablet, and desktop screens.',
+      title: t('example.overview.feature3Title'),
+      description: t('example.overview.feature3Desc'),
       icon: Smartphone
     },
     {
-      title: 'Clean Architecture',
-      description: 'Built with shadcn/ui and Radix UI primitives.',
+      title: t('example.overview.feature4Title'),
+      description: t('example.overview.feature4Desc'),
       icon: Layers
     }
   ];
@@ -33,7 +33,7 @@ export default function Index() {
       <div className="space-y-2">
         <h1 className="text-3xl font-bold tracking-tight">{t('menu.example')}</h1>
         <p className="text-lg text-muted-foreground">
-          Explore our collection of modern UI components and layouts.
+          {t('example.overview.subtitle')}
         </p>
       </div>
       
@@ -51,7 +51,7 @@ export default function Index() {
             </CardHeader>
             <CardContent>
                <p className="text-sm text-muted-foreground">
-                 Every component is designed to be accessible, performant, and easy to customize.
+                 {t('example.overview.cardNote')}
                </p>
             </CardContent>
           </Card>
@@ -60,9 +60,9 @@ export default function Index() {
 
       <Card className="bg-primary text-primary-foreground">
         <CardHeader>
-          <CardTitle>Getting Started</CardTitle>
+          <CardTitle>{t('example.overview.gettingStartedTitle')}</CardTitle>
           <CardDescription className="text-primary-foreground/80">
-            Select a component from the sidebar to view its interactive demo and documentation.
+            {t('example.overview.gettingStartedDesc')}
           </CardDescription>
         </CardHeader>
       </Card>

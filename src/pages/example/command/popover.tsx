@@ -4,6 +4,7 @@ import { cn } from '@/lib/utils';
 import {
   ArrowUpCircle, CheckCircle2, Circle, HelpCircle, LucideIcon, XCircle,
 } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import { Button } from '@/components/ui/button';
 import {
   Command, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList,
@@ -16,35 +17,35 @@ type Status = {
   icon: LucideIcon
 }
 
-const statuses: Status[] = [
-  {
-    value: 'backlog',
-    label: 'Backlog',
-    icon: HelpCircle,
-  },
-  {
-    value: 'todo',
-    label: 'Todo',
-    icon: Circle,
-  },
-  {
-    value: 'in progress',
-    label: 'In Progress',
-    icon: ArrowUpCircle,
-  },
-  {
-    value: 'done',
-    label: 'Done',
-    icon: CheckCircle2,
-  },
-  {
-    value: 'canceled',
-    label: 'Canceled',
-    icon: XCircle,
-  },
-];
-
 export default function CommandPopover() {
+  const { t } = useTranslation();
+  const statuses: Status[] = [
+    {
+      value: 'backlog',
+      label: t('example.command.popover.backlog'),
+      icon: HelpCircle,
+    },
+    {
+      value: 'todo',
+      label: t('example.command.popover.todo'),
+      icon: Circle,
+    },
+    {
+      value: 'in progress',
+      label: t('example.command.popover.inProgress'),
+      icon: ArrowUpCircle,
+    },
+    {
+      value: 'done',
+      label: t('example.command.popover.done'),
+      icon: CheckCircle2,
+    },
+    {
+      value: 'canceled',
+      label: t('example.command.popover.canceled'),
+      icon: XCircle,
+    },
+  ];
   const [open, setOpen] = React.useState(false);
   const [selectedStatus, setSelectedStatus] = React.useState<Status | null>(
     null,
@@ -52,7 +53,7 @@ export default function CommandPopover() {
 
   return (
     <div className="flex items-center space-x-4">
-      <p className="text-sm text-muted-foreground">Status</p>
+      <p className="text-sm text-muted-foreground">{t('example.command.popover.status')}</p>
       <Popover open={open} onOpenChange={setOpen}>
         <PopoverTrigger asChild>
           <Button
@@ -66,15 +67,15 @@ export default function CommandPopover() {
                 {selectedStatus.label}
               </>
             ) : (
-              <>+ Set status</>
+              <>+ {t('example.command.popover.setStatus')}</>
             )}
           </Button>
         </PopoverTrigger>
         <PopoverContent className="p-0" side="right" align="start">
           <Command>
-            <CommandInput placeholder="Change status..." />
+            <CommandInput placeholder={t('example.command.popover.changeStatusPlaceholder')} />
             <CommandList>
-              <CommandEmpty>No results found.</CommandEmpty>
+              <CommandEmpty>{t('example.command.popover.noResults')}</CommandEmpty>
               <CommandGroup>
                 {statuses.map((status) => (
                   <CommandItem

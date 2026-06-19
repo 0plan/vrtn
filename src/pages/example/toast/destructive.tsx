@@ -1,9 +1,11 @@
+import { useTranslation } from 'react-i18next';
 import { Button } from '@/components/ui/button';
 import { ToastAction } from '@/components/ui/toast';
 import { useToast } from '@/components/ui/use-toast';
 
 export default function ToastDestructive() {
   const { toast } = useToast();
+  const { t } = useTranslation();
 
   return (
     <Button
@@ -11,13 +13,13 @@ export default function ToastDestructive() {
       onClick={() => {
         toast({
           variant: 'destructive',
-          title: 'Uh oh! Something went wrong.',
-          description: 'There was a problem with your request.',
-          action: <ToastAction altText="Try again">Try again</ToastAction>,
+          title: t('example.toast.destructive.title'),
+          description: t('example.toast.destructive.description'),
+          action: <ToastAction altText={t('example.toast.destructive.action')}>{t('example.toast.destructive.action')}</ToastAction>,
         });
       }}
     >
-      Show Toast
+      {t('example.toast.destructive.button')}
     </Button>
   );
 }

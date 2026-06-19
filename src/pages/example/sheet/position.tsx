@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -19,6 +20,7 @@ const SHEET_POSITIONS = ['top', 'right', 'bottom', 'left'] as const;
 type SheetPosition = (typeof SHEET_POSITIONS)[number]
 
 export default function SheetPosition() {
+  const { t } = useTranslation();
   const [position, setPosition] = useState<SheetPosition>('right');
   return (
     <div className="flex flex-col space-y-8">
@@ -40,31 +42,31 @@ export default function SheetPosition() {
       </RadioGroup>
       <Sheet>
         <SheetTrigger asChild>
-          <Button>Open {position} sheet</Button>
+          <Button>{t('example.sheet.position.openSheet', { position })}</Button>
         </SheetTrigger>
         <SheetContent side={position} size="content">
           <SheetHeader>
-            <SheetTitle>Edit profile</SheetTitle>
+            <SheetTitle>{t('example.sheet.position.title')}</SheetTitle>
             <SheetDescription>
-              Make changes to your profile here. Click save when you're done.
+              {t('example.sheet.position.description')}
             </SheetDescription>
           </SheetHeader>
           <div className="grid gap-4 py-4">
             <div className="grid grid-cols-4 items-center gap-4">
               <Label htmlFor="name" className="text-right">
-                Name
+                {t('example.sheet.position.name')}
               </Label>
               <Input id="name" value="Pedro Duarte" className="col-span-3" />
             </div>
             <div className="grid grid-cols-4 items-center gap-4">
               <Label htmlFor="username" className="text-right">
-                Username
+                {t('example.sheet.position.username')}
               </Label>
               <Input id="username" value="@peduarte" className="col-span-3" />
             </div>
           </div>
           <SheetFooter>
-            <Button type="submit">Save changes</Button>
+            <Button type="submit">{t('example.sheet.position.saveChanges')}</Button>
           </SheetFooter>
         </SheetContent>
       </Sheet>

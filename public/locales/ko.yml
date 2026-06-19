@@ -9,20 +9,14 @@ home:
   title: Let's Start
   subtitle: Together
   cta: 시작하기
-  content: Lorem ipsum dolor sit amet, consectetur adipiscing
-    elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-    cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  content: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 signIn: 로그인
 signOut: 로그아웃
-
 error:
   notFound:
     title: 이런!
     content: 죄송합니다, 예기치 못한 오류가 발생했습니다.
     button: 홈페이지로 돌아가기
-
 example:
   accordion:
     - title: 접근성이 좋나요?
@@ -57,3 +51,351 @@ example:
       calculator: 계산기
       profile: 프로필
       billing: 결제
+    dialog:
+      press: 누르세요
+      inputPlaceholder: 명령어를 입력하거나 검색하세요...
+      noResults: 검색 결과가 없습니다.
+      suggestions: 추천
+      calendar: 캘린더
+      searchEmoji: 이모지 검색
+      calculator: 계산기
+      settings: 설정
+      profile: 프로필
+      billing: 결제
+    dropdownMenu:
+      createNewProject: 새 프로젝트 만들기
+      actions: 작업
+      assignTo: 담당자 지정...
+      setDueDate: 마감일 설정...
+      applyLabel: 라벨 적용
+      filterLabelPlaceholder: 라벨 필터...
+      noLabelFound: 라벨을 찾을 수 없습니다.
+      delete: 삭제
+    popover:
+      status: 상태
+      setStatus: 상태 설정
+      changeStatusPlaceholder: 상태 변경...
+      noResults: 검색 결과가 없습니다.
+      backlog: 백로그
+      todo: 할 일
+      inProgress: 진행 중
+      done: 완료
+      canceled: 취소됨
+  input:
+    placeholder: 이메일
+    disabled:
+      placeholder: 이메일
+    file:
+      label: 사진
+    withButton:
+      placeholder: 이메일
+      button: 구독
+    withLabel:
+      label: 이메일
+      placeholder: 이메일
+    withText:
+      label: 이메일
+      placeholder: 이메일
+      description: 이메일 주소를 입력하세요.
+  textarea:
+    placeholder: 메시지를 입력하세요.
+    disabled:
+      placeholder: 메시지를 입력하세요.
+    withButton:
+      placeholder: 메시지를 입력하세요.
+      button: 메시지 보내기
+    withLabel:
+      label: 메시지
+      placeholder: 메시지를 입력하세요.
+    withText:
+      label: 메시지
+      placeholder: 메시지를 입력하세요.
+      description: 메시지가 지원팀에 전달됩니다.
+  label:
+    label: 이용약관에 동의합니다
+  select:
+    placeholder: 과일 선택
+    label: 과일
+    apple: 사과
+    banana: 바나나
+    blueberry: 블루베리
+    grapes: 포도
+    pineapple: 파인애플
+  radioGroup:
+    default: 기본
+    comfortable: 넓게
+    compact: 좁게
+  switch:
+    label: 비행기 모드
+  dialog:
+    editProfileButton: 프로필 편집
+    title: 프로필 편집
+    description: 여기에서 프로필을 변경하세요. 완료되면 저장을 클릭하세요.
+    name: 이름
+    username: 사용자 이름
+    saveChanges: 변경사항 저장
+  sheet:
+    open: 열기
+    title: 프로필 편집
+    description: 여기에서 프로필을 변경하세요. 완료되면 저장을 클릭하세요.
+    name: 이름
+    username: 사용자 이름
+    saveChanges: 변경사항 저장
+    position:
+      openSheet: '{{position}} 시트 열기'
+      title: 프로필 편집
+      description: 여기에서 프로필을 변경하세요. 완료되면 저장을 클릭하세요.
+      name: 이름
+      username: 사용자 이름
+      saveChanges: 변경사항 저장
+    size:
+      openSheet: '{{size}} 시트 열기'
+      title: 프로필 편집
+      description: 여기에서 프로필을 변경하세요. 완료되면 저장을 클릭하세요.
+      name: 이름
+      username: 사용자 이름
+      saveChanges: 변경사항 저장
+  popover:
+    openPopover: 팝오버 열기
+    dimensions: 크기
+    description: 레이어의 크기를 설정하세요.
+    width: 너비
+    maxWidth: 최대 너비
+    height: 높이
+    maxHeight: 최대 높이
+  hoverCard:
+    description: React 프레임워크 – @vercel이 제작하고 관리합니다.
+    joined: 2021년 12월 가입
+  tooltip:
+    add: 추가
+    addToLibrary: 라이브러리에 추가
+  dropdownMenu:
+    open: 열기
+    myAccount: 내 계정
+    profile: 프로필
+    billing: 결제
+    settings: 설정
+    keyboardShortcuts: 키보드 단축키
+    team: 팀
+    inviteUsers: 사용자 초대
+    email: 이메일
+    message: 메시지
+    more: 더 보기...
+    newTeam: 새 팀
+    support: 지원
+    api: API
+    logOut: 로그아웃
+    checkboxes:
+      open: 열기
+      appearance: 화면 표시
+      statusBar: 상태 표시줄
+      activityBar: 활동 표시줄
+      panel: 패널
+    radioGroup:
+      open: 열기
+      panelPosition: 패널 위치
+      top: 위
+      bottom: 아래
+      right: 오른쪽
+  contextMenu:
+    rightClickHere: 여기를 우클릭하세요
+    back: 뒤로
+    forward: 앞으로
+    reload: 새로고침
+    moreTools: 도구 더 보기
+    savePageAs: 다른 이름으로 페이지 저장...
+    createShortcut: 바로 가기 만들기...
+    nameWindow: 창 이름 지정...
+    developerTools: 개발자 도구
+    showBookmarksBar: 북마크 바 표시
+    showFullUrls: 전체 URL 표시
+    people: 사람
+  menubar:
+    file: 파일
+    newTab: 새 탭
+    newWindow: 새 창
+    newIncognitoWindow: 새 시크릿 창
+    share: 공유
+    emailLink: 이메일 링크
+    messages: 메시지
+    notes: 메모
+    print: 인쇄...
+    edit: 편집
+    undo: 실행 취소
+    redo: 다시 실행
+    find: 찾기
+    searchTheWeb: 웹에서 검색
+    findEllipsis: 찾기...
+    findNext: 다음 찾기
+    findPrevious: 이전 찾기
+    cut: 잘라내기
+    copy: 복사
+    paste: 붙여넣기
+    view: 보기
+    alwaysShowBookmarksBar: 북마크 바 항상 표시
+    alwaysShowFullUrls: 전체 URL 항상 표시
+    reload: 새로고침
+    forceReload: 강제 새로고침
+    toggleFullscreen: 전체 화면 전환
+    hideSidebar: 사이드바 숨기기
+    profiles: 프로필
+    editEllipsis: 편집...
+    addProfile: 프로필 추가...
+  navigationMenu:
+    gettingStarted: 시작하기
+    components: 컴포넌트
+    documentation: 문서
+    heroDescription: Radix UI와 Tailwind CSS로 만든 아름답게 디자인된 컴포넌트입니다.
+    introductionTitle: 소개
+    introductionDescription: Radix UI와 Tailwind CSS로 만든 재사용 가능한 컴포넌트입니다.
+    installationTitle: 설치
+    installationDescription: 의존성을 설치하고 앱을 구성하는 방법입니다.
+    typographyTitle: 타이포그래피
+    typographyDescription: 제목, 문단, 목록 등의 스타일입니다.
+    alertDialogTitle: 알림 대화상자
+    alertDialogDescription: 중요한 내용으로 사용자를 중단시키고 응답을 요구하는 모달 대화상자입니다.
+    hoverCardTitle: 호버 카드
+    hoverCardDescription: 링크 뒤에 있는 콘텐츠를 미리 볼 수 있게 해줍니다.
+    progressTitle: 진행률
+    progressDescription: 작업의 완료 진행 상황을 보여주는 표시기로, 보통 진행 막대로 표시됩니다.
+    scrollAreaTitle: 스크롤 영역
+    scrollAreaDescription: 콘텐츠를 시각적 또는 의미적으로 구분합니다.
+    tabsTitle: 탭
+    tabsDescription: 한 번에 하나씩 표시되는 탭 패널이라고 불리는 계층형 콘텐츠 섹션 모음입니다.
+    tooltipTitle: 툴팁
+    tooltipDescription: 요소가 키보드 포커스를 받거나 마우스를 올렸을 때 관련 정보를 표시하는 팝업입니다.
+  tabs:
+    account: 계정
+    password: 비밀번호
+    accountDescription: 여기에서 계정을 변경하세요. 완료되면 저장을 클릭하세요.
+    name: 이름
+    username: 사용자 이름
+    saveChanges: 변경사항 저장
+    passwordDescription: 여기에서 비밀번호를 변경하세요. 저장 후에는 로그아웃됩니다.
+    currentPassword: 현재 비밀번호
+    newPassword: 새 비밀번호
+    savePassword: 비밀번호 저장
+  separator:
+    description: 오픈소스 UI 컴포넌트 라이브러리.
+    blog: 블로그
+    docs: 문서
+    source: 소스
+  scrollArea:
+    tags: 태그
+  toggle:
+    toggleItalic: 기울임꼴 전환
+    disabled:
+      toggleItalic: 기울임꼴 전환
+    lg:
+      toggleItalic: 기울임꼴 전환
+    outline:
+      toggleItalic: 기울임꼴 전환
+    sm:
+      toggleItalic: 기울임꼴 전환
+    withText:
+      toggleItalic: 기울임꼴 전환
+      italic: 기울임꼴
+  toast:
+    button: 캘린더에 추가
+    title: '예약됨: 따라잡기'
+    description: 2023년 2월 10일 금요일 오후 5:57
+    undo: 실행 취소
+    undoAltText: 일정으로 이동하여 실행 취소
+    simple:
+      button: 토스트 표시
+      description: 메시지가 전송되었습니다.
+    withTitle:
+      button: 토스트 표시
+      title: 이런! 문제가 발생했습니다.
+      description: 요청에 문제가 있었습니다.
+    withAction:
+      button: 토스트 표시
+      title: 이런! 문제가 발생했습니다.
+      description: 요청에 문제가 있었습니다.
+      action: 다시 시도
+    destructive:
+      button: 토스트 표시
+      title: 이런! 문제가 발생했습니다.
+      description: 요청에 문제가 있었습니다.
+      action: 다시 시도
+  overview:
+    subtitle: 최신 UI 컴포넌트와 레이아웃 모음을 살펴보세요.
+    feature1Title: 모던 사이드바
+    feature1Desc: 중첩 그룹과 아이콘이 있는 접이식 내비게이션.
+    feature2Title: 빠른 검색
+    feature2Desc: 실시간 필터링으로 컴포넌트를 즉시 찾기.
+    feature3Title: 반응형 디자인
+    feature3Desc: 모바일, 태블릿, 데스크톱 화면에 완벽하게 최적화.
+    feature4Title: 깔끔한 아키텍처
+    feature4Desc: shadcn/ui와 Radix UI 프리미티브로 제작.
+    cardNote: 모든 컴포넌트는 접근성, 성능, 손쉬운 커스터마이징을 고려해 설계되었습니다.
+    gettingStartedTitle: 시작하기
+    gettingStartedDesc: 사이드바에서 컴포넌트를 선택하여 인터랙티브 데모와 문서를 확인하세요.
+  typography:
+    h1:
+      heading: '웃음에 세금을: 농담세 연대기'
+    h2:
+      heading: 왕국의 백성들
+    h3:
+      heading: 농담세
+    h4:
+      heading: 사람들이 농담을 그만두다
+    blockquote:
+      quote: '"어차피" 그가 말했다, "누구나 재미있는 농담을 즐기니, 그 특권에 대가를 치르는 것이 공평하지 않겠나."'
+    large:
+      text: 정말로, 확실하신가요?
+    lead:
+      lead: 중요한 내용으로 사용자를 가로막고 응답을 요구하는 모달 대화 상자입니다.
+    muted:
+      text: 이메일 주소를 입력하세요.
+    p:
+      paragraph: 왕은 백성들이 훨씬 행복해진 모습을 보고 자신의 잘못을 깨달아 농담세를 폐지했다.
+    small:
+      text: 이메일 주소
+    list:
+      item1: '1단계 말장난: 금화 5닢'
+      item2: '2단계 농담: 금화 10닢'
+      item3: '3단계 한 줄 개그: 금화 20닢'
+    table:
+      colTreasury: 왕의 금고
+      colHappiness: 백성들의 행복
+      row1Treasury: 텅 빔
+      row1Happiness: 넘쳐흐름
+      row2Treasury: 적당함
+      row2Happiness: 만족함
+      row3Treasury: 가득 참
+      row3Happiness: 환희에 참
+    demo:
+      title: 농담세 연대기
+      intro: 옛날 옛적 머나먼 나라에, 하루 종일 왕좌에 늘어져 있는 아주 게으른 왕이 있었다. 어느 날, 신하들이 한 가지 문제를 들고 왕을 찾아왔다. 왕국의 돈이 바닥나고 있다는 것이었다.
+      kingsPlanHeading: 왕의 계획
+      kingsPlanBefore: 왕은 오래도록 고민한 끝에 마침내
+      kingsPlanLink: 기발한 계획
+      kingsPlanAfter: 을 떠올렸다. 바로 왕국의 농담에 세금을 매기는 것이었다.
+      quote: '"어차피" 그가 말했다, "누구나 재미있는 농담을 즐기니, 그 특권에 대가를 치르는 것이 공평하지 않겠나."'
+      jokeTaxHeading: 농담세
+      jokeTaxParagraph: 왕의 백성들은 전혀 즐겁지 않았다. 그들은 투덜대며 불평했지만, 왕은 단호했다.
+      item1: '1단계 말장난: 금화 5닢'
+      item2: '2단계 농담: 금화 10닢'
+      item3: '3단계 한 줄 개그: 금화 20닢'
+      jesterParagraph: 그 결과 사람들은 농담을 그만두었고, 왕국은 우울에 빠졌다. 하지만 왕의 어리석음에 굴하지 않은 단 한 사람이 있었으니, 바로 조커스터라는 이름의 궁정 광대였다.
+      revoltHeading: 조커스터의 반란
+      revoltParagraph: 조커스터는 한밤중에 성에 몰래 숨어들어 곳곳에 농담을 남기기 시작했다. 왕의 베개 밑에, 수프 속에, 심지어 왕실 변기 안에까지. 왕은 격노했지만, 도무지 조커스터를 막을 수 없었다.
+      laughterParagraph: 그러던 어느 날, 왕국의 백성들은 조커스터가 남긴 농담이 너무나 우스워 웃지 않을 수 없다는 것을 깨달았다. 그리고 한번 웃기 시작하자, 도저히 멈출 수가 없었다.
+      rebellionHeading: 백성들의 봉기
+      rebellionParagraph: 웃음으로 기운을 되찾은 왕국의 백성들은 다시 농담과 말장난을 하기 시작했고, 이내 온 왕국이 그 농담에 함께 빠져들었다.
+      colTreasury: 왕의 금고
+      colHappiness: 백성들의 행복
+      row1Treasury: 텅 빔
+      row1Happiness: 넘쳐흐름
+      row2Treasury: 적당함
+      row2Happiness: 만족함
+      row3Treasury: 가득 참
+      row3Happiness: 환희에 참
+      repealParagraph: 왕은 백성들이 훨씬 행복해진 모습을 보고 자신의 잘못을 깨달아 농담세를 폐지했다. 조커스터는 영웅으로 선포되었고, 왕국은 그 후로도 오래오래 행복하게 살았다.
+      moralParagraph: 이 이야기의 교훈은 이렇다. 한바탕 웃음의 힘을 결코 얕보지 말고, 나쁜 발상은 늘 경계하라.
+      labelH1: h1
+      labelH2: h2
+      labelH3: h3
+      labelH4: h4
+      labelInlineCode: 인라인 코드
