@@ -1,4 +1,5 @@
 import { Link, Outlet, useLocation } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { AppSidebar } from '@/components/layouts/app-sidebar';
 import {
   SidebarInset,
@@ -18,6 +19,7 @@ import { examples } from '@/data/example';
 
 export default function Example() {
   const location = useLocation();
+  const { t } = useTranslation();
   const pathnames = location.pathname.split('/').filter((x) => x);
 
   const getBreadcrumbs = () => {
@@ -68,7 +70,7 @@ export default function Example() {
             <BreadcrumbList>
               <BreadcrumbItem className="hidden md:block">
                 <BreadcrumbLink asChild>
-                  <Link to="/">Home</Link>
+                  <Link to="/">{t('sidebar.home')}</Link>
                 </BreadcrumbLink>
               </BreadcrumbItem>
               {breadcrumbs.length > 0 && <BreadcrumbSeparator className="hidden md:block" />}

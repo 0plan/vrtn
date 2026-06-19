@@ -2,44 +2,40 @@ import * as React from 'react';
 import { ChevronLeft, ChevronRight, MoreHorizontal } from 'lucide-react';
 
 import { cn } from '@/lib/utils';
-import { ButtonProps, buttonVariants } from '@/components/ui/button';
+import { Button, buttonVariants } from '@/components/ui/button';
 
 function Pagination({ className, ...props }: React.ComponentProps<'nav'>) {
   return (
     <nav
       role="navigation"
       aria-label="pagination"
+      data-slot="pagination"
       className={cn('mx-auto flex w-full justify-center', className)}
       {...props}
     />
   );
 }
-Pagination.displayName = 'Pagination';
 
-const PaginationContent = React.forwardRef<
-  HTMLUListElement,
-  React.ComponentProps<'ul'>
->(({ className, ...props }, ref) => (
-  <ul
-    ref={ref}
-    className={cn('flex flex-row items-center gap-1', className)}
-    {...props}
-  />
-));
-PaginationContent.displayName = 'PaginationContent';
+function PaginationContent({ className, ...props }: React.ComponentProps<'ul'>) {
+  return (
+    <ul
+      data-slot="pagination-content"
+      className={cn('flex flex-row items-center gap-1', className)}
+      {...props}
+    />
+  );
+}
 
-const PaginationItem = React.forwardRef<
-  HTMLLIElement,
-  React.ComponentProps<'li'>
->(({ className, ...props }, ref) => (
-  <li ref={ref} className={cn('', className)} {...props} />
-));
-PaginationItem.displayName = 'PaginationItem';
+function PaginationItem({ className, ...props }: React.ComponentProps<'li'>) {
+  return (
+    <li data-slot="pagination-item" className={cn('', className)} {...props} />
+  );
+}
 
 type PaginationLinkProps = {
-  isActive?: boolean
-} & Pick<ButtonProps, 'size'> &
-  React.ComponentProps<'a'>
+  isActive?: boolean;
+} & Pick<React.ComponentProps<typeof Button>, 'size'> &
+  React.ComponentProps<'a'>;
 
 function PaginationLink({
   className,
@@ -50,6 +46,7 @@ function PaginationLink({
   return (
     <a
       aria-current={isActive ? 'page' : undefined}
+      data-slot="pagination-link"
       className={cn(
         buttonVariants({
           variant: isActive ? 'outline' : 'ghost',
@@ -61,7 +58,6 @@ function PaginationLink({
     />
   );
 }
-PaginationLink.displayName = 'PaginationLink';
 
 function PaginationPrevious({
   className,
@@ -79,7 +75,6 @@ function PaginationPrevious({
     </PaginationLink>
   );
 }
-PaginationPrevious.displayName = 'PaginationPrevious';
 
 function PaginationNext({
   className,
@@ -97,7 +92,6 @@ function PaginationNext({
     </PaginationLink>
   );
 }
-PaginationNext.displayName = 'PaginationNext';
 
 function PaginationEllipsis({
   className,
@@ -106,6 +100,7 @@ function PaginationEllipsis({
   return (
     <span
       aria-hidden
+      data-slot="pagination-ellipsis"
       className={cn('flex h-9 w-9 items-center justify-center', className)}
       {...props}
     >
@@ -114,7 +109,6 @@ function PaginationEllipsis({
     </span>
   );
 }
-PaginationEllipsis.displayName = 'PaginationEllipsis';
 
 export {
   Pagination,
