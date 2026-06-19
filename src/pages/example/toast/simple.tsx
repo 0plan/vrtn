@@ -1,19 +1,21 @@
+import { useTranslation } from 'react-i18next';
 import { Button } from '@/components/ui/button';
 import { useToast } from '@/components/ui/use-toast';
 
 export default function ToastSimple() {
   const { toast } = useToast();
+  const { t } = useTranslation();
 
   return (
     <Button
       variant="outline"
       onClick={() => {
         toast({
-          description: 'Your message has been sent.',
+          description: t('example.toast.simple.description'),
         });
       }}
     >
-      Show Toast
+      {t('example.toast.simple.button')}
     </Button>
   );
 }

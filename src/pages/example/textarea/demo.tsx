@@ -1,5 +1,7 @@
+import { useTranslation } from 'react-i18next';
 import { Textarea } from '@/components/ui/textarea';
 
 export default function TextareaDemo() {
-  return <Textarea placeholder="Type your message here." />;
+  const { t } = useTranslation();
+  return <Textarea placeholder={t('example.textarea.placeholder')} />;
 }

@@ -1,8 +1,10 @@
+import { useTranslation } from 'react-i18next';
+
 export default function TypographyBlockquote() {
+  const { t } = useTranslation();
   return (
     <blockquote className="mt-6 border-l-2 pl-6 italic">
-      "After all," he said, "everyone enjoys a good joke, so it's only fair that
-      they should pay for the privilege."
+      {t('example.typography.blockquote.quote')}
     </blockquote>
   );
 }

@@ -1,5 +1,7 @@
+import { useTranslation } from 'react-i18next';
 import { Textarea } from '@/components/ui/textarea';
 
 export default function TextareaDisabled() {
-  return <Textarea placeholder="Type your message here." disabled />;
+  const { t } = useTranslation();
+  return <Textarea placeholder={t('example.textarea.disabled.placeholder')} disabled />;
 }

@@ -1,22 +1,24 @@
+import { useTranslation } from 'react-i18next';
 import { Button } from '@/components/ui/button';
 import { ToastAction } from '@/components/ui/toast';
 import { useToast } from '@/components/ui/use-toast';
 
 export default function ToastWithAction() {
   const { toast } = useToast();
+  const { t } = useTranslation();
 
   return (
     <Button
       variant="outline"
       onClick={() => {
         toast({
-          title: 'Uh oh! Something went wrong.',
-          description: 'There was a problem with your request.',
-          action: <ToastAction altText="Try again">Try again</ToastAction>,
+          title: t('example.toast.withAction.title'),
+          description: t('example.toast.withAction.description'),
+          action: <ToastAction altText={t('example.toast.withAction.action')}>{t('example.toast.withAction.action')}</ToastAction>,
         });
       }}
     >
-      Show Toast
+      {t('example.toast.withAction.button')}
     </Button>
   );
 }

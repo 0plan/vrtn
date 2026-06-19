@@ -9,20 +9,14 @@ home:
   title: Let's Start
   subtitle: Together
   cta: Get Started
-  content: Lorem ipsum dolor sit amet, consectetur adipiscing
-    elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-    cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  content: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 signIn: Sign In
 signOut: Sign Out
-
 error:
   notFound:
     title: Oops!
     content: Sorry, an unexpected error has occurred.
     button: Go back to the home page
-
 example:
   accordion:
     - title: Is it accessible?
@@ -37,8 +31,7 @@ example:
   alertDialog:
     trigger: Show Dialog
     title: Are you absolutely sure?
-    content: This action cannot be undone. This will permanently delete your
-      account and remove your data from our servers.
+    content: This action cannot be undone. This will permanently delete your account and remove your data from our servers.
     confirm: Continue
     cancel: Cancel
   command:
@@ -58,3 +51,351 @@ example:
       calculator: Calculator
       profile: Profile
       billing: Billing
+    dialog:
+      press: Press
+      inputPlaceholder: Type a command or search...
+      noResults: No results found.
+      suggestions: Suggestions
+      calendar: Calendar
+      searchEmoji: Search Emoji
+      calculator: Calculator
+      settings: Settings
+      profile: Profile
+      billing: Billing
+    dropdownMenu:
+      createNewProject: Create a new project
+      actions: Actions
+      assignTo: Assign to...
+      setDueDate: Set due date...
+      applyLabel: Apply label
+      filterLabelPlaceholder: Filter label...
+      noLabelFound: No label found.
+      delete: Delete
+    popover:
+      status: Status
+      setStatus: Set status
+      changeStatusPlaceholder: Change status...
+      noResults: No results found.
+      backlog: Backlog
+      todo: Todo
+      inProgress: In Progress
+      done: Done
+      canceled: Canceled
+  input:
+    placeholder: Email
+    disabled:
+      placeholder: Email
+    file:
+      label: Picture
+    withButton:
+      placeholder: Email
+      button: Subscribe
+    withLabel:
+      label: Email
+      placeholder: Email
+    withText:
+      label: Email
+      placeholder: Email
+      description: Enter your email address.
+  textarea:
+    placeholder: Type your message here.
+    disabled:
+      placeholder: Type your message here.
+    withButton:
+      placeholder: Type your message here.
+      button: Send message
+    withLabel:
+      label: Your message
+      placeholder: Type your message here.
+    withText:
+      label: Your Message
+      placeholder: Type your message here.
+      description: Your message will be copied to the support team.
+  label:
+    label: Accept terms and conditions
+  select:
+    placeholder: Select a fruit
+    label: Fruits
+    apple: Apple
+    banana: Banana
+    blueberry: Blueberry
+    grapes: Grapes
+    pineapple: Pineapple
+  radioGroup:
+    default: Default
+    comfortable: Comfortable
+    compact: Compact
+  switch:
+    label: Airplane Mode
+  dialog:
+    editProfileButton: Edit Profile
+    title: Edit profile
+    description: Make changes to your profile here. Click save when you're done.
+    name: Name
+    username: Username
+    saveChanges: Save changes
+  sheet:
+    open: Open
+    title: Edit profile
+    description: Make changes to your profile here. Click save when you're done.
+    name: Name
+    username: Username
+    saveChanges: Save changes
+    position:
+      openSheet: Open {{position}} sheet
+      title: Edit profile
+      description: Make changes to your profile here. Click save when you're done.
+      name: Name
+      username: Username
+      saveChanges: Save changes
+    size:
+      openSheet: Open {{size}} sheet
+      title: Edit profile
+      description: Make changes to your profile here. Click save when you're done.
+      name: Name
+      username: Username
+      saveChanges: Save changes
+  popover:
+    openPopover: Open popover
+    dimensions: Dimensions
+    description: Set the dimensions for the layer.
+    width: Width
+    maxWidth: Max. width
+    height: Height
+    maxHeight: Max. height
+  hoverCard:
+    description: The React Framework – created and maintained by @vercel.
+    joined: Joined December 2021
+  tooltip:
+    add: Add
+    addToLibrary: Add to library
+  dropdownMenu:
+    open: Open
+    myAccount: My Account
+    profile: Profile
+    billing: Billing
+    settings: Settings
+    keyboardShortcuts: Keyboard shortcuts
+    team: Team
+    inviteUsers: Invite users
+    email: Email
+    message: Message
+    more: More...
+    newTeam: New Team
+    support: Support
+    api: API
+    logOut: Log out
+    checkboxes:
+      open: Open
+      appearance: Appearance
+      statusBar: Status Bar
+      activityBar: Activity Bar
+      panel: Panel
+    radioGroup:
+      open: Open
+      panelPosition: Panel Position
+      top: Top
+      bottom: Bottom
+      right: Right
+  contextMenu:
+    rightClickHere: Right click here
+    back: Back
+    forward: Forward
+    reload: Reload
+    moreTools: More Tools
+    savePageAs: Save Page As...
+    createShortcut: Create Shortcut...
+    nameWindow: Name Window...
+    developerTools: Developer Tools
+    showBookmarksBar: Show Bookmarks Bar
+    showFullUrls: Show Full URLs
+    people: People
+  menubar:
+    file: File
+    newTab: New Tab
+    newWindow: New Window
+    newIncognitoWindow: New Incognito Window
+    share: Share
+    emailLink: Email link
+    messages: Messages
+    notes: Notes
+    print: Print...
+    edit: Edit
+    undo: Undo
+    redo: Redo
+    find: Find
+    searchTheWeb: Search the web
+    findEllipsis: Find...
+    findNext: Find Next
+    findPrevious: Find Previous
+    cut: Cut
+    copy: Copy
+    paste: Paste
+    view: View
+    alwaysShowBookmarksBar: Always Show Bookmarks Bar
+    alwaysShowFullUrls: Always Show Full URLs
+    reload: Reload
+    forceReload: Force Reload
+    toggleFullscreen: Toggle Fullscreen
+    hideSidebar: Hide Sidebar
+    profiles: Profiles
+    editEllipsis: Edit...
+    addProfile: Add Profile...
+  navigationMenu:
+    gettingStarted: Getting started
+    components: Components
+    documentation: Documentation
+    heroDescription: Beautifully designed components built with Radix UI and Tailwind CSS.
+    introductionTitle: Introduction
+    introductionDescription: Re-usable components built using Radix UI and Tailwind CSS.
+    installationTitle: Installation
+    installationDescription: How to install dependencies and structure your app.
+    typographyTitle: Typography
+    typographyDescription: Styles for headings, paragraphs, lists...etc
+    alertDialogTitle: Alert Dialog
+    alertDialogDescription: A modal dialog that interrupts the user with important content and expects a response.
+    hoverCardTitle: Hover Card
+    hoverCardDescription: For sighted users to preview content available behind a link.
+    progressTitle: Progress
+    progressDescription: Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.
+    scrollAreaTitle: Scroll-area
+    scrollAreaDescription: Visually or semantically separates content.
+    tabsTitle: Tabs
+    tabsDescription: A set of layered sections of content—known as tab panels—that are displayed one at a time.
+    tooltipTitle: Tooltip
+    tooltipDescription: A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.
+  tabs:
+    account: Account
+    password: Password
+    accountDescription: Make changes to your account here. Click save when you're done.
+    name: Name
+    username: Username
+    saveChanges: Save changes
+    passwordDescription: Change your password here. After saving, you'll be logged out.
+    currentPassword: Current password
+    newPassword: New password
+    savePassword: Save password
+  separator:
+    description: An open-source UI component library.
+    blog: Blog
+    docs: Docs
+    source: Source
+  scrollArea:
+    tags: Tags
+  toggle:
+    toggleItalic: Toggle italic
+    disabled:
+      toggleItalic: Toggle italic
+    lg:
+      toggleItalic: Toggle italic
+    outline:
+      toggleItalic: Toggle italic
+    sm:
+      toggleItalic: Toggle italic
+    withText:
+      toggleItalic: Toggle italic
+      italic: Italic
+  toast:
+    button: Add to calendar
+    title: 'Scheduled: Catch up '
+    description: Friday, February 10, 2023 at 5:57 PM
+    undo: Undo
+    undoAltText: Goto schedule to undo
+    simple:
+      button: Show Toast
+      description: Your message has been sent.
+    withTitle:
+      button: Show Toast
+      title: Uh oh! Something went wrong.
+      description: There was a problem with your request.
+    withAction:
+      button: Show Toast
+      title: Uh oh! Something went wrong.
+      description: There was a problem with your request.
+      action: Try again
+    destructive:
+      button: Show Toast
+      title: Uh oh! Something went wrong.
+      description: There was a problem with your request.
+      action: Try again
+  overview:
+    subtitle: Explore our collection of modern UI components and layouts.
+    feature1Title: Modern Sidebar
+    feature1Desc: Collapsible navigation with nested groups and icons.
+    feature2Title: Quick Search
+    feature2Desc: Instantly find components with real-time filtering.
+    feature3Title: Responsive Design
+    feature3Desc: Fully optimized for mobile, tablet, and desktop screens.
+    feature4Title: Clean Architecture
+    feature4Desc: Built with shadcn/ui and Radix UI primitives.
+    cardNote: Every component is designed to be accessible, performant, and easy to customize.
+    gettingStartedTitle: Getting Started
+    gettingStartedDesc: Select a component from the sidebar to view its interactive demo and documentation.
+  typography:
+    h1:
+      heading: 'Taxing Laughter: The Joke Tax Chronicles'
+    h2:
+      heading: The People of the Kingdom
+    h3:
+      heading: The Joke Tax
+    h4:
+      heading: People stopped telling jokes
+    blockquote:
+      quote: '"After all," he said, "everyone enjoys a good joke, so it''s only fair that they should pay for the privilege."'
+    large:
+      text: Are you sure absolutely sure?
+    lead:
+      lead: A modal dialog that interrupts the user with important content and expects a response.
+    muted:
+      text: Enter your email address.
+    p:
+      paragraph: The king, seeing how much happier his subjects were, realized the error of his ways and repealed the joke tax.
+    small:
+      text: Email address
+    list:
+      item1: '1st level of puns: 5 gold coins'
+      item2: '2nd level of jokes: 10 gold coins'
+      item3: '3rd level of one-liners : 20 gold coins'
+    table:
+      colTreasury: King's Treasury
+      colHappiness: People's happiness
+      row1Treasury: Empty
+      row1Happiness: Overflowing
+      row2Treasury: Modest
+      row2Happiness: Satisfied
+      row3Treasury: Full
+      row3Happiness: Ecstatic
+    demo:
+      title: The Joke Tax Chronicles
+      intro: 'Once upon a time, in a far-off land, there was a very lazy king who spent all day lounging on his throne. One day, his advisors came to him with a problem: the kingdom was running out of money.'
+      kingsPlanHeading: The King's Plan
+      kingsPlanBefore: The king thought long and hard, and finally came up with
+      kingsPlanLink: a brilliant plan
+      kingsPlanAfter: ': he would tax the jokes in the kingdom.'
+      quote: '"After all," he said, "everyone enjoys a good joke, so it''s only fair that they should pay for the privilege."'
+      jokeTaxHeading: The Joke Tax
+      jokeTaxParagraph: 'The king''s subjects were not amused. They grumbled and complained, but the king was firm:'
+      item1: '1st level of puns: 5 gold coins'
+      item2: '2nd level of jokes: 10 gold coins'
+      item3: '3rd level of one-liners : 20 gold coins'
+      jesterParagraph: 'As a result, people stopped telling jokes, and the kingdom fell into a gloom. But there was one person who refused to let the king''s foolishness get him down: a court jester named Jokester.'
+      revoltHeading: Jokester's Revolt
+      revoltParagraph: 'Jokester began sneaking into the castle in the middle of the night and leaving jokes all over the place: under the king''s pillow, in his soup, even in the royal toilet. The king was furious, but he couldn''t seem to stop Jokester.'
+      laughterParagraph: And then, one day, the people of the kingdom discovered that the jokes left by Jokester were so funny that they couldn't help but laugh. And once they started laughing, they couldn't stop.
+      rebellionHeading: The People's Rebellion
+      rebellionParagraph: The people of the kingdom, feeling uplifted by the laughter, started to tell jokes and puns again, and soon the entire kingdom was in on the joke.
+      colTreasury: King's Treasury
+      colHappiness: People's happiness
+      row1Treasury: Empty
+      row1Happiness: Overflowing
+      row2Treasury: Modest
+      row2Happiness: Satisfied
+      row3Treasury: Full
+      row3Happiness: Ecstatic
+      repealParagraph: The king, seeing how much happier his subjects were, realized the error of his ways and repealed the joke tax. Jokester was declared a hero, and the kingdom lived happily ever after.
+      moralParagraph: 'The moral of the story is: never underestimate the power of a good laugh and always be careful of bad ideas.'
+      labelH1: h1
+      labelH2: h2
+      labelH3: h3
+      labelH4: h4
+      labelInlineCode: Inline Code
