@@ -5,7 +5,7 @@ VRTN is Vite React Tailwindcss Typescript i18n template
 
 ## 🚀 Features
 
-- React 18, Typescript, [Vite](https://github.com/vitejs/vite), [pnpm](https://pnpm.io/) 
+- React 19, Typescript, [Vite](https://github.com/vitejs/vite), [pnpm](https://pnpm.io/) 
 - [Tailwind CSS](https://tailwindcss.com/), [shadcn/ui](https://ui.shadcn.com/)
 - [Components](./src/components)
 - [Zustand](https://zustand-demo.pmnd.rs/)
@@ -17,10 +17,7 @@ VRTN is Vite React Tailwindcss Typescript i18n template
 - Docker
 - [PWA](https://vite-pwa-org.netlify.app/)
 - [File-based MDX routes with React](https://github.com/oedotme/generouted/tree/main/examples/react-router-mdx)
-
-## 🚧 TO-DO
-- Unit Testing with [Vitest](https://github.com/vitest-dev/vitest), E2E Testing with [Playwright](https://playwright.dev/)
-  on [GitHub Actions](https://github.com/features/actions)
+- Unit testing with [Vitest](https://vitest.dev/) & E2E testing with [Playwright](https://playwright.dev/), run on [GitHub Actions](https://github.com/features/actions)
 
 [//]: # (## Try it now!)
 
@@ -44,4 +41,18 @@ Build the App
 
 ```bash
 pnpm build
+```
+
+### Test
+
+Run unit tests (Vitest):
+
+```bash
+pnpm test
+```
+
+Run end-to-end tests (Playwright):
+
+```bash
+pnpm test:e2e
 ```
