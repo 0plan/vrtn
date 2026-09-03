@@ -55,7 +55,7 @@
     "@radix-ui/react-toggle": "^1.1.12",
     "@radix-ui/react-toggle-group": "^1.1.13",
     "@radix-ui/react-tooltip": "^1.2.10",
-    "@tailwindcss/postcss": "^4.3.1",
+    "@tailwindcss/postcss": "^4.3.3",
     "@uiw/react-md-editor": "^4.1.1",
     "axios": "^1.18.0",
     "class-variance-authority": "^0.7.1",
@@ -121,7 +121,7 @@
     "postcss": "^8.5.27",
     "serve": "^14.2.6",
     "storybook": "^10.4.6",
-    "tailwindcss": "^4.3.1",
+    "tailwindcss": "^4.3.3",
     "typescript": "^6.0.3",
     "typescript-eslint": "^8.61.1",
     "vite": "^8.0.16",
@@ -136,27 +136,11 @@
   },
   "pnpm": {
     "overrides": {
-      "serialize-javascript": "^7.0.3",
+      "serialize-javascript": "^7.0.5",
       "react": "^19.2.7",
       "react-dom": "^19.2.7",
-      "fast-uri@<=3.1.1": "^4.1.4",
-      "ws@>=8.0.0 <8.21.0": ">=8.21.0",
-      "@babel/plugin-transform-modules-systemjs@>=7.12.0 <=7.29.3": "^7.29.4",
-      "brace-expansion@<1.1.18": "^1.1.18",
-      "brace-expansion@>=2.0.0 <2.1.4": "^2.1.4",
-      "brace-expansion@>=3.0.0 <5.0.9": "^5.0.9",
-      "esbuild@>=0.27.3 <0.28.1": ">=0.28.1",
-      "form-data@>=4.0.0 <4.0.6": ">=4.0.6",
-      "js-yaml@<4.3.2": "^4.3.2",
-      "@babel/core@<=7.29.0": "^7.29.6",
-      "markdown-it@<=14.1.1": ">=14.2.0",
-      "browserslist@<=4.28.6": "^4.28.8",
-      "immutable@<5.1.9": "^5.1.9",
       "linkify-it@<=5.0.1": "^5.0.2",
-      "nanoid@<3.3.18": "^3.3.18",
-      "postcss@<8.5.23": "^8.5.27",
-      "undici@<7.29.0": "^7.29.0",
-      "react-router@>=7.12.0 <7.18.3": "^7.18.3"
+      "markdown-it@<=14.1.1": ">=14.2.0"
     }
   }
 }
