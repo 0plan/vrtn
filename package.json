@@ -26,8 +26,6 @@
     "@generouted/react-router": "^1.20.2",
     "@hookform/resolvers": "^5.4.0",
     "@mdx-js/rollup": "^3.1.1",
-    "@projectstorm/react-canvas-core": "^7.0.3",
-    "@projectstorm/react-diagrams": "^7.0.4",
     "@radix-ui/react-accordion": "^1.2.14",
     "@radix-ui/react-alert-dialog": "^1.1.17",
     "@radix-ui/react-aspect-ratio": "^1.1.10",
@@ -137,8 +135,6 @@
   "pnpm": {
     "overrides": {
       "serialize-javascript": "^7.0.5",
-      "react": "^19.2.7",
-      "react-dom": "^19.2.7",
       "linkify-it@<=5.0.1": "^5.0.2",
       "markdown-it@<=14.1.1": ">=14.2.0"
     }
