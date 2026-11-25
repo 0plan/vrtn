@@ -35,6 +35,13 @@ pnpm dev
 ```
 Just run and visit http://localhost:5173
 
+### Theme colors
+
+Edit the light (`:root`) and dark (`.dark`) palettes in [src/index.css](./src/index.css).
+Each token is a complete CSS color: use `var(--primary)` directly in CSS, or pair
+Tailwind utilities such as `bg-primary text-primary-foreground` on a button.
+Cards, popovers, and the sidebar share named colors from the active palette.
+
 ### Build
 
 Build the App

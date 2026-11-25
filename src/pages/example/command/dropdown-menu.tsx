@@ -94,7 +94,7 @@ export default function CommandDropdownMenu() {
               </DropdownMenuSubContent>
             </DropdownMenuSub>
             <DropdownMenuSeparator />
-            <DropdownMenuItem className="text-red-600">
+            <DropdownMenuItem className="text-destructive focus:text-destructive">
               <Trash className="mr-2 h-4 w-4" />
               {t('example.command.dropdownMenu.delete')}
               <DropdownMenuShortcut>⌘⌫</DropdownMenuShortcut>
