@@ -10,7 +10,7 @@ export default function NotFound() {
       id="error-page"
       className="mx-auto flex min-h-[60vh] max-w-md flex-col items-center justify-center px-4 text-center"
     >
-      <p className="bg-gradient-to-r from-primary to-violet-700 bg-clip-text text-7xl font-extrabold text-transparent dark:to-violet-300 sm:text-8xl">
+      <p className="text-7xl font-extrabold text-foreground sm:text-8xl">
         404
       </p>
       <h2 className="mt-4 text-2xl font-semibold">{t('error.notFound.title')}</h2>

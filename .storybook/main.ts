@@ -1,7 +1,14 @@
 import type { StorybookConfig } from '@storybook/react-vite'
 import type { PluginOption } from 'vite'
 
+// Storybook's own chrome, addon icons and syntax highlighting have independent palettes.
+const monochromeHead = (head: string) => `${head}
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <style>@media (forced-colors: none) { :root { filter: grayscale(1); } }</style>`
+
 const config: StorybookConfig = {
+  managerHead: monochromeHead,
+  previewHead: monochromeHead,
   "stories": [
     "../src/**/*.mdx",
     "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"

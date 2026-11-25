@@ -21,6 +21,32 @@ function textContrast(locator: Locator) {
 }
 
 for (const theme of ['light', 'dark'] as const) {
+  test(`all ${theme} theme colors are neutral grays`, async ({ page }) => {
+    await page.emulateMedia({ colorScheme: theme });
+    await page.goto('/');
+    await expect(page.locator('body')).toHaveCSS('color-scheme', theme);
+    const invalid = await page.evaluate(() => {
+      const styles = getComputedStyle(document.body);
+      const ctx = document.createElement('canvas').getContext('2d')!;
+      const roles = [
+        'background', 'foreground', 'border', 'input', 'ring',
+        'sidebar-background', 'sidebar-foreground', 'sidebar-border', 'sidebar-ring',
+        ...['primary', 'secondary', 'muted', 'accent', 'destructive', 'card', 'popover',
+          'sidebar-primary', 'sidebar-accent'].flatMap(role => [role, `${role}-foreground`]),
+      ];
+      return roles.filter(role => {
+        const paint = styles.getPropertyValue(`--${role}`).trim();
+        if (!CSS.supports('color', paint)) return true;
+        ctx.clearRect(0, 0, 1, 1);
+        ctx.fillStyle = paint;
+        ctx.fillRect(0, 0, 1, 1);
+        const [r, g, b, a] = ctx.getImageData(0, 0, 1, 1).data;
+        return a !== 255 || r !== g || g !== b;
+      });
+    });
+    expect(invalid).toEqual([]);
+  });
+
   test(`primary buttons and muted tabs have readable text in ${theme} mode`, async ({ page }) => {
     await page.emulateMedia({ colorScheme: theme });
     await page.goto('/example/tabs/demo');

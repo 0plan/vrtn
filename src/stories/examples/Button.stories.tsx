@@ -10,8 +10,7 @@ const meta = {
   },
   argTypes: {
     className: {
-      control: 'select',
-      options: ['bg-green-500', 'bg-red-500', 'bg-blue-500'],
+      control: 'text',
     },
   },
   tags: ['autodocs'],
@@ -84,6 +83,6 @@ export const IconButton: Story = {
 export const CustomClassName: Story = {
   ...ButtonTemplate,
   args: {
-    className: 'bg-amber-300 text-black hover:bg-green-300',
+    className: 'rounded-full border border-input bg-card text-card-foreground hover:bg-accent hover:text-accent-foreground',
   },
 };

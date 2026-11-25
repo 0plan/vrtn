@@ -80,45 +80,45 @@
     color-scheme: light;
     --radius: 0.5rem;
 
-    --background: #f4f8fb;
-    --foreground: #172f3d;
+    --background: #f7f7f7;
+    --foreground: #242424;
     --card: #ffffff;
-    --muted: #e6eff3;
-    --muted-foreground: #405966;
+    --muted: #ededed;
+    --muted-foreground: #555555;
 
-    --primary: #075985;
-    --primary-foreground: #ffffff;
-    --secondary: #ccebf0;
-    --secondary-foreground: #153f50;
-    --accent: #c5edf2;
-    --accent-foreground: #124659;
-    --destructive: #991b32;
+    --primary: #404040;
+    --primary-foreground: #fafafa;
+    --secondary: #e7e7e7;
+    --secondary-foreground: #383838;
+    --accent: #dedede;
+    --accent-foreground: #242424;
+    --destructive: #292929;
     --destructive-foreground: #ffffff;
 
-    --border: #c1d3dc;
-    --input: #627c8a;
+    --border: #d6d6d6;
+    --input: #777777;
 }
 
 .dark {
     color-scheme: dark;
 
-    --background: #102631;
-    --foreground: #edf5f7;
-    --card: #193642;
-    --muted: #213c49;
-    --muted-foreground: #b4cbd4;
+    --background: #191919;
+    --foreground: #e8e8e8;
+    --card: #242424;
+    --muted: #303030;
+    --muted-foreground: #b5b5b5;
 
-    --primary: #7dd3fc;
-    --primary-foreground: #082f49;
-    --secondary: #284753;
-    --secondary-foreground: #d5f4f8;
-    --accent: #195260;
-    --accent-foreground: #dcf8fa;
-    --destructive: #fda4af;
-    --destructive-foreground: #450a0a;
+    --primary: #cccccc;
+    --primary-foreground: #222222;
+    --secondary: #353535;
+    --secondary-foreground: #dddddd;
+    --accent: #404040;
+    --accent-foreground: #ededed;
+    --destructive: #e2e2e2;
+    --destructive-foreground: #191919;
 
-    --border: #3b5c69;
-    --input: #7896a4;
+    --border: #494949;
+    --input: #858585;
 }
 
 /* Resolve shared roles again on the element where dark mode is applied. */
@@ -144,7 +144,19 @@
     }
 
     body {
-        @apply bg-background text-foreground;
+        @apply bg-background text-foreground accent-primary;
+    }
+
+    :focus-visible {
+        outline-color: var(--ring);
+    }
+
+    ::selection {
+        @apply bg-primary text-primary-foreground;
+    }
+
+    img {
+        @apply grayscale;
     }
 
     h1 {

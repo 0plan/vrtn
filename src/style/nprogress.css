@@ -8,6 +8,15 @@
   transition: width 0.3s ease; /* 프로그레스 바의 애니메이션 설정 */
 }
 
+#nprogress .peg {
+  box-shadow: none;
+}
+
+#nprogress .spinner-icon {
+  border-top-color: var(--primary);
+  border-left-color: var(--primary);
+}
+
 /* 로딩 모양 애니메이션 */
 #nprogress .spinner {
   border: 2px solid var(--border);

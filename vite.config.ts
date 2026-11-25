@@ -12,6 +12,11 @@ export default defineConfig({
     react(),
     generouted(),
     VitePWA({ registerType: 'autoUpdate',
+      manifest: {
+        theme_color: '#404040',
+        background_color: '#f7f7f7',
+        icons: [{ src: 'favicon.svg', sizes: 'any', type: 'image/svg+xml' }],
+      },
       workbox: {
         maximumFileSizeToCacheInBytes: 3000000
       }}),
