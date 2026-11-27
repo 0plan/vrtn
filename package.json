@@ -54,6 +54,7 @@
     "@radix-ui/react-toggle-group": "^1.1.13",
     "@radix-ui/react-tooltip": "^1.2.10",
     "@tailwindcss/postcss": "^4.3.3",
+    "@tanstack/react-table": "^8.21.3",
     "@uiw/react-md-editor": "^4.1.1",
     "axios": "^1.21.1",
     "class-variance-authority": "^0.7.1",
