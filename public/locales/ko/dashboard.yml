@@ -1,0 +1,24 @@
+title: 웹 방문 현황
+navigation: 보고서 탐색
+overview: 개요
+charts: 차트
+daily: 일별 내역
+date: 날짜
+loading: 방문 데이터를 불러오는 중…
+loadError: 방문 데이터를 불러오지 못했습니다.
+retry: 다시 시도
+sample: 샘플 데이터
+period: 조회 기간
+days: '{{count}}일'
+total: 총 방문
+average: 일평균 방문
+peak: 일 최고 방문
+trend: 일별 방문 추이
+trendHint: 모바일과 PC의 방문 수를 합산했습니다.
+visits: 방문 수
+devices: 기기별 방문 비중
+mobile: 모바일
+desktop: PC
+pendingOrders: 입금 확인 대기
+pausedMembers: 일시 정지 회원
+draftNotices: 미게시 공지

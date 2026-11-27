@@ -32,16 +32,13 @@ export function useDarkMode(options: DarkModeOptions = {}): DarkModeReturn {
     initializeWithValue,
     defaultValue,
   });
-  const [isDarkMode, setDarkMode] = useLocalStorage<boolean>(
+  const [preference, setDarkMode] = useLocalStorage<boolean | null>(
     localStorageKey,
-    defaultValue ?? isDarkOS ?? false,
+    null,
     { initializeWithValue },
   );
+  const isDarkMode = preference ?? defaultValue ?? isDarkOS;
 
-  // Update darkMode if os prefers changes
-  useIsomorphicLayoutEffect(() => {
-    setDarkMode(isDarkOS);
-  }, [isDarkOS]);
   useIsomorphicLayoutEffect(() => {
     document.body.classList.toggle('dark', isDarkMode);
     document.body.dataset.colorMode = isDarkMode ? 'dark' : 'light';
@@ -50,7 +47,7 @@ export function useDarkMode(options: DarkModeOptions = {}): DarkModeReturn {
   return {
     isDarkMode,
     toggle: () => {
-      setDarkMode((prev) => !prev);
+      setDarkMode(!isDarkMode);
     },
     enable: () => {
       setDarkMode(true);

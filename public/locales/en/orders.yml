@@ -1,0 +1,10 @@
+description: Find an order by number or buyer and record a received payment.
+order: Order number
+buyer: Buyer
+date: Order date
+amount: Amount
+status: Payment status
+pending: Pending
+paid: Paid
+refunded: Refunded
+confirm: Mark as paid

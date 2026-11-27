@@ -1,0 +1,31 @@
+appName: 웹 트래픽 대시보드
+workspace: 관리 워크스페이스
+theme: 테마 전환
+language: 언어 변경
+signOut: 로그아웃
+loading: 불러오는 중…
+console: 관리 콘솔
+home: 관리 개요
+members: 회원 관리
+sales: 매출 관리
+site: 사이트 관리
+directory: 회원 목록
+registrations: 가입 현황
+orders: 주문 내역
+revenue: 매출 요약
+settings: 기본 설정
+notices: 공지 관리
+collapse: 사이드바 접기
+expand: 사이드바 펼치기
+openMenu: 메뉴 열기
+closeMenu: 메뉴 닫기
+search: 검색
+filter: 조회
+status: 상태
+all: 전체
+action: 작업
+empty: 조건에 맞는 항목이 없습니다.
+reset: 조건 초기화
+saved: 변경사항을 저장했습니다.
+invalid: 저장하지 못했습니다. 입력값을 확인하고 다시 시도하세요.
+demoNote: 샘플 데이터 · 변경사항은 현재 로그인 세션에만 적용됩니다.

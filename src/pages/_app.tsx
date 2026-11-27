@@ -1,29 +1,19 @@
+import { Suspense } from 'react';
+import { Outlet } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+import Header from '@/components/layouts/header';
 import Footer from '@/components/layouts/footer';
-import { Outlet, useLocation } from 'react-router-dom';
-import Header from '@/components/layouts/header/index';
-import { Toaster } from '@/components/ui/toaster';
+import '@/style/dashboard.css';
 
 export default function App() {
-  const location = useLocation();
-  const isExamplePath = location.pathname.startsWith('/example');
-
-  if (isExamplePath) {
-    return (
-      <div className="min-h-screen flex flex-col">
-        <Toaster />
-        <div className="flex-1">
-           <Outlet />
-        </div>
-      </div>
-    );
-  }
-
+  const { t } = useTranslation('common');
   return (
-    <div className="min-h-screen flex flex-col">
-      <Toaster />
+    <div className="traffic-shell">
       <Header />
-      <main className="mx-auto w-full max-w-[85rem] px-4 py-5 mt-[72px] flex-1">
-        <Outlet />
+      <main className="traffic-width traffic-main">
+        <Suspense fallback={<p role="status">{t('loading')}</p>}>
+          <Outlet />
+        </Suspense>
       </main>
       <Footer />
     </div>

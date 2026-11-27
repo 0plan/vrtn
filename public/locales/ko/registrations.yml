@@ -1,0 +1,6 @@
+description: 가입한 달을 기준으로 회원 수와 현재 이용 상태를 확인하세요.
+month: 가입 월
+joined: 가입 회원
+active: 이용 중
+paused: 일시 정지
+allMembers: 전체 회원

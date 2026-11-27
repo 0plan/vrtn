@@ -1,0 +1,4 @@
+description: Paid order totals by order month. Pending and refunded orders are excluded.
+month: Order month
+paidOrders: Paid orders
+sales: Paid sales

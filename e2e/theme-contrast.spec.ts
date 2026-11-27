@@ -47,22 +47,14 @@ for (const theme of ['light', 'dark'] as const) {
     expect(invalid).toEqual([]);
   });
 
-  test(`primary buttons and muted tabs have readable text in ${theme} mode`, async ({ page }) => {
+  test(`sign-in, period selection and traffic metrics have readable text in ${theme} mode`, async ({ page }) => {
     await page.emulateMedia({ colorScheme: theme });
-    await page.goto('/example/tabs/demo');
+    await page.goto('/login');
     await expect(page.locator('body')).toHaveCSS('color-scheme', theme);
-    const button = page.getByRole('tabpanel').getByRole('button');
+    const button = page.locator('form button[type="submit"]');
     expect(await textContrast(button), 'primary button').toBeGreaterThanOrEqual(4.5);
-    expect(await textContrast(page.getByRole('tablist')), 'muted tabs').toBeGreaterThanOrEqual(4.5);
-  });
-
-  test(`destructive toast is visible and readable in ${theme} mode`, async ({ page }) => {
-    await page.emulateMedia({ colorScheme: theme });
-    await page.goto('/example/toast/destructive');
-    await expect(page.locator('body')).toHaveCSS('color-scheme', theme);
-    await page.getByRole('button', { name: 'Show Toast' }).press('Enter');
-    const toast = page.locator('[data-slot="toast"]');
-    await expect(toast).toBeVisible();
-    expect(await textContrast(toast)).toBeGreaterThanOrEqual(4.5);
+    await button.click();
+    expect(await textContrast(page.locator('button[aria-pressed="true"]')), 'selected period').toBeGreaterThanOrEqual(4.5);
+    expect(await textContrast(page.locator('.traffic-metrics')), 'traffic metrics').toBeGreaterThanOrEqual(4.5);
   });
 }

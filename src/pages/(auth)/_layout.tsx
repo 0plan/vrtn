@@ -1,20 +1,20 @@
-import { useEffect } from 'react';
+import { Suspense } from 'react';
+import { Navigate, Outlet, useLocation } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+import { ConsoleLayout } from '@/console/console-layout';
+import { managementPage } from '@/console/menu';
 import authStore from '@/stores/auth';
-import { useNavigate, Outlet } from 'react-router-dom';
+import NotFound from '../404';
 
-export default function Index() {
-  const { isAuth } = authStore();
-  const nav = useNavigate();
-
-  useEffect(() => {
-    if (!isAuth) {
-      nav('/', { replace: true });
-    }
-  }, [isAuth]);
-
+export default function AuthLayout() {
+  const isAuth = authStore(state => state.isAuth);
+  const { pathname } = useLocation();
+  const { i18n, t } = useTranslation('common');
+  if (pathname.startsWith('/manage/') && !managementPage(pathname)) return <NotFound />;
+  if (!isAuth) return <Navigate to="/login" replace />;
   return (
-    <main>
-      <Outlet />
-    </main>
+    <ConsoleLayout path={pathname} labels={i18n.getResourceBundle(i18n.resolvedLanguage!, 'common')}>
+      <Suspense fallback={<p role="status">{t('loading')}</p>}><Outlet /></Suspense>
+    </ConsoleLayout>
   );
 }

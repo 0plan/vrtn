@@ -1,0 +1,6 @@
+title: 로그인
+intro: 데모 계정으로 회원·주문·사이트를 관리해 보세요.
+email: 이메일
+password: 비밀번호
+invalid: 아래 데모 계정의 이메일과 비밀번호를 입력하세요.
+account: 데모 계정

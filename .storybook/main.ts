@@ -36,6 +36,7 @@ const config: StorybookConfig = {
     // The tsconfig-paths/react plugins are kept so the "@/" alias still works.
     const isAppOnlyPlugin = (name: string) =>
       name.startsWith('vite-plugin-pwa')
+      || name === 'spa-page-entries'
       || name === '@mdx-js/rollup'
       || name === 'vite-plugin-markdown'
     const plugins = (config.plugins ?? []) as unknown[]

@@ -7,7 +7,7 @@ import storybook from 'eslint-plugin-storybook';
 
 export default tseslint.config(
   {
-    ignores: ['dist', 'dist-ssr', 'storybook-static'],
+    ignores: ['dist', 'dist-ssr', 'storybook-static', 'src/router.ts'],
   },
   js.configs.recommended,
   ...tseslint.configs.recommended,

@@ -1,0 +1,25 @@
+{
+  "members": [
+    { "id": "M-106", "name": "Jin Park", "email": "jin@example.com", "joined": "2026-09-29", "status": "active" },
+    { "id": "M-105", "name": "Ari Kim", "email": "ari@example.com", "joined": "2026-09-21", "status": "active" },
+    { "id": "M-104", "name": "Noah Lee", "email": "noah@example.com", "joined": "2026-09-04", "status": "paused" },
+    { "id": "M-103", "name": "Mina Han", "email": "mina@example.com", "joined": "2026-08-17", "status": "active" },
+    { "id": "M-102", "name": "Ian Cho", "email": "ian@example.com", "joined": "2026-08-03", "status": "active" },
+    { "id": "M-101", "name": "Yuna Seo", "email": "yuna@example.com", "joined": "2026-07-15", "status": "active" }
+  ],
+  "orders": [
+    { "id": "O-208", "member": "M-106", "date": "2026-09-30", "amount": 42000, "status": "pending" },
+    { "id": "O-207", "member": "M-105", "date": "2026-09-29", "amount": 78000, "status": "paid" },
+    { "id": "O-206", "member": "M-104", "date": "2026-09-23", "amount": 23500, "status": "refunded" },
+    { "id": "O-205", "member": "M-103", "date": "2026-09-10", "amount": 38000, "status": "pending" },
+    { "id": "O-204", "member": "M-101", "date": "2026-09-02", "amount": 61500, "status": "paid" },
+    { "id": "O-203", "member": "M-103", "date": "2026-08-22", "amount": 54000, "status": "paid" },
+    { "id": "O-202", "member": "M-102", "date": "2026-08-08", "amount": 32000, "status": "paid" },
+    { "id": "O-201", "member": "M-101", "date": "2026-07-18", "amount": 26500, "status": "paid" }
+  ],
+  "notices": [
+    { "id": "N-03", "title": "autumnHours", "date": "2026-09-30", "status": "draft" },
+    { "id": "N-02", "title": "shippingSchedule", "date": "2026-09-16", "status": "published" },
+    { "id": "N-01", "title": "welcome", "date": "2026-07-01", "status": "published" }
+  ]
+}

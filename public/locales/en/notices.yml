@@ -1,0 +1,11 @@
+description: Publish a prepared notice or return a published notice to drafts.
+subject: Notice title
+date: Created
+status: Publication status
+draft: Draft
+published: Published
+publish: Publish
+unpublish: Return to draft
+autumnHours: Autumn support hours
+shippingSchedule: September shipping schedule
+welcome: Welcome to the store
