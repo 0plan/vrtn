@@ -1,0 +1,81 @@
+.traffic-report {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+.report-content { min-width: 0; }
+.report-content:only-child { grid-column: 1 / -1; }
+.report-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 12px;
+  border-block: 1px solid var(--border);
+}
+.report-nav p, .report-filter-label {
+  font-size: .75rem;
+  font-weight: 650;
+  letter-spacing: .025em;
+  color: var(--muted-foreground);
+}
+.report-nav p { display: none; }
+.report-nav a {
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+  min-height: 44px;
+  min-width: 44px;
+  font-size: .875rem;
+  font-weight: 600;
+}
+.report-nav a span {
+  font: 500 .7rem/1 ui-monospace, monospace;
+  color: var(--muted-foreground);
+}
+.report-nav a:hover, .report-nav a:focus-visible { text-decoration: underline; text-underline-offset: 4px; }
+.report-content :is(#overview, #charts, #daily) { scroll-margin-block-start: 16px; }
+.report-filter-label { display: block; margin-bottom: 5px; }
+.report-ledger {
+  margin-top: 20px;
+  padding: clamp(14px, 2.5vw, 24px);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--card);
+}
+.report-ledger h2 { margin-bottom: 16px; font-size: 21px; font-weight: 650; letter-spacing: -.025em; }
+.report-ledger table { border-collapse: collapse; table-layout: fixed; width: 100%; font-size: .875rem; font-variant-numeric: tabular-nums; }
+.report-ledger th, .report-ledger td { padding: 10px 4px; border-top: 1px solid var(--border); text-align: end; }
+.report-ledger th:first-child { width: 31%; padding-inline-start: 0; text-align: start; }
+.report-ledger thead th { color: var(--muted-foreground); font-size: .8125rem; }
+.report-ledger tbody th { font-weight: 500; }
+.report-ledger td:last-child { font-weight: 650; }
+.report-ledger tbody tr:hover { background: var(--muted); }
+
+.report-value-skeleton {
+  display: inline-block;
+  width: 4.5ch;
+  max-width: 100%;
+  height: .7em;
+  border-radius: .15em;
+  background: currentColor;
+  opacity: .2;
+}
+.traffic-metrics > div:first-child .report-value-skeleton { width: 5.5ch; }
+.traffic-dateline .report-value-skeleton { width: 22ch; }
+.report-ledger td .report-value-skeleton { width: 3.5ch; }
+.report-trend-skeleton {
+  border-inline-start: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  background: repeating-linear-gradient(to top, transparent 0 calc(25% - 1px), var(--border) calc(25% - 1px) 25%);
+}
+.report-ring-skeleton { display: grid; place-items: center; }
+.report-ring-skeleton::before {
+  content: "";
+  width: min(85%, 148px);
+  aspect-ratio: 1;
+  border: 14px solid var(--muted);
+  border-radius: 50%;
+}
+@media (max-width: 399px) {
+  .report-nav a span { display: none; }
+}

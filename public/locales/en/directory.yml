@@ -1,0 +1,9 @@
+description: Find a member by name or email and manage their account status.
+member: Member
+email: Email
+joined: Joined
+status: Account status
+active: Active
+paused: Paused
+pause: Pause account
+restore: Restore account

@@ -1,0 +1,24 @@
+title: Website traffic
+navigation: Report navigation
+overview: Overview
+charts: Charts
+daily: Daily breakdown
+date: Date
+loading: Loading traffic data…
+loadError: Traffic data could not be loaded.
+retry: Try again
+sample: Sample data
+period: Reporting period
+days: '{{count}} days'
+total: Total visits
+average: Daily average
+peak: Peak day
+trend: Daily visits
+trendHint: Mobile and desktop visits combined.
+visits: Visits
+devices: Visits by device
+mobile: Mobile
+desktop: Desktop
+pendingOrders: Awaiting payment
+pausedMembers: Paused members
+draftNotices: Unpublished notices

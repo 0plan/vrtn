@@ -1,0 +1,9 @@
+description: 이름이나 이메일로 회원을 찾아 이용 상태를 변경하세요.
+member: 회원명
+email: 이메일
+joined: 가입일
+status: 이용 상태
+active: 이용 중
+paused: 일시 정지
+pause: 이용 정지
+restore: 이용 재개

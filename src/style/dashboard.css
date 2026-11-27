@@ -1,0 +1,138 @@
+@import "./report.css";
+@import "./console.css";
+
+/* The shell uses the complete light/dark CSS colors defined in src/index.css. */
+.traffic-shell {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: system-ui, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+}
+
+.traffic-width {
+  width: min(calc(100% - 32px), 1184px);
+  margin-inline: auto;
+}
+
+.traffic-main { display: flex; flex: 1; flex-direction: column; }
+.traffic-header { border-bottom: 1px solid var(--border); background: var(--card); }
+.traffic-bar, .traffic-brand, .traffic-actions, .traffic-footer, .traffic-footer > div {
+  display: flex;
+  align-items: center;
+}
+.traffic-bar { min-height: 64px; justify-content: space-between; gap: 8px; }
+.traffic-brand { min-height: 44px; gap: 10px; font-weight: 750; font-size: 18px; }
+.traffic-brand img { flex: none; }
+.traffic-brand span {
+  border-inline-start: 1px solid var(--border);
+  padding-inline-start: 12px;
+  color: var(--muted-foreground);
+  font-size: 14px;
+  font-weight: 500;
+}
+.traffic-actions { gap: 2px; }
+.traffic-actions button { min-width: 44px; height: 44px; }
+.traffic-footer {
+  min-height: 60px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  column-gap: 16px;
+  border-top: 1px solid var(--border);
+  color: var(--muted-foreground);
+  font-size: 13px;
+}
+.traffic-footer > div { gap: 16px; flex-wrap: wrap; }
+.traffic-footer a { display: inline-flex; min-height: 44px; min-width: 44px; align-items: center; text-decoration: underline; text-underline-offset: 3px; }
+.traffic-shell :focus-visible { outline: 2px solid var(--ring); outline-offset: 2px; }
+
+.traffic-login {
+  width: min(100%, 420px);
+  margin: auto;
+  padding: 32px;
+  border: 1px solid var(--border);
+  border-top: 4px solid var(--primary);
+  border-radius: 8px;
+  background: var(--card);
+}
+.traffic-main:has(.traffic-login) { padding-block: 32px; }
+.traffic-login h1, .traffic-report h1 {
+  font-size: clamp(32px, 4vw, 48px);
+  line-height: 1.15;
+  font-weight: 700;
+  letter-spacing: -.045em;
+}
+.traffic-login h1 { font-size: 32px; }
+.traffic-description { margin-top: 6px; color: var(--muted-foreground); font-size: 14px; line-height: 1.6; }
+.traffic-login form { display: grid; gap: 18px; margin-block: 28px 24px; }
+.traffic-field { display: grid; gap: 8px; }
+.traffic-field input { height: 46px; font-size: 16px; background: var(--card); }
+.traffic-field input[aria-invalid="true"] { border: 2px solid var(--destructive); }
+.traffic-login [role="alert"] { border-inline-start: 3px solid var(--destructive); padding-inline-start: 10px; font-size: 14px; }
+.traffic-submit { min-height: 46px; width: 100%; }
+.traffic-demo { border-top: 1px solid var(--border); padding-top: 16px; font-size: 13px; }
+.traffic-demo h2 { font-size: 14px; font-weight: 650; }
+.traffic-demo dl { margin-top: 8px; }
+.traffic-demo dl > div { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 4px 12px; line-height: 1.8; }
+.traffic-demo dt { color: var(--muted-foreground); }
+
+.traffic-report { padding-block: clamp(28px, 5vw, 64px); }
+.traffic-intro { display: flex; align-items: flex-end; flex-wrap: wrap; justify-content: space-between; gap: 16px; }
+.traffic-dateline { display: flex; align-items: center; flex-wrap: wrap; gap: 8px 12px; margin-top: 12px; color: var(--muted-foreground); font-size: 14px; }
+.traffic-sample { padding: 2px 8px; border: 1px solid var(--border); border-radius: 4px; font-size: 12px; }
+.traffic-period { display: inline-flex; gap: 2px; padding: 3px; border: 1px solid var(--border); border-radius: 8px; background: var(--card); }
+.traffic-period button { min-height: 44px; padding-inline: 18px; }
+.traffic-period button[aria-pressed="true"] { background: var(--primary); color: var(--primary-foreground); }
+.traffic-metrics {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr;
+  margin-block: 24px 20px;
+  padding: 24px 0;
+  border-radius: 8px;
+  background: var(--foreground);
+  color: var(--background);
+  font-variant-numeric: tabular-nums;
+}
+.traffic-metrics > div { align-self: center; padding-inline: clamp(16px, 3vw, 36px); }
+.traffic-metrics > div + div { border-inline-start: 1px solid color-mix(in srgb, currentColor 30%, transparent); }
+.traffic-metrics dt { font-size: 14px; }
+.traffic-metrics dd { margin-top: 4px; font-size: clamp(26px, 3.3vw, 42px); font-weight: 580; line-height: 1.12; letter-spacing: -.04em; }
+.traffic-metrics > div:first-child dd { font-size: clamp(36px, 4.6vw, 56px); }
+.traffic-metrics small { display: inline-block; font: 400 14px/1.5 system-ui, sans-serif; letter-spacing: normal; }
+.traffic-charts { display: grid; gap: 16px; }
+.traffic-panel { min-width: 0; padding: 24px; border: 1px solid var(--border); border-radius: 8px; background: var(--card); }
+.traffic-panel h2 { font-size: 21px; font-weight: 650; letter-spacing: -.025em; }
+.traffic-trend, .traffic-donut { width: 100%; aspect-ratio: auto; }
+.traffic-trend { height: 240px; margin-top: 20px; }
+.traffic-ring { position: relative; margin-block: 8px; }
+.traffic-donut { height: 172px; }
+.traffic-ring-label { position: absolute; inset: 0; display: grid; align-content: center; justify-items: center; pointer-events: none; }
+.traffic-ring-label strong { font-size: 26px; font-weight: 650; letter-spacing: -.04em; }
+.traffic-ring-label span { color: var(--muted-foreground); font-size: 13px; }
+.traffic-devices { font-size: 14px; font-variant-numeric: tabular-nums; }
+.traffic-devices > div, .traffic-devices dt, .traffic-devices dd { display: flex; align-items: center; gap: 8px; }
+.traffic-devices > div { justify-content: space-between; padding-block: 9px; border-top: 1px solid var(--border); }
+.traffic-devices i { width: 10px; height: 10px; border-radius: 50%; }
+.traffic-devices dd { font-weight: 600; }
+.traffic-devices dd span { min-width: 5ch; text-align: end; font-size: 13px; font-weight: 400; color: var(--muted-foreground); }
+
+@media (min-width: 640px) {
+  .traffic-width { width: min(calc(100% - 64px), 1184px); }
+}
+@media (min-width: 900px) {
+  .traffic-charts { grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); }
+}
+@media (max-width: 639px) {
+  .traffic-brand { font-size: 16px; line-height: 1.25; word-break: keep-all; }
+  .traffic-brand span, .traffic-actions button span { display: none; }
+  .traffic-actions button { padding-inline: 0; }
+  .traffic-login, .traffic-panel { padding: 20px; }
+  .traffic-intro { flex-direction: column; align-items: flex-start; }
+  .traffic-metrics { grid-template-columns: 1fr 1fr; row-gap: 16px; padding: 18px 0; }
+  .traffic-metrics > div { align-self: start; }
+  .traffic-metrics > div:first-child { grid-column: 1 / -1; }
+  .traffic-metrics > div:nth-child(2) { border: 0; }
+  .traffic-metrics small { display: block; font-size: 12px; }
+  .traffic-trend { height: 190px; }
+}

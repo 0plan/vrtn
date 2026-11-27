@@ -1,0 +1,10 @@
+description: 주문 번호나 구매자로 검색하고 대기 중인 주문의 입금을 확인하세요.
+order: 주문 번호
+buyer: 구매자
+date: 주문일
+amount: 주문 금액
+status: 결제 상태
+pending: 입금 대기
+paid: 결제 완료
+refunded: 환불 완료
+confirm: 입금 확인

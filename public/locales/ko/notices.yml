@@ -1,0 +1,11 @@
+description: 준비한 공지를 게시하거나 게시된 공지를 초안으로 되돌리세요.
+subject: 공지 제목
+date: 작성일
+status: 게시 상태
+draft: 초안
+published: 게시 중
+publish: 게시
+unpublish: 초안으로 전환
+autumnHours: 가을 고객센터 운영 시간
+shippingSchedule: 9월 배송 일정 안내
+welcome: 스토어 이용 안내

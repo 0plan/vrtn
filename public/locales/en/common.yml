@@ -1,0 +1,31 @@
+appName: Web Traffic Dashboard
+workspace: Admin workspace
+theme: Toggle theme
+language: Change language
+signOut: Sign Out
+loading: Loading…
+console: Admin console
+home: Admin overview
+members: Member management
+sales: Sales management
+site: Site management
+directory: Member directory
+registrations: Registrations
+orders: Orders
+revenue: Sales summary
+settings: Site settings
+notices: Notices
+collapse: Collapse sidebar
+expand: Expand sidebar
+openMenu: Open menu
+closeMenu: Close menu
+search: Search
+filter: Apply
+status: Status
+all: All
+action: Action
+empty: No items match these filters.
+reset: Clear filters
+saved: Changes saved.
+invalid: Changes could not be saved. Check the values and try again.
+demoNote: Sample data · Changes apply only to this signed-in session.

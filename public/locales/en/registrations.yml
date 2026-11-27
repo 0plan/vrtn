@@ -1,0 +1,6 @@
+description: Review member counts and current account status by signup month.
+month: Signup month
+joined: Registrations
+active: Active
+paused: Paused
+allMembers: Total members

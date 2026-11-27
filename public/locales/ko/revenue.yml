@@ -1,0 +1,4 @@
+description: 주문 월별로 결제 완료 금액을 합산합니다. 입금 대기와 환불 주문은 제외합니다.
+month: 주문 월
+paidOrders: 결제 완료 주문
+sales: 결제 완료 매출
