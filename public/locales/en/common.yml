@@ -28,4 +28,8 @@ empty: No items match these filters.
 reset: Clear filters
 saved: Changes saved.
 invalid: Changes could not be saved. Check the values and try again.
+rowsPerPage: Rows per page
+prev: Previous
+next: Next
+of: of
 demoNote: Sample data · Changes apply only to this signed-in session.

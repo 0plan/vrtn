@@ -2,11 +2,36 @@ import { useMemo } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Link, useNavigate } from 'react-router-dom';
-import { getCoreRowModel, useReactTable, type ColumnDef } from '@tanstack/react-table';
+import {
+  getCoreRowModel,
+  getPaginationRowModel,
+  useReactTable,
+  type ColumnDef,
+} from '@tanstack/react-table';
 import type { MenuPage } from './menu';
 import { registerFor, siteSettings, type Filter, type Text, type Workspace } from './workspace';
 
 type TableRow = Record<string, string> & { id: string };
+
+const PAGE_SIZES = [10, 25, 50, 100];
+const DEFAULT_PAGE_SIZE = 10;
+
+function loadSavedSorting(pageKey: string) {
+  try {
+    const raw = localStorage.getItem(`vrtn:table:sort:${pageKey}`);
+    return raw ? JSON.parse(raw) : undefined;
+  } catch {
+    return undefined;
+  }
+}
+
+function saveSorting(pageKey: string, sorting: { id: string; desc: boolean }[]) {
+  try {
+    localStorage.setItem(`vrtn:table:sort:${pageKey}`, JSON.stringify(sorting));
+  } catch {
+    // ignore storage errors
+  }
+}
 
 export function ManagementPanel({ page, state, filter, result, t, common, save }: {
   page: MenuPage; state: Workspace; filter: Filter; result?: string;
@@ -29,12 +54,27 @@ export function ManagementPanel({ page, state, filter, result, t, common, save }
 
   const actionById = new Map(register.rows.map((row) => [row.id, row.action]));
 
+  const savedSorting = loadSavedSorting(page.key);
+
   const table = useReactTable({
     data,
     columns,
     getCoreRowModel: getCoreRowModel(),
-    initialState: { sorting: [] },
+    getPaginationRowModel: getPaginationRowModel(),
+    initialState: {
+      sorting: savedSorting ?? [],
+      pagination: { pageIndex: 0, pageSize: DEFAULT_PAGE_SIZE },
+    },
+    onStateChange: (updater) => {
+      const change =
+        typeof updater === 'function' ? updater(table.getState()) : updater;
+      if (change.sorting) {
+        saveSorting(page.key, change.sorting);
+      }
+    },
   });
+
+  const { pageIndex, pageSize } = table.getState().pagination;
 
   return (
     <section className="console-page" aria-labelledby="console-title">
@@ -123,6 +163,48 @@ export function ManagementPanel({ page, state, filter, result, t, common, save }
                 })}
               </tbody>
             </table>
+            <div className="console-pagination">
+              <label htmlFor="page-size">{common('rowsPerPage')}</label>
+              <select
+                id="page-size"
+                value={pageSize}
+                onChange={event => {
+                  const size = Number(event.target.value);
+                  table.setPageSize(size);
+                  table.setPageIndex(0);
+                }}
+              >
+                {PAGE_SIZES.map(size => (
+                  <option key={size} value={size}>
+                    {size}
+                  </option>
+                ))}
+              </select>
+              <Button
+                variant="outline"
+                onClick={() => table.previousPage()}
+                disabled={!table.getCanPreviousPage()}
+              >
+                            {common('prev')}
+                          </Button>
+              <span>
+                {pageIndex + 1} / {table.getPageCount()}
+              </span>
+              <Button
+                variant="outline"
+                onClick={() => table.nextPage()}
+                disabled={!table.getCanNextPage()}
+              >
+                            {common('next')}
+                          </Button>
+              <span className="console-pagination-range">
+                {table.getRowModel().rows.length > 0
+                  ? `${pageIndex * pageSize + 1} - ${Math.min((pageIndex + 1) * pageSize, table.getRowModel().rows.length)}`
+                  : '0'}
+                  {common('of')}
+                  {table.getFilteredRowModel().rows.length}
+              </span>
+            </div>
             {!register.rows.length && <p className="console-empty">{common('empty')}</p>}
           </div>
         </>
